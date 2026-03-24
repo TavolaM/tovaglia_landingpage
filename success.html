@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kauf erfolgreich – Tovaglia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --gold: #c9a96e;
+  --bg: #080809;
+  --surface: #0d0d0f;
+  --text: #f5f0e6;
+  --muted: rgba(245,240,230,0.55);
+  --border: rgba(255,255,255,0.07);
+}
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg); color: var(--text);
+  font-family: 'Jost', sans-serif; font-weight: 300;
+  min-height: 100vh; display: flex; flex-direction: column;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 40px; left: 50%; transform: translateX(-50%);
+  z-index: 100; display: flex; align-items: center; gap: 40px;
+  padding: 14px 28px; background: rgba(8,8,9,0.75);
+  backdrop-filter: blur(20px); border: 1px solid var(--border);
+  border-radius: 60px; white-space: nowrap;
+}
+.nav-logo svg { height: 24px; width: auto; display: block; margin-top: 3px; }
+
+/* ── MAIN ── */
+.success-wrap {
+  flex: 1; display: flex; align-items: center; justify-content: center;
+  padding: 160px 24px 80px;
+}
+.success-card {
+  max-width: 560px; width: 100%; text-align: center;
+  display: flex; flex-direction: column; align-items: center; gap: 32px;
+}
+
+/* Checkmark Animation */
+.check-circle {
+  width: 80px; height: 80px; border-radius: 50%;
+  background: rgba(201,169,110,0.1); border: 1px solid rgba(201,169,110,0.3);
+  display: flex; align-items: center; justify-content: center;
+  animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+@keyframes popIn {
+  0%   { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.check-icon {
+  font-size: 2.2rem;
+  animation: fadeIn 0.3s ease 0.3s both;
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* Text */
+.success-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(36px, 6vw, 52px);
+  font-weight: 300; color: var(--text);
+  letter-spacing: 0.04em; line-height: 1.15;
+}
+.success-title span { color: var(--gold); }
+.success-sub {
+  font-size: 16px; font-weight: 300; color: var(--muted);
+  line-height: 1.7; max-width: 440px;
+}
+
+/* Steps */
+.steps {
+  display: flex; flex-direction: column; gap: 16px;
+  width: 100%; text-align: left;
+}
+.step {
+  display: flex; align-items: center; gap: 16px;
+  padding: 18px 24px; border: 1px solid var(--border);
+  border-radius: 12px; background: rgba(255,255,255,0.02);
+  transition: border-color 0.3s;
+}
+.step:hover { border-color: rgba(201,169,110,0.2); }
+.step-num {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: rgba(201,169,110,0.1); border: 1px solid rgba(201,169,110,0.3);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 600; color: var(--gold); flex-shrink: 0;
+}
+.step-text { font-size: 14px; color: var(--muted); line-height: 1.5; }
+.step-text strong { color: var(--text); font-weight: 500; display: block; margin-bottom: 2px; }
+
+/* CTA */
+.success-cta {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--text); color: #080809;
+  font-family: 'Jost', sans-serif; font-size: 14px;
+  font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 16px 36px; border-radius: 40px; text-decoration: none;
+  transition: all 0.25s;
+}
+.success-cta:hover { box-shadow: 0 0 32px rgba(255,255,255,0.4); transform: translateY(-2px); }
+
+/* QR Code Box */
+.qr-box {
+  border: 1px solid var(--border); border-radius: 16px;
+  padding: 28px; display: flex; flex-direction: column;
+  align-items: center; gap: 16px;
+  background: rgba(255,255,255,0.02);
+}
+.qr-label {
+  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--gold); opacity: 0.8;
+}
+.qr-box img {
+  border-radius: 8px; padding: 12px;
+  background: var(--surface); border: 1px solid var(--border);
+}
+.qr-sub { font-size: 12px; color: var(--muted); }
+
+/* Footer */
+footer {
+  background: var(--surface); border-top: 1px solid var(--border);
+  padding: 32px 24px;
+}
+.footer-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+}
+.footer-inner svg { height: 20px; width: auto; opacity: 0.4; }
+.footer-copy { font-size: 12px; color: var(--muted); }
+.footer-links { display: flex; gap: 24px; }
+.footer-links a { font-size: 12px; color: var(--muted); text-decoration: none; }
+.footer-links a:hover { color: var(--text); }
+.nav-logo svg path, .nav-logo svg polygon, .nav-logo svg rect,
+.footer-inner svg path, .footer-inner svg polygon, .footer-inner svg rect { fill: #c9a96e; }
+
+
+/* Mobile */
+@media (max-width: 768px) {
+  nav { padding: 10px 20px; width: calc(100% - 40px); }
+  .success-wrap { padding: 120px 20px 60px; }
+  .success-title { font-size: 32px; }
+  .success-sub { font-size: 14px; }
+  .footer-inner { flex-direction: column; gap: 16px; text-align: center; }
+  .footer-links { justify-content: center; }
+  /* Desktop CTA auf Mobile verstecken */
+  .desktop-only { display: none; }
+  .mobile-only { display: flex !important; }
+}
+@media (min-width: 769px) {
+  .mobile-only { display: none !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 728 108">
+  <path d="M437.84,85.09c19.37,3.84,39.79-4.83,43.88-26.26l-40.58-.09-.14-8.68h50.84c.66,19.24-11.09,36.11-29.22,42.06-9.6,3.14-19.43,3.37-29.18.95-19.75-4.89-32.44-22-32.56-42.27-.11-17.99,9.46-34.08,26.3-40.9,23.35-9.45,53.36-.7,62.02,24.53l-10.21.19c-6.11-13.21-19.14-19.86-33.37-19.73-20.79.19-35.97,16.02-35.25,36.76.57,16.4,11.01,30.19,27.47,33.45Z"/>
+  <path d="M157.79,92.41c-10.02,3.04-19.85,2.99-29.54.32-19.44-5.36-31.53-22.62-31.37-42.67.16-19.53,11.91-36.24,30.78-41.73,9.86-2.87,19.98-2.85,29.81.05,18.9,5.58,30.55,22.39,30.62,41.86.06,19.35-11.2,36.37-30.3,42.17ZM178.62,49.65c-.4-20.76-16.25-34.91-36.31-34.84-20.36.07-35.78,14.84-35.97,35.24-.2,20.74,15.3,35.94,35.97,36.02s36.73-14.99,36.31-36.42Z"/>
+  <path d="M353.91,18.08c-9.15-4.34-19.51-4.26-28.47-.38-8.17,3.54-13.44,12.04-13.48,21.17l-.28,54.25h-9.08s.03-52.12.03-52.12c0-14.16,7.24-27.65,21.24-32.3,10.72-3.56,22.34-3.54,32.96.74,11.53,4.64,19.15,15.85,19.22,28.65l.29,55.01-9.45.04-.27-54.27c-.04-8.66-4.79-17.03-12.71-20.78Z"/>
+  <path d="M694.28,18.12c-9.2-4.42-19.59-4.3-28.55-.42-8.17,3.53-13.44,12.04-13.49,21.17l-.28,54.25h-9.08s.03-52.12.03-52.12c0-5.22,1.15-10.41,3.02-15.1,7.76-19.48,31.65-23.01,49-17.31,14.12,4.64,21.68,18.02,21.68,32.12l.02,52.38-9.46.04-.27-54.27c-.04-8.59-4.72-16.93-12.62-20.73Z"/>
+  <polygon points="271.92 7.83 282.13 7.91 248.12 93.07 237.85 92.98 203.99 7.9 214.51 7.93 243.2 82.13 271.92 7.83"/>
+  <polygon points="52.71 92.9 43.25 93.12 43.24 16.38 14.33 16.34 14.41 7.73 81.64 7.74 81.73 16.33 52.73 16.39 52.71 92.9"/>
+  <polygon points="578.94 84.53 579.02 93.17 517.74 93.19 517.73 7.92 527.21 7.75 527.19 84.49 578.94 84.53"/>
+  <polygon points="613.81 92.88 604.33 93.12 604.33 7.77 613.79 7.79 613.81 92.88"/>
+  <path d="M676.97,51.96c4.12-1.62,8.06.74,9.43,4.15,1.52,3.79-.46,7.99-4.19,9.46-3.58,1.41-7.54-.24-9.24-3.68s-.36-8.23,3.99-9.94Z"/>
+  <path d="M335.94,51.96c4.08-1.64,8.03.74,9.42,4.15,1.53,3.76-.48,7.97-4.19,9.45-3.55,1.42-7.52-.23-9.22-3.67s-.37-8.18,4-9.93Z"/>
+</svg>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<div class="success-wrap">
+  <div class="success-card">
+
+    <!-- Check -->
+    <div class="check-circle">
+      <span class="check-icon">✓</span>
+    </div>
+
+    <!-- Titel -->
+    <div>
+      <h1 class="success-title">Vielen Dank für<br>deinen <span>Kauf!</span></h1>
+    </div>
+    <p class="success-sub">
+      Dein Plan wird in wenigen Sekunden aktiviert. 
+      Melde dich einfach in der App an — dein Konto wird automatisch aktualisiert.
+    </p>
+
+    <!-- Schritte -->
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text">
+          <strong>App auf dem Computer öffnen</strong>
+          Gehe auf deinem PC oder Laptop zu app.tovaglia.io
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text">
+          <strong>Mit deiner E-Mail anmelden</strong>
+          Nutze dieselbe E-Mail-Adresse die du beim Kauf angegeben hast
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text">
+          <strong>Plan ist aktiv — loslegen!</strong>
+          Dein neuer Plan wird automatisch erkannt
+        </div>
+      </div>
+    </div>
+
+    <!-- Desktop CTA -->
+    <a href="https://app.tovaglia.io" class="success-cta desktop-only">
+      Jetzt zur App →
+    </a>
+
+    <!-- Mobile QR -->
+    <div class="qr-box mobile-only" style="display:none;">
+      <div class="qr-label">Am Computer öffnen</div>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&bgcolor=0d0d0f&color=c9a96e&data=https://app.tovaglia.io" alt="QR Code app.tovaglia.io" width="180" height="180">
+      <div class="qr-sub">Scanne den Code mit deinem Computer — oder tippe<br><strong style="color:var(--text);">app.tovaglia.io</strong> in den Browser</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 728 108">
+  <path d="M437.84,85.09c19.37,3.84,39.79-4.83,43.88-26.26l-40.58-.09-.14-8.68h50.84c.66,19.24-11.09,36.11-29.22,42.06-9.6,3.14-19.43,3.37-29.18.95-19.75-4.89-32.44-22-32.56-42.27-.11-17.99,9.46-34.08,26.3-40.9,23.35-9.45,53.36-.7,62.02,24.53l-10.21.19c-6.11-13.21-19.14-19.86-33.37-19.73-20.79.19-35.97,16.02-35.25,36.76.57,16.4,11.01,30.19,27.47,33.45Z"/>
+  <path d="M157.79,92.41c-10.02,3.04-19.85,2.99-29.54.32-19.44-5.36-31.53-22.62-31.37-42.67.16-19.53,11.91-36.24,30.78-41.73,9.86-2.87,19.98-2.85,29.81.05,18.9,5.58,30.55,22.39,30.62,41.86.06,19.35-11.2,36.37-30.3,42.17ZM178.62,49.65c-.4-20.76-16.25-34.91-36.31-34.84-20.36.07-35.78,14.84-35.97,35.24-.2,20.74,15.3,35.94,35.97,36.02s36.73-14.99,36.31-36.42Z"/>
+  <path d="M353.91,18.08c-9.15-4.34-19.51-4.26-28.47-.38-8.17,3.54-13.44,12.04-13.48,21.17l-.28,54.25h-9.08s.03-52.12.03-52.12c0-14.16,7.24-27.65,21.24-32.3,10.72-3.56,22.34-3.54,32.96.74,11.53,4.64,19.15,15.85,19.22,28.65l.29,55.01-9.45.04-.27-54.27c-.04-8.66-4.79-17.03-12.71-20.78Z"/>
+  <path d="M694.28,18.12c-9.2-4.42-19.59-4.3-28.55-.42-8.17,3.53-13.44,12.04-13.49,21.17l-.28,54.25h-9.08s.03-52.12.03-52.12c0-5.22,1.15-10.41,3.02-15.1,7.76-19.48,31.65-23.01,49-17.31,14.12,4.64,21.68,18.02,21.68,32.12l.02,52.38-9.46.04-.27-54.27c-.04-8.59-4.72-16.93-12.62-20.73Z"/>
+  <polygon points="271.92 7.83 282.13 7.91 248.12 93.07 237.85 92.98 203.99 7.9 214.51 7.93 243.2 82.13 271.92 7.83"/>
+  <polygon points="52.71 92.9 43.25 93.12 43.24 16.38 14.33 16.34 14.41 7.73 81.64 7.74 81.73 16.33 52.73 16.39 52.71 92.9"/>
+  <polygon points="578.94 84.53 579.02 93.17 517.74 93.19 517.73 7.92 527.21 7.75 527.19 84.49 578.94 84.53"/>
+  <polygon points="613.81 92.88 604.33 93.12 604.33 7.77 613.79 7.79 613.81 92.88"/>
+  <path d="M676.97,51.96c4.12-1.62,8.06.74,9.43,4.15,1.52,3.79-.46,7.99-4.19,9.46-3.58,1.41-7.54-.24-9.24-3.68s-.36-8.23,3.99-9.94Z"/>
+  <path d="M335.94,51.96c4.08-1.64,8.03.74,9.42,4.15,1.53,3.76-.48,7.97-4.19,9.45-3.55,1.42-7.52-.23-9.22-3.67s-.37-8.18,4-9.93Z"/>
+</svg>
+    <div class="footer-copy">© 2026 Tovaglia. Alle Rechte vorbehalten.</div>
+    <div class="footer-links">
+      <a href="#">Impressum</a>
+      <a href="#">Datenschutz</a>
+      <a href="#">AGB</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
