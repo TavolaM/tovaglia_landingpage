@@ -37,6 +37,7 @@ nav {
   z-index: 100;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 40px;
   padding: 14px 28px;
   background: rgba(8,8,9,0.7);
@@ -467,79 +468,17 @@ footer {
 }
 
 /* ════ RESPONSIVE ════ */
-/* ── Hamburger Button ── */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-  padding: 6px;
-  border: none;
-  background: transparent;
-  position: relative;
-  z-index: 9999;
-  flex-shrink: 0;
-}
-.hamburger span {
-  display: block;
-  width: 22px;
-  height: 2px;
-  background: var(--text);
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.hamburger.open span:nth-child(2) { opacity: 0; }
-.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-/* ── Mobile Menu Overlay ── */
-.mobile-menu {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(8,8,9,0.97);
-  backdrop-filter: blur(20px);
-  z-index: 8888;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-}
-.mobile-menu.open { display: flex; }
-.mobile-menu a {
-  color: var(--text);
-  text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  opacity: 0.85;
-  transition: opacity 0.2s;
-}
-.mobile-menu a:hover { opacity: 1; }
-.mobile-menu .mobile-cta {
-  margin-top: 16px;
-  background: var(--text);
-  color: #080809;
-  padding: 14px 36px;
-  border-radius: 50px;
-  font-weight: 700;
-  font-size: 1rem;
-  opacity: 1;
-}
-
-/* ── PC Warning Modal ── */
 .pc-warning-overlay {
   display: none;
   position: fixed;
-  inset: 0;
-  background: rgba(8,8,9,0.85);
-  backdrop-filter: blur(12px);
-  z-index: 9999;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(8,8,9,0.9);
+  z-index: 99999;
   align-items: center;
   justify-content: center;
   padding: 24px;
 }
-.pc-warning-overlay.show { display: flex; }
+.pc-warning-overlay.active { display: flex; }
 .pc-warning-box {
   background: #111;
   border: 1px solid rgba(201,169,110,0.3);
@@ -562,37 +501,33 @@ footer {
   line-height: 1.6;
   margin-bottom: 28px;
 }
-.pc-warning-btn-primary {
-  display: block;
-  width: 100%;
-  background: var(--accent);
-  color: #080809;
-  border: none;
-  border-radius: 50px;
-  padding: 14px;
-  font-size: 0.95rem;
-  font-weight: 700;
-  cursor: pointer;
-  margin-bottom: 12px;
-}
-.pc-warning-btn-secondary {
+.pc-warning-btn {
   display: block;
   width: 100%;
   background: transparent;
-  color: rgba(245,240,230,0.5);
-  border: 1px solid rgba(245,240,230,0.15);
+  color: rgba(245,240,230,0.6);
+  border: 1px solid rgba(245,240,230,0.2);
   border-radius: 50px;
   padding: 13px;
   font-size: 0.9rem;
   cursor: pointer;
+  font-family: 'Jost', sans-serif;
 }
 
 @media (max-width: 768px) {
-  nav { gap: 12px; padding: 12px 20px; }
-  .nav-links { display: none; }
-  .nav-cta { display: none; }
-  .hamburger { display: flex; }
+  /* App-Buttons auf Mobile ausblenden */
+  a[href*="app.tovaglia.io"],
+  .nav-cta,
+  .btn-ghost { display: none !important; }
 
+  /* Stripe Kauf-Buttons auf Mobile anzeigen */
+  a[href*="buy.stripe.com"] { display: block !important; }
+
+  /* Mobile Kauf-Hinweis anzeigen */
+  .mobile-buy-hint { display: block !important; }
+
+  nav { padding: 10px 20px; width: calc(100% - 48px); max-width: none; gap: 0; justify-content: space-between; }
+  .nav-links { display: none; }
   /* Hero */
   .hero { min-height: 85vh; }
   .hero-content { margin-top: -40px; gap: 18px; padding: 0 20px; }
@@ -634,6 +569,25 @@ footer {
   /* Footer */
   .footer-inner { flex-direction: column; gap: 16px; text-align: center; }
 }
+
+.mobile-buy-hint {
+  display: none;
+  background: rgba(201,169,110,0.08);
+  border: 1px solid rgba(201,169,110,0.2);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 32px;
+  font-size: 13px;
+  color: rgba(245,240,230,0.7);
+  line-height: 1.6;
+  text-align: center;
+}
+.mobile-buy-hint strong {
+  display: block;
+  color: #c9a96e;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
 </style>
 </head>
 <body>
@@ -658,26 +612,15 @@ footer {
     <a href="#preise">Preise</a>
   </div>
   <a href="https://app.tovaglia.io" class="nav-cta">Jetzt loslegen</a>
-  <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
-    <span></span><span></span><span></span>
-  </button>
 </nav>
-
-<!-- ════ MOBILE MENU ════ -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#wie-es-funktioniert" class="mobile-link">Wie funktioniert es?</a>
-  <a href="#features" class="mobile-link">Features</a>
-  <a href="#preise" class="mobile-link">Preise</a>
-  <a href="https://app.tovaglia.io" class="mobile-cta" id="mobileAppBtn">Jetzt loslegen</a>
-</div>
 
 <!-- ════ PC WARNING MODAL ════ -->
 <div class="pc-warning-overlay" id="pcWarning">
   <div class="pc-warning-box">
     <div class="pc-warning-icon">💻</div>
     <h3>Nur auf dem PC verfügbar</h3>
-    <p>Der Speisekarten-Editor ist für Desktop optimiert und funktioniert auf dem Smartphone nicht richtig. Öffne Tovaglia am PC oder Laptop.</p>
-    <button class="pc-warning-btn-secondary" onclick="closePcWarning()">Verstanden</button>
+    <p>Der Speisekarten-Editor ist für Desktop optimiert. Öffne Tovaglia auf einem Computer oder Laptop.</p>
+    <button class="pc-warning-btn" id="closeWarningBtn">Verstanden</button>
   </div>
 </div>
 
@@ -800,6 +743,11 @@ footer {
     <h2 class="section-title">Einfach & transparent</h2>
     <p class="section-sub">Starte kostenlos. Upgrade wenn du mehr brauchst. Keine versteckten Kosten.</p>
 
+    
+    <div class="mobile-buy-hint">
+      <strong>💻 Hinweis für Mobil-Nutzer</strong>
+      Du kannst hier kaufen — die App selbst öffnest du danach auf deinem Computer unter <strong>app.tovaglia.io</strong>
+    </div>
     <div class="pricing-grid">
 
       <!-- FREE -->
@@ -840,7 +788,7 @@ footer {
           <li>Prioritäts-Support</li>
         </ul>
         <p style="font-size:11px;color:var(--muted);font-style:italic;margin:0;line-height:1.5;">Empfohlen für Betriebe, die ihre Karte regelmäßig anpassen müssen.</p>
-        <a href="https://app.tovaglia.io" class="plan-cta plan-cta-gold">Jetzt sparen</a>
+        <a href="https://buy.stripe.com/test_4gMbJ0grr7DK5vfgRB6sw01" class="plan-cta plan-cta-gold" target="_blank">Jetzt sparen</a>
       </div>
 
       <!-- PRO -->
@@ -863,7 +811,7 @@ footer {
           <li>Prioritäts-Support</li>
         </ul>
         <p style="font-size:11px;color:var(--muted);font-style:italic;margin:0;line-height:1.5;">Jederzeit kündbar.</p>
-        <a href="https://app.tovaglia.io" class="plan-cta plan-cta-ghost">Jetzt upgraden</a>
+        <a href="https://buy.stripe.com/test_8x2dR8grr9LS7DncBl6sw02" class="plan-cta plan-cta-ghost" target="_blank">Jetzt upgraden</a>
       </div>
 
     </div>
@@ -877,7 +825,7 @@ footer {
       </div>
       <div style="display:flex;align-items:center;gap:20px;flex-shrink:0;">
         <div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:var(--text);">12 <span style="font-size:16px;color:var(--muted);font-family:'Jost',sans-serif;">€</span></div>
-        <a href="https://app.tovaglia.io" style="display:block;text-align:center;padding:10px 20px;border-radius:6px;font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;cursor:pointer;border:1px solid rgba(255,255,255,0.08);color:var(--muted);background:transparent;white-space:nowrap;">Einmalig kaufen</a>
+        <a href="https://buy.stripe.com/test_cNi9AS3EF4rycXH8l56sw00" target="_blank" href="https://app.tovaglia.io" style="display:block;text-align:center;padding:10px 20px;border-radius:6px;font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;cursor:pointer;border:1px solid rgba(255,255,255,0.08);color:var(--muted);background:transparent;white-space:nowrap;">Einmalig kaufen</a>
       </div>
     </div>
   </div>
@@ -910,68 +858,25 @@ footer {
       <a href="#">Impressum</a>
       <a href="#">Datenschutz</a>
       <a href="#">AGB</a>
-    </    </div>
+    </div>
   </div>
 </footer>
 
 <script>
-(function() {
-
-  var btn  = document.getElementById('hamburger');
-  var menu = document.getElementById('mobileMenu');
-  var warn = document.getElementById('pcWarning');
-
-  // Hamburger Toggle
-  btn.onclick = function() {
-    var open = !menu.classList.contains('open');
-    if (open) {
-      menu.classList.add('open');
-      btn.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    } else {
-      menu.classList.remove('open');
-      btn.classList.remove('open');
-      document.body.style.overflow = '';
-    }
-  };
-
-  // Interne Links schliessen das Menue
-  var links = menu.querySelectorAll('a[href^="#"]');
-  for (var i = 0; i < links.length; i++) {
-    links[i].onclick = function() {
-      menu.classList.remove('open');
-      btn.classList.remove('open');
-      document.body.style.overflow = '';
-    };
+function blockApp(e) {
+  if (window.innerWidth < 1024 || navigator.maxTouchPoints > 0) {
+    e.preventDefault();
+    document.getElementById('pcWarning').classList.add('active');
+    return false;
   }
-
-  // Handy-Sperre
-  function istHandy() {
-    return window.innerWidth < 1024 || navigator.maxTouchPoints > 0 || 'ontouchstart' in window;
-  }
-
-  function sperren(e) {
-    if (istHandy()) {
-      e.preventDefault();
-      e.stopImmediatePropagation();
-      menu.classList.remove('open');
-      btn.classList.remove('open');
-      document.body.style.overflow = '';
-      warn.style.display = 'flex';
-      return false;
-    }
-  }
-
-  var appLinks = document.querySelectorAll('a[href*="app.tovaglia.io"]');
-  for (var j = 0; j < appLinks.length; j++) {
-    appLinks[j].addEventListener('click', sperren, true);
-  }
-
-})();
-
-function closePcWarning() {
-  document.getElementById('pcWarning').style.display = 'none';
 }
+var aLinks = document.querySelectorAll('a[href*="app.tovaglia.io"]');
+for (var j = 0; j < aLinks.length; j++) {
+  aLinks[j].onclick = blockApp;
+}
+document.getElementById('closeWarningBtn').onclick = function() {
+  document.getElementById('pcWarning').classList.remove('active');
+};
 </script>
 </body>
 </html>
