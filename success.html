@@ -208,8 +208,8 @@ footer {
       <div class="step">
         <div class="step-num">2</div>
         <div class="step-text">
-          <strong>Mit deiner E-Mail anmelden</strong>
-          Nutze dieselbe E-Mail-Adresse die du beim Kauf angegeben hast
+          <strong>Anmelden oder registrieren</strong>
+          Nutze dieselbe E-Mail-Adresse die du beim Kauf angegeben hast. Kein Passwort? Einfach "Magic Link senden" klicken.
         </div>
       </div>
       <div class="step">
@@ -222,9 +222,9 @@ footer {
     </div>
 
     <!-- Desktop CTA -->
-    <a href="https://app.tovaglia.io" class="success-cta desktop-only">
-      Jetzt zur App →
-    </a>
+    <button class="success-cta desktop-only" onclick="goToApp()" id="app-btn">
+      Zum Login →
+    </button>
 
     <!-- Mobile QR -->
     <div class="qr-box mobile-only" style="display:none;">
@@ -261,5 +261,11 @@ footer {
   </div>
 </footer>
 
+
+<script>
+function goToApp() {
+  window.location.href = 'https://tovaglia.io/login.html';
+}
+</script>
 </body>
 </html>
