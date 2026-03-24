@@ -476,7 +476,9 @@ footer {
   padding: 6px;
   border: none;
   background: transparent;
-  z-index: 200;
+  position: relative;
+  z-index: 9999;
+  flex-shrink: 0;
 }
 .hamburger span {
   display: block;
@@ -497,7 +499,7 @@ footer {
   inset: 0;
   background: rgba(8,8,9,0.97);
   backdrop-filter: blur(20px);
-  z-index: 150;
+  z-index: 8888;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -532,7 +534,7 @@ footer {
   inset: 0;
   background: rgba(8,8,9,0.85);
   backdrop-filter: blur(12px);
-  z-index: 300;
+  z-index: 9999;
   align-items: center;
   justify-content: center;
   padding: 24px;
@@ -913,58 +915,62 @@ footer {
 </footer>
 
 <script>
-// ── Alles läuft sofort wenn DOM bereit ist ──
-document.addEventListener('DOMContentLoaded', function() {
+(function() {
 
-  var hamburger = document.getElementById('hamburger');
-  var mobileMenu = document.getElementById('mobileMenu');
-  var pcWarning  = document.getElementById('pcWarning');
+  var btn  = document.getElementById('hamburger');
+  var menu = document.getElementById('mobileMenu');
+  var warn = document.getElementById('pcWarning');
 
-  // ── Hamburger ──
-  hamburger.addEventListener('click', function() {
-    var open = mobileMenu.classList.toggle('open');
-    hamburger.classList.toggle('open', open);
-    document.body.style.overflow = open ? 'hidden' : '';
-  });
-
-  // Menü schließen wenn ein interner Link geklickt wird
-  mobileMenu.querySelectorAll('a[href^="#"]').forEach(function(link) {
-    link.addEventListener('click', function() {
-      mobileMenu.classList.remove('open');
-      hamburger.classList.remove('open');
+  // Hamburger Toggle
+  btn.onclick = function() {
+    var open = !menu.classList.contains('open');
+    if (open) {
+      menu.classList.add('open');
+      btn.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    } else {
+      menu.classList.remove('open');
+      btn.classList.remove('open');
       document.body.style.overflow = '';
-    });
-  });
+    }
+  };
 
-  // ── PC-Sperre ──
-  function isMobile() {
-    return ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (window.innerWidth < 1024);
+  // Interne Links schliessen das Menue
+  var links = menu.querySelectorAll('a[href^="#"]');
+  for (var i = 0; i < links.length; i++) {
+    links[i].onclick = function() {
+      menu.classList.remove('open');
+      btn.classList.remove('open');
+      document.body.style.overflow = '';
+    };
   }
 
-  function blockApp(e) {
-    if (isMobile()) {
+  // Handy-Sperre
+  function istHandy() {
+    return window.innerWidth < 1024 || navigator.maxTouchPoints > 0 || 'ontouchstart' in window;
+  }
+
+  function sperren(e) {
+    if (istHandy()) {
       e.preventDefault();
       e.stopImmediatePropagation();
-      // Menü schließen falls offen
-      mobileMenu.classList.remove('open');
-      hamburger.classList.remove('open');
+      menu.classList.remove('open');
+      btn.classList.remove('open');
       document.body.style.overflow = '';
-      // Warnung zeigen
-      pcWarning.classList.add('show');
+      warn.style.display = 'flex';
       return false;
     }
   }
 
-  // Alle Links zur App abfangen
-  document.querySelectorAll('a[href*="app.tovaglia.io"]').forEach(function(link) {
-    link.addEventListener('click', blockApp, true);
-  });
+  var appLinks = document.querySelectorAll('a[href*="app.tovaglia.io"]');
+  for (var j = 0; j < appLinks.length; j++) {
+    appLinks[j].addEventListener('click', sperren, true);
+  }
 
-});
+})();
 
-// Global — wird vom Modal-Button aufgerufen
 function closePcWarning() {
-  document.getElementById('pcWarning').classList.remove('show');
+  document.getElementById('pcWarning').style.display = 'none';
 }
 </script>
 </body>
