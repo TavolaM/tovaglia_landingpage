@@ -913,64 +913,56 @@ footer {
 </footer>
 
 <script>
+// ── Alles läuft sofort wenn DOM bereit ist ──
 document.addEventListener('DOMContentLoaded', function() {
 
-  // ── Hamburger Menu ──
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobileMenu');
+  var hamburger = document.getElementById('hamburger');
+  var mobileMenu = document.getElementById('mobileMenu');
+  var pcWarning  = document.getElementById('pcWarning');
 
-  hamburger.addEventListener('click', () => {
-    const isOpen = mobileMenu.classList.toggle('open');
-    hamburger.classList.toggle('open', isOpen);
-    document.body.style.overflow = isOpen ? 'hidden' : '';
+  // ── Hamburger ──
+  hamburger.addEventListener('click', function() {
+    var open = mobileMenu.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
   });
 
-  document.querySelectorAll('.mobile-link').forEach(link => {
-    link.addEventListener('click', () => {
+  // Menü schließen wenn ein interner Link geklickt wird
+  mobileMenu.querySelectorAll('a[href^="#"]').forEach(function(link) {
+    link.addEventListener('click', function() {
       mobileMenu.classList.remove('open');
       hamburger.classList.remove('open');
       document.body.style.overflow = '';
     });
   });
 
-  // ── PC Warning: block ALL app links on mobile (no "trotzdem öffnen") ──
+  // ── PC-Sperre ──
   function isMobile() {
-    return window.innerWidth < 1024 || /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+    return ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (window.innerWidth < 1024);
   }
 
-  function showPcWarning(e) {
+  function blockApp(e) {
     if (isMobile()) {
       e.preventDefault();
-      e.stopPropagation();
-      // Close mobile menu if open
+      e.stopImmediatePropagation();
+      // Menü schließen falls offen
       mobileMenu.classList.remove('open');
       hamburger.classList.remove('open');
       document.body.style.overflow = '';
-      // Show warning
-      document.getElementById('pcWarning').classList.add('show');
+      // Warnung zeigen
+      pcWarning.classList.add('show');
+      return false;
     }
   }
 
-  // Attach to every link pointing to the app
-  document.querySelectorAll('a[href*="app.tovaglia.io"]').forEach(link => {
-    link.addEventListener('click', showPcWarning);
+  // Alle Links zur App abfangen
+  document.querySelectorAll('a[href*="app.tovaglia.io"]').forEach(function(link) {
+    link.addEventListener('click', blockApp, true);
   });
-
-  // Also intercept the mobile-cta button (it may be added dynamically, so use event delegation)
-  document.addEventListener('click', function(e) {
-    const target = e.target.closest('a[href*="app.tovaglia.io"]');
-    if (target && isMobile()) {
-      e.preventDefault();
-      e.stopPropagation();
-      mobileMenu.classList.remove('open');
-      hamburger.classList.remove('open');
-      document.body.style.overflow = '';
-      document.getElementById('pcWarning').classList.add('show');
-    }
-  }, true); // capture phase so it fires before other handlers
 
 });
 
+// Global — wird vom Modal-Button aufgerufen
 function closePcWarning() {
   document.getElementById('pcWarning').classList.remove('show');
 }
