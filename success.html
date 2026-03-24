@@ -223,7 +223,7 @@ footer {
 
     <!-- Desktop CTA -->
     <button class="success-cta desktop-only" onclick="goToApp()" id="app-btn">
-      Zum Login →
+      Jetzt zur App →
     </button>
 
     <!-- Mobile QR -->
@@ -262,9 +262,31 @@ footer {
 </footer>
 
 
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 <script>
-function goToApp() {
-  window.location.href = 'https://tovaglia.io/login.html';
+var _sb = supabase.createClient(
+  'https://aaclveqblcnslezzyfst.supabase.co',
+  'sb_publishable_UR3w6sTQr9R6ubdQt_lHNA_QHKEOwKh'
+);
+
+async function goToApp() {
+  var btn = document.getElementById('app-btn');
+  btn.textContent = '...';
+  btn.disabled = true;
+
+  var res = await _sb.auth.getSession();
+  var session = res.data && res.data.session;
+
+  if (session && session.access_token) {
+    // Session vorhanden - direkt zur App mit Token
+    window.location.href = 'https://app.tovaglia.io/#access_token='
+      + encodeURIComponent(session.access_token)
+      + '&refresh_token=' + encodeURIComponent(session.refresh_token)
+      + '&type=magiclink';
+  } else {
+    // Keine Session - zum Login
+    window.location.href = 'https://tovaglia.io/login.html';
+  }
 }
 </script>
 </body>

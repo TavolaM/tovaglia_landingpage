@@ -216,9 +216,19 @@ _supabase.auth.onAuthStateChange(function(event, session) {
   }
 });
 
-function redirectAfterLogin() {
+async function redirectAfterLogin() {
   if (checkoutPlan && STRIPE_LINKS[checkoutPlan]) {
     window.location.href = STRIPE_LINKS[checkoutPlan];
+    return;
+  }
+  // Pass session tokens to app subdomain
+  var res = await _supabase.auth.getSession();
+  var session = res.data && res.data.session;
+  if (session && session.access_token) {
+    window.location.href = 'https://app.tovaglia.io/#access_token='
+      + encodeURIComponent(session.access_token)
+      + '&refresh_token=' + encodeURIComponent(session.refresh_token)
+      + '&type=magiclink';
   } else {
     window.location.href = 'https://app.tovaglia.io';
   }
