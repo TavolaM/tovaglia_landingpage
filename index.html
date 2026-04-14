@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<script src="https://cloud.ccm19.de/app.js?apiKey=76738178f8818c5b5f4689c632ead15e1c08b369cfc21e20&domain=69de508d5532bb1c1e04fa82" referrerpolicy="origin"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tovaglia — Professionelle Speisekarte in 5 Minuten</title>
+<meta name="description" content="Erstelle druckfertige Speisekarten mit automatischem Layout, Allergenkennzeichnung und QR-Menü. Ab 99€/Jahr.">
+<link rel="canonical" href="https://tovaglia.io">
+<meta property="og:title" content="Tovaglia — Professionelle Speisekarte in 5 Minuten">
+<meta property="og:description" content="Druckfertige Speisekarten mit Auto-Layout, LMIV-Allergenen und QR-Menü.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #F4EFE8;
+  --ink: #1A1816;
+  --wine: #7A1F2E;
+  --stone: #6B6058;
+  --cream: #D5CEC4;
+  --faint: rgba(26,24,22,0.06);
+}
+*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+body::after {
+  content: '';
+  position: fixed; inset: 0;
+  pointer-events: none; z-index: 9999; opacity: 0.028;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px;
+}
+.rv {
+  opacity: 0; transform: translateY(36px);
+  transition: opacity 1s cubic-bezier(0.23,1,0.32,1), transform 1s cubic-bezier(0.23,1,0.32,1);
+}
+.rv.vis { opacity: 1; transform: translateY(0); }
+.d1 { transition-delay: .15s; }
+.d2 { transition-delay: .3s; }
+.d3 { transition-delay: .45s; }
+
+/* ═══ NAV ═══ */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 24px 48px;
+  display: flex; justify-content: space-between; align-items: center;
+  transition: background 0.4s, backdrop-filter 0.4s, box-shadow 0.4s;
+}
+.nav.scrolled {
+  background: rgba(244,239,232,0.88);
+  backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 1px 0 var(--faint);
+}
+.nav-logo svg {
+  height: 22px; width: auto; display: block;
+  fill: var(--ink);
+  transition: opacity 0.3s;
+}
+.nav-logo:hover svg { opacity: 0.6; }
+.nav-r { display: flex; align-items: center; gap: 40px; }
+.nav-a {
+  font-size: 11px; font-weight: 400; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--stone);
+  text-decoration: none; transition: color 0.3s;
+}
+.nav-a:hover { color: var(--ink); }
+.nav-cta {
+  font-size: 11px; font-weight: 500; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--paper);
+  background: var(--ink); padding: 10px 24px;
+  text-decoration: none; transition: all 0.3s;
+}
+.nav-cta:hover { background: var(--wine); }
+
+/* ═══ HERO ═══ */
+.hero {
+  min-height: 100vh; min-height: 100dvh;
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  text-align: center;
+  padding: 160px 48px 100px;
+  position: relative;
+}
+.hero-logo {
+  margin-bottom: 56px;
+}
+.hero-logo svg {
+  height: clamp(40px, 6vw, 64px);
+  width: auto;
+  fill: var(--ink);
+  opacity: 0.12;
+}
+.hero-h {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(38px, 7.2vw, 96px);
+  font-weight: 400; line-height: 1.06;
+  letter-spacing: -0.02em; color: var(--ink);
+  max-width: 900px;
+}
+.hero-h em { font-style: italic; color: var(--wine); }
+.hero-p {
+  margin-top: 40px;
+  font-size: 17px; font-weight: 300; color: var(--stone);
+  line-height: 1.75; max-width: 380px;
+}
+.cta {
+  display: inline-block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--paper); background: var(--ink);
+  padding: 20px 52px; text-decoration: none;
+  transition: all 0.45s cubic-bezier(0.23,1,0.32,1);
+}
+.cta:hover {
+  background: var(--wine);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 48px rgba(122,31,46,0.18);
+}
+.hero-cta { margin-top: 52px; }
+.hero-scroll {
+  position: absolute; bottom: 40px; left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--stone); opacity: 0.3;
+  writing-mode: vertical-rl;
+  animation: drift 2.5s ease-in-out infinite;
+}
+@keyframes drift {
+  0%,100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(8px); }
+}
+
+/* ═══ DIVIDER ═══ */
+.dv { width: 1px; height: 72px; background: var(--ink); opacity: 0.07; margin: 0 auto; }
+
+/* ═══ SHOWCASE ═══ */
+.showcase {
+  padding: 120px 48px 140px;
+  display: flex; justify-content: center;
+  position: relative;
+}
+.showcase-wrap {
+  position: relative;
+  max-width: 540px; width: 100%;
+}
+.showcase-img {
+  width: 100%; height: auto; display: block;
+  box-shadow:
+    0 1px 4px rgba(26,24,22,0.03),
+    0 8px 28px rgba(26,24,22,0.07),
+    0 32px 64px rgba(26,24,22,0.05);
+}
+.showcase-cap {
+  margin-top: 28px; text-align: center;
+  font-size: 13px; font-weight: 300; font-style: italic;
+  color: var(--stone); letter-spacing: 0.03em;
+}
+.showcase-tag {
+  position: absolute; top: -16px; right: -52px;
+  font-size: 9px; font-weight: 500;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--stone); opacity: 0.4;
+  writing-mode: vertical-rl; transform: rotate(180deg);
+}
+
+/* ═══ STATEMENT ═══ */
+.stmt {
+  padding: 160px 48px;
+  max-width: 1260px; margin: 0 auto;
+}
+.stmt-t {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(24px, 3.6vw, 48px);
+  font-weight: 400; line-height: 1.45; color: var(--ink);
+  max-width: 780px;
+}
+.stmt-t .acc { color: var(--wine); }
+.stmt-t .fad { color: var(--stone); }
+
+/* ═══ PROCESS ═══ */
+.proc {
+  padding: 80px 48px 160px;
+  max-width: 1260px; margin: 0 auto;
+}
+.proc-lbl {
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 0.24em; text-transform: uppercase;
+  color: var(--stone); margin-bottom: 68px;
+}
+.proc-s {
+  display: grid; grid-template-columns: 96px 1fr;
+  padding: 48px 0;
+  border-top: 1px solid var(--faint);
+}
+.proc-s:last-of-type { border-bottom: 1px solid var(--faint); }
+.proc-n {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px; font-weight: 400;
+  color: var(--cream); line-height: 1;
+}
+.proc-h {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(19px, 2.4vw, 28px);
+  font-weight: 400; color: var(--ink);
+  margin-bottom: 12px; line-height: 1.3;
+}
+.proc-d {
+  font-size: 15px; font-weight: 300;
+  color: var(--stone); line-height: 1.8; max-width: 440px;
+}
+
+/* ═══ LMIV ═══ */
+.lmiv {
+  background: var(--ink); color: var(--paper);
+  padding: 160px 48px; text-align: center;
+  position: relative; overflow: hidden;
+}
+.lmiv-bg {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(200px, 28vw, 400px);
+  font-weight: 400; color: rgba(244,239,232,0.025);
+  line-height: 1; pointer-events: none; user-select: none;
+}
+.lmiv-h {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(26px, 3.8vw, 50px);
+  font-weight: 400; line-height: 1.25;
+  margin-bottom: 32px; position: relative;
+}
+.lmiv-b {
+  font-size: 15px; font-weight: 300;
+  color: rgba(244,239,232,0.65);
+  line-height: 1.85; max-width: 460px; margin: 0 auto;
+  position: relative;
+}
+
+/* ═══ QR ═══ */
+.qr {
+  padding: 160px 48px;
+  max-width: 1260px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 100px; align-items: center;
+}
+.qr-lbl {
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 0.24em; text-transform: uppercase;
+  color: var(--stone); margin-bottom: 24px;
+}
+.qr-h {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(22px, 2.8vw, 38px);
+  font-weight: 400; color: var(--ink);
+  line-height: 1.3; margin-bottom: 20px;
+}
+.qr-b {
+  font-size: 15px; font-weight: 300;
+  color: var(--stone); line-height: 1.8; max-width: 380px;
+}
+.qr-vis {
+  display: flex; justify-content: center; align-items: center;
+  position: relative;
+}
+.qr-img {
+  width: 160px; height: 160px; object-fit: contain;
+  opacity: 0.8; transition: opacity 0.4s;
+}
+.qr-vis:hover .qr-img { opacity: 1; }
+.qr-sub {
+  position: absolute; bottom: -32px;
+  font-size: 9px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--stone);
+  white-space: nowrap; opacity: 0.4;
+}
+
+/* ═══ PRICE ═══ */
+.price { padding: 160px 48px; text-align: center; }
+.price-card {
+  max-width: 600px; margin: 0 auto;
+  padding: 80px 60px 72px;
+  border: 1px solid rgba(26,24,22,0.1);
+  background: rgba(255,255,255,0.35);
+  position: relative;
+}
+.price-card::before {
+  content: 'Saison Pass';
+  position: absolute; top: -11px; left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--paper); background: var(--wine);
+  padding: 5px 20px; white-space: nowrap;
+}
+.price-amt {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(56px, 10vw, 120px);
+  font-weight: 400; line-height: 1; color: var(--ink);
+  letter-spacing: -0.03em;
+}
+.price-per {
+  font-size: 16px; font-weight: 300;
+  color: var(--stone); margin-top: 10px; letter-spacing: 0.05em;
+}
+.price-monthly {
+  margin-top: 4px; font-size: 13px; font-weight: 400;
+  color: var(--wine); letter-spacing: 0.03em;
+}
+.price-rule {
+  width: 40px; height: 1px; background: var(--ink);
+  opacity: 0.12; margin: 36px auto;
+}
+.price-inc {
+  font-size: 14px; font-weight: 400;
+  color: var(--ink); line-height: 2.4;
+}
+.price-alt {
+  margin-top: 32px;
+  font-size: 13px; color: rgba(107,96,88,0.7);
+  font-weight: 300; font-style: italic;
+}
+.price-cta { margin-top: 48px; }
+
+/* ═══ CLOSING ═══ */
+.closing { padding: 160px 48px 140px; text-align: center; }
+.closing-t {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(26px, 4.5vw, 56px);
+  font-weight: 400; line-height: 1.2; color: var(--ink);
+  max-width: 660px; margin: 0 auto;
+}
+.closing-t em { font-style: italic; color: var(--wine); }
+.closing-a {
+  margin-top: 52px;
+  display: inline-block;
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ink); text-decoration: none;
+  padding-bottom: 6px; border-bottom: 1px solid var(--ink);
+  transition: all 0.3s;
+}
+.closing-a:hover { color: var(--wine); border-color: var(--wine); }
+
+/* ═══ FOOTER ═══ */
+.ft {
+  padding: 40px 48px;
+  display: flex; justify-content: space-between; align-items: center;
+  border-top: 1px solid var(--faint);
+  max-width: 1260px; margin: 0 auto;
+}
+.ft-logo svg { height: 18px; width: auto; fill: var(--ink); opacity: 0.3; }
+.ft-r { display: flex; gap: 28px; align-items: center; }
+.ft-r a {
+  font-size: 11px; color: var(--stone);
+  text-decoration: none; letter-spacing: 0.04em;
+  transition: color 0.2s;
+}
+.ft-r a:hover { color: var(--ink); }
+.ft-c { font-size: 11px; color: var(--stone); opacity: 0.35; }
+
+/* ═══ PC OVERLAY ═══ */
+.pco { display:none; position:fixed; inset:0; background:rgba(26,24,22,0.88); z-index:99999; align-items:center; justify-content:center; padding:32px; }
+.pco.act { display:flex; }
+.pcb { background:var(--paper); padding:48px 36px; max-width:360px; text-align:center; }
+.pcb h3 { font-family:'Playfair Display',serif; font-size:20px; font-weight:400; margin-bottom:14px; }
+.pcb p { font-size:14px; color:var(--stone); line-height:1.7; margin-bottom:24px; }
+.pcbt { font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--ink); border:1px solid var(--ink); background:none; padding:13px 28px; cursor:pointer; font-family:'DM Sans',sans-serif; transition:all 0.3s; }
+.pcbt:hover { background:var(--ink); color:var(--paper); }
+
+/* ═══ RESPONSIVE ═══ */
+@media(max-width:900px) {
+  .nav { padding: 18px 24px; }
+  .nav-r .nav-a { display: none; }
+  .hero { padding: 130px 24px 80px; }
+  .hero-logo svg { height: 32px; }
+  .showcase { padding: 80px 24px 100px; }
+  .showcase-tag { display: none; }
+  .stmt,.proc { padding-left: 24px; padding-right: 24px; }
+  .proc-s { grid-template-columns: 60px 1fr; padding: 32px 0; }
+  .proc-n { font-size: 36px; }
+  .lmiv { padding: 120px 24px; }
+  .qr { grid-template-columns: 1fr; gap: 40px; padding: 100px 24px; }
+  .qr-vis { justify-content: flex-start; }
+  .price { padding: 120px 24px; }
+  .price-card { padding: 56px 28px 52px; }
+  .closing { padding: 100px 24px; }
+  .ft { flex-direction: column; gap: 18px; padding: 28px 24px; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nv">
+  <a href="/" class="nav-logo" aria-label="Tovaglia Home">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 927.65 267.03"><path d="M644.42,194.87c4.52,27.96-4.38,54.13-31.99,64.3-23.21,8.55-62.27,11.11-80.01-10.46-12.2-14.83-10.66-37.05,2.57-50.61,6.96-7.14,15.6-10.12,25.71-12.38-6.12-1.73-11.88-3.72-16.8-7.92-10.57-9.01-12.21-24.83-3.45-35.65,4.4-5.43,10.28-8,16.85-10.74-11.08-4.65-17.26-13.53-18.34-24.53-1.39-14.21,5.8-26.56,18.89-32.55,10.84-4.96,22.61-5.93,34.67-4.76,17.83,1.73,33.89-10.19,36.54-27.95,2.08-13.97-4.83-26.94-17.42-32.97-10.07-4.83-29.9-7.38-35.25,1.89-4.93,8.55,1.2,15.41,2.17,24.46,1.01,9.46-5.32,16.5-14.37,16.98s-15.61-5.25-16.4-14.26c-.96-11.07,4.63-21.44,14.29-27.7,14.11-9.14,32.58-11.04,48.26-4.82s24.75,22.73,20.73,39.28c-3.22,13.26-13,22.94-26.29,27.21,8.22,3.37,15.56,7.09,19.91,14.43,9.59,16.21,2.27,35.48-14.63,43.51-15.28,7.26-32.11,6.82-48.74,3.75-4.03-.75-6.56,6.06-6.26,9,2.1,20.86,71.43-.05,88.23,49.56,7.61.6,9.76-9,9.76-15.27l-.03-160.58c0-2.84-1.54-6.58-3.06-7.89-3.7-3.2-14.66-1.1-8.98-4.61l45.59-1.43.06,173.58c0,3.78.68,7.17,1.6,10.32,2.7,9.28,14.29,3.8,11.4,8.74l-55.21.06ZM595.3,117.42c1.73-10.56,4.44-44.67-10.62-45.67-12.46-.83-13.68,22-13.6,31.05.08,8.46.76,28.6,11.12,29.91,7.72.97,12.01-8.68,13.09-15.3ZM595.52,259.17c16.48-5.77,24.41-20.61,23.03-37.05-1.07-12.72-7.54-23.78-19.92-28.69-13.97-5.54-29.58-7.21-44.02-3.46-16.85,4.38-27.89,18.05-27.82,35.33.06,14.14,7.84,26.11,20.98,31.93,14.8,6.56,32.02,7.44,47.74,1.94Z"/><path d="M120.26,194.79l-59.13.09c-.77,0-1.88-.91-2.2-1.22-2.23-2.14,10.24.56,12.16-8.02.69-3.08,1.38-6.32,1.38-9.83l-.02-138.71c0-4.22-.91-8.67-2.94-11.81-5.03-7.81-19.57,2.53-23.56,8.9-9.48,10.47-13.53,23.04-21,36.46-.65-17.29,1.83-33.28,2.39-50.11l124.22.05,3.21,46.66c.06.88-1.12,2.63-1.43,2.32-2.69-2.68-13.23-36-32.16-45.61-3.17-1.61-8.45-2.24-11.01.65s-3.58,7.87-3.58,12.15l.02,141.97c0,4.88,2.14,9.69,5.35,12.36,2.79,2.32,6.84-1.22,8.3,3.71Z"/><path d="M239.34,192.63c-18.91,6.36-38.96,5.23-56.83-2.3-22.49-9.48-35.19-30.54-35.6-54.6-.49-28.4,15.66-52.78,42.68-62.26,18.56-6.51,39.04-5.75,57.31,1.79,22.77,9.4,35.74,30.61,36,54.96.3,28.46-15.83,53.1-43.55,62.42ZM243.82,163.6c4.64-19.98,4.69-40.57.22-60.58-3.39-15.17-12.48-31.88-29.48-31.67s-25.41,16.74-28.74,31.49c-4.43,19.6-4.43,39.74-.15,59.4,3.27,15,12.12,32.05,28.91,32.23,16.65.18,25.78-15.94,29.24-30.87Z"/><path d="M790.08,196.37c-9.92-1.38-16.35-8.42-17.42-17.76-1.75-15.31,9.95-22.76,22.84-27.37s26.04-8.41,39.77-12.14l-.24-32.98c-.06-8.65-2.99-17.61-9.41-23.55-10.08-9.33-26.2-9.44-36.79-1.09-6.76,5.33-9.21,15.03-4.05,22.01,4.61,6.25,20.69,4.02,23.32,16.49,1.4,6.68-.49,13.15-6.35,16.52-10.34,5.95-22.97,1.02-27.5-9.95-2.58-6.23-2.88-12.8-2.15-19.55,1.64-15.21,10.81-27.63,25.16-33.39,14.75-5.93,31.15-6.11,46.25-.39s24.93,19.05,25.02,35.15l.38,69.91c.02,3.44,2.07,6.62,5.07,7.27,11.13,2.42,17.28-20.7,7.89-38.5-.56-1.06-.13-3.58.83-3.92s3.43,1,3.77,2.03c3.4,10.55,3.45,21.6.76,32.14-3.28,12.85-14.13,19.51-26.95,19.5-12.85,0-23.99-7.45-24.6-21.04l-.57-12.62c-7.37,19.42-22.93,36.3-45.01,33.21ZM815.05,173.27c15.8-.41,22.32-18.35,19.91-31.52l-28.1,8.26c-2.24,5.23-3.14,10.88-1.92,16.43.99,4.53,5.05,6.96,10.11,6.83Z"/><path d="M419.02,179.01c-2.01-15.44,9.62-22.99,22.07-27.51,13.44-4.88,26.51-8.62,40.47-12.4l-.24-32.98c-.06-8.64-3-17.62-9.41-23.55-10.09-9.34-26.23-9.47-36.8-1.1-6.75,5.35-9.2,15-4.06,21.99,4.74,6.44,21.32,3.91,23.52,17.32,1.08,6.6-1.09,12.89-7.08,16.05-10.31,5.44-22.5.45-26.96-10.29-2.58-6.23-2.88-12.8-2.15-19.56,1.64-15.19,10.8-27.61,25.16-33.39,14.94-6.02,31.66-6.12,46.88-.12,14.31,5.65,24.29,19.06,24.38,34.88l.42,72.51c.01,2.27,2.09,5.37,3.82,6.02,1.97.75,4.72.24,6.87-.54l1.92-.69c4.1-1.47-4.21,12.67-24.54,10.94-11.58-.98-20.76-8.7-21.32-20.79l-.58-12.66c-7.57,19.95-23.42,36.45-45.38,33.14-9.09-1.37-15.74-7.78-16.98-17.29ZM460.41,173.26c16.26.41,23.35-17.98,20.85-31.53l-28.12,8.27c-2.24,5.25-3.11,10.86-1.91,16.43.89,4.14,4.45,6.71,9.18,6.83Z"/><path d="M394.19,83.74c-1.75-11.95-17.5-10.23-12.53-12.1,3.04-1.14,35.09-.99,42.3-.19-6.37,3.64-11.35,5.17-15.4,10.22-5.19,6.73-9.72,13.44-13.61,21.25l-47.49,95.38-54.23-106.95c-2.31-4.56-4.87-8.58-7.5-12.6-3.12-4.76-7.68-3.48-13.02-7.39l62.92-.45c.3,0,1.74.18,1.8.46,1.06,4.68-7.82-.01-10.06,4.71-1.43,3.01-.23,7.77,1.37,11l35.6,71.64,27.27-55.47c3.01-6.12,3.51-13.17,2.59-19.5Z"/><path d="M704.89,194.86c-1.04,0-2.73-.86-2.44-1.16,2.76-2.86,7.79-.62,10.21-4.34,2.21-3.39,3.44-7.46,3.44-11.67l-.03-94.04c0-2.73-1.43-6.53-2.92-7.9-2.9-2.67-5.6-1.18-10.57-3.01-.57-.21.96-1.62,1.57-1.64l45.49-1.34.05,106.07c0,3.34.72,6.61,1.31,9.55,1.35,6.71,8.73,6.64,12.13,7.53.46.12-.78,1.92-1.71,1.92l-56.53.02Z"/><path d="M731.81,56c-12.28.54-20.92-8.18-20.76-19.93.15-11.12,8.31-19.08,19.4-19.24,11.73-.17,20.37,8.42,20.04,20.19-.3,10.5-7.67,18.5-18.68,18.98Z"/></svg>
+  </a>
+  <div class="nav-r">
+    <a href="#preis" class="nav-a">Preise</a>
+    <a href="https://app.tovaglia.io" class="nav-cta">Karte erstellen</a>
+  </div>
+</nav>
+
+<!-- PC OVERLAY -->
+<div class="pco" id="pcW">
+  <div class="pcb">
+    <h3>Für Desktop gemacht</h3>
+    <p>Der Editor ist für Computer optimiert.<br>Öffne Tovaglia auf deinem Laptop.</p>
+    <button class="pcbt" id="pcC">Verstanden</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <h1 class="hero-h rv">Deine Speisekarte.<br><em>Endlich so gut<br>wie dein Essen.</em></h1>
+  <p class="hero-p rv d1">Professionelle Speisekarten erstellen.<br>In Minuten. Ohne Designer.</p>
+  <a href="https://app.tovaglia.io" class="cta hero-cta rv d2">Karte erstellen</a>
+  <span class="hero-scroll">Scroll</span>
+</section>
+
+<!-- SHOWCASE -->
+<section class="showcase">
+  <div class="showcase-wrap rv">
+    <span class="showcase-tag">Erstellt mit Tovaglia</span>
+    <img src="speisekarte.jpg" alt="Professionelle Speisekarte erstellt mit Tovaglia" class="showcase-img" width="560" height="792" loading="eager">
+    <p class="showcase-cap">Automatisch gesetzt. Druckfertig. Jederzeit änderbar.</p>
+  </div>
+</section>
+
+<div class="dv"></div>
+
+<!-- STATEMENT -->
+<section class="stmt">
+  <p class="stmt-t rv">
+    Neue Saison, neues Tagesgericht, geänderte Preise. <span class="fad">Deine Karte muss sich ständig ändern — aber jedes Mal den Grafiker anrufen oder in Word kämpfen?</span>
+    <span class="acc">Mit Tovaglia änderst du in Minuten. Ohne auf professionelles Design zu verzichten.</span>
+  </p>
+</section>
+
+<div class="dv"></div>
+
+<!-- PROCESS -->
+<section class="proc">
+  <div class="proc-lbl rv">So funktioniert es</div>
+  <div class="proc-s rv">
+    <div class="proc-n">01</div>
+    <div><h3 class="proc-h">Du tippst deine Gerichte ein.</h3><p class="proc-d">Kategorien, Preise, Beschreibungen. Allergene mit einem Klick. Kein Formatieren, kein Layout-Puzzle.</p></div>
+  </div>
+  <div class="proc-s rv">
+    <div class="proc-n">02</div>
+    <div><h3 class="proc-h">Tovaglia setzt die Karte.</h3><p class="proc-d">Automatisch. Professionelles Layout, richtige Proportionen, passende Typografie. Wie vom Designer — ohne einen zu bezahlen.</p></div>
+  </div>
+  <div class="proc-s rv">
+    <div class="proc-n">03</div>
+    <div><h3 class="proc-h">Du druckst.</h3><p class="proc-d">PDF. A4, A5 oder Bifold. Druckerei oder Drucker. Fertig in fünf Minuten statt fünf Tagen.</p></div>
+  </div>
+</section>
+
+<!-- LMIV -->
+<section class="lmiv">
+  <div class="lmiv-bg" aria-hidden="true">14</div>
+  <h2 class="lmiv-h rv">Allergene. Automatisch.<br>Rechtssicher.</h2>
+  <p class="lmiv-b rv d1">Alle 14 EU-Pflichtallergene nach LMIV&nbsp;1169/2011. Mit einem Klick zuweisen. Die Legende erscheint automatisch auf deiner Karte.</p>
+</section>
+
+<!-- QR -->
+<section class="qr">
+  <div class="rv">
+    <div class="qr-lbl">Auch digital</div>
+    <h3 class="qr-h">Deine Karte als<br>QR-Menü.</h3>
+    <p class="qr-b">Gäste scannen den Code und sehen die aktuelle Speisekarte auf dem Smartphone. Immer aktuell. Kein App-Download.</p>
+  </div>
+  <div class="qr-vis rv d1">
+    <img src="qr.png" alt="QR-Code Speisekarte" class="qr-img" width="160" height="160" loading="lazy">
+    <span class="qr-sub">Scannen & Speisekarte sehen</span>
+  </div>
+</section>
+
+<div class="dv"></div>
+
+<!-- PRICE -->
+<section class="price" id="preis">
+  <div class="price-card rv">
+    <div class="price-amt">99 €</div>
+    <div class="price-per">im Jahr</div>
+    <div class="price-monthly">Nur ~8 € pro Monat</div>
+    <div class="price-rule"></div>
+    <div class="price-inc">Unbegrenzte Karten · Alle Vorlagen · Allergene<br>QR-Menü · Übersetzungen · Logo-Freistellung</div>
+    <div class="price-alt">Oder einmalig 12 € für eine einzelne Karte · Kostenlos testen mit Wasserzeichen</div>
+    <div><a href="https://app.tovaglia.io" class="cta price-cta">Karte erstellen</a></div>
+  </div>
+</section>
+
+<div class="dv"></div>
+
+<!-- CLOSING -->
+<section class="closing">
+  <p class="closing-t rv">Dein Gast nimmt<br>die Karte in die Hand.<br><em>Was soll er fühlen?</em></p>
+  <div><a href="https://app.tovaglia.io" class="closing-a rv d1">Karte erstellen</a></div>
+</section>
+
+<!-- FOOTER -->
+<footer class="ft">
+  <div class="ft-logo">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 927.65 267.03"><path d="M644.42,194.87c4.52,27.96-4.38,54.13-31.99,64.3-23.21,8.55-62.27,11.11-80.01-10.46-12.2-14.83-10.66-37.05,2.57-50.61,6.96-7.14,15.6-10.12,25.71-12.38-6.12-1.73-11.88-3.72-16.8-7.92-10.57-9.01-12.21-24.83-3.45-35.65,4.4-5.43,10.28-8,16.85-10.74-11.08-4.65-17.26-13.53-18.34-24.53-1.39-14.21,5.8-26.56,18.89-32.55,10.84-4.96,22.61-5.93,34.67-4.76,17.83,1.73,33.89-10.19,36.54-27.95,2.08-13.97-4.83-26.94-17.42-32.97-10.07-4.83-29.9-7.38-35.25,1.89-4.93,8.55,1.2,15.41,2.17,24.46,1.01,9.46-5.32,16.5-14.37,16.98s-15.61-5.25-16.4-14.26c-.96-11.07,4.63-21.44,14.29-27.7,14.11-9.14,32.58-11.04,48.26-4.82s24.75,22.73,20.73,39.28c-3.22,13.26-13,22.94-26.29,27.21,8.22,3.37,15.56,7.09,19.91,14.43,9.59,16.21,2.27,35.48-14.63,43.51-15.28,7.26-32.11,6.82-48.74,3.75-4.03-.75-6.56,6.06-6.26,9,2.1,20.86,71.43-.05,88.23,49.56,7.61.6,9.76-9,9.76-15.27l-.03-160.58c0-2.84-1.54-6.58-3.06-7.89-3.7-3.2-14.66-1.1-8.98-4.61l45.59-1.43.06,173.58c0,3.78.68,7.17,1.6,10.32,2.7,9.28,14.29,3.8,11.4,8.74l-55.21.06ZM595.3,117.42c1.73-10.56,4.44-44.67-10.62-45.67-12.46-.83-13.68,22-13.6,31.05.08,8.46.76,28.6,11.12,29.91,7.72.97,12.01-8.68,13.09-15.3ZM595.52,259.17c16.48-5.77,24.41-20.61,23.03-37.05-1.07-12.72-7.54-23.78-19.92-28.69-13.97-5.54-29.58-7.21-44.02-3.46-16.85,4.38-27.89,18.05-27.82,35.33.06,14.14,7.84,26.11,20.98,31.93,14.8,6.56,32.02,7.44,47.74,1.94Z"/><path d="M120.26,194.79l-59.13.09c-.77,0-1.88-.91-2.2-1.22-2.23-2.14,10.24.56,12.16-8.02.69-3.08,1.38-6.32,1.38-9.83l-.02-138.71c0-4.22-.91-8.67-2.94-11.81-5.03-7.81-19.57,2.53-23.56,8.9-9.48,10.47-13.53,23.04-21,36.46-.65-17.29,1.83-33.28,2.39-50.11l124.22.05,3.21,46.66c.06.88-1.12,2.63-1.43,2.32-2.69-2.68-13.23-36-32.16-45.61-3.17-1.61-8.45-2.24-11.01.65s-3.58,7.87-3.58,12.15l.02,141.97c0,4.88,2.14,9.69,5.35,12.36,2.79,2.32,6.84-1.22,8.3,3.71Z"/><path d="M239.34,192.63c-18.91,6.36-38.96,5.23-56.83-2.3-22.49-9.48-35.19-30.54-35.6-54.6-.49-28.4,15.66-52.78,42.68-62.26,18.56-6.51,39.04-5.75,57.31,1.79,22.77,9.4,35.74,30.61,36,54.96.3,28.46-15.83,53.1-43.55,62.42ZM243.82,163.6c4.64-19.98,4.69-40.57.22-60.58-3.39-15.17-12.48-31.88-29.48-31.67s-25.41,16.74-28.74,31.49c-4.43,19.6-4.43,39.74-.15,59.4,3.27,15,12.12,32.05,28.91,32.23,16.65.18,25.78-15.94,29.24-30.87Z"/><path d="M790.08,196.37c-9.92-1.38-16.35-8.42-17.42-17.76-1.75-15.31,9.95-22.76,22.84-27.37s26.04-8.41,39.77-12.14l-.24-32.98c-.06-8.65-2.99-17.61-9.41-23.55-10.08-9.33-26.2-9.44-36.79-1.09-6.76,5.33-9.21,15.03-4.05,22.01,4.61,6.25,20.69,4.02,23.32,16.49,1.4,6.68-.49,13.15-6.35,16.52-10.34,5.95-22.97,1.02-27.5-9.95-2.58-6.23-2.88-12.8-2.15-19.55,1.64-15.21,10.81-27.63,25.16-33.39,14.75-5.93,31.15-6.11,46.25-.39s24.93,19.05,25.02,35.15l.38,69.91c.02,3.44,2.07,6.62,5.07,7.27,11.13,2.42,17.28-20.7,7.89-38.5-.56-1.06-.13-3.58.83-3.92s3.43,1,3.77,2.03c3.4,10.55,3.45,21.6.76,32.14-3.28,12.85-14.13,19.51-26.95,19.5-12.85,0-23.99-7.45-24.6-21.04l-.57-12.62c-7.37,19.42-22.93,36.3-45.01,33.21ZM815.05,173.27c15.8-.41,22.32-18.35,19.91-31.52l-28.1,8.26c-2.24,5.23-3.14,10.88-1.92,16.43.99,4.53,5.05,6.96,10.11,6.83Z"/><path d="M419.02,179.01c-2.01-15.44,9.62-22.99,22.07-27.51,13.44-4.88,26.51-8.62,40.47-12.4l-.24-32.98c-.06-8.64-3-17.62-9.41-23.55-10.09-9.34-26.23-9.47-36.8-1.1-6.75,5.35-9.2,15-4.06,21.99,4.74,6.44,21.32,3.91,23.52,17.32,1.08,6.6-1.09,12.89-7.08,16.05-10.31,5.44-22.5.45-26.96-10.29-2.58-6.23-2.88-12.8-2.15-19.56,1.64-15.19,10.8-27.61,25.16-33.39,14.94-6.02,31.66-6.12,46.88-.12,14.31,5.65,24.29,19.06,24.38,34.88l.42,72.51c.01,2.27,2.09,5.37,3.82,6.02,1.97.75,4.72.24,6.87-.54l1.92-.69c4.1-1.47-4.21,12.67-24.54,10.94-11.58-.98-20.76-8.7-21.32-20.79l-.58-12.66c-7.57,19.95-23.42,36.45-45.38,33.14-9.09-1.37-15.74-7.78-16.98-17.29ZM460.41,173.26c16.26.41,23.35-17.98,20.85-31.53l-28.12,8.27c-2.24,5.25-3.11,10.86-1.91,16.43.89,4.14,4.45,6.71,9.18,6.83Z"/><path d="M394.19,83.74c-1.75-11.95-17.5-10.23-12.53-12.1,3.04-1.14,35.09-.99,42.3-.19-6.37,3.64-11.35,5.17-15.4,10.22-5.19,6.73-9.72,13.44-13.61,21.25l-47.49,95.38-54.23-106.95c-2.31-4.56-4.87-8.58-7.5-12.6-3.12-4.76-7.68-3.48-13.02-7.39l62.92-.45c.3,0,1.74.18,1.8.46,1.06,4.68-7.82-.01-10.06,4.71-1.43,3.01-.23,7.77,1.37,11l35.6,71.64,27.27-55.47c3.01-6.12,3.51-13.17,2.59-19.5Z"/><path d="M704.89,194.86c-1.04,0-2.73-.86-2.44-1.16,2.76-2.86,7.79-.62,10.21-4.34,2.21-3.39,3.44-7.46,3.44-11.67l-.03-94.04c0-2.73-1.43-6.53-2.92-7.9-2.9-2.67-5.6-1.18-10.57-3.01-.57-.21.96-1.62,1.57-1.64l45.49-1.34.05,106.07c0,3.34.72,6.61,1.31,9.55,1.35,6.71,8.73,6.64,12.13,7.53.46.12-.78,1.92-1.71,1.92l-56.53.02Z"/><path d="M731.81,56c-12.28.54-20.92-8.18-20.76-19.93.15-11.12,8.31-19.08,19.4-19.24,11.73-.17,20.37,8.42,20.04,20.19-.3,10.5-7.67,18.5-18.68,18.98Z"/></svg>
+  </div>
+  <div class="ft-r">
+    <a href="#">Impressum</a>
+    <a href="#">Datenschutz</a>
+    <a href="#">AGB</a>
+    <span class="ft-c">© 2026</span>
+  </div>
+</footer>
+
+<script>
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const nv=document.getElementById('nv');
+window.addEventListener('scroll',()=>{nv.classList.toggle('scrolled',window.scrollY>50)},{passive:true});
+function bk(e){if(window.innerWidth<1024||navigator.maxTouchPoints>0){e.preventDefault();document.getElementById('pcW').classList.add('act')}}
+document.querySelectorAll('a[href*="app.tovaglia.io"]').forEach(a=>a.onclick=bk);
+document.getElementById('pcC').onclick=()=>document.getElementById('pcW').classList.remove('act');
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Tovaglia","applicationCategory":"BusinessApplication","operatingSystem":"Web","description":"Professionelle Speisekarten für Restaurants — automatisches Layout, Allergenkennzeichnung, QR-Menü.","offers":[{"@type":"Offer","price":"0","priceCurrency":"EUR","name":"Free"},{"@type":"Offer","price":"99","priceCurrency":"EUR","name":"Saison Pass"},{"@type":"Offer","price":"12","priceCurrency":"EUR","name":"Einmalig"}]}</script>
+</body>
+</html>
