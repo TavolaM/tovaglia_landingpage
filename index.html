@@ -8,9 +8,11 @@
 <meta name="description" content="Erstelle druckfertige Speisekarten mit automatischem Layout, LMIV-Allergenen und QR-Menü. In 5 Minuten fertig. Kostenlos starten — keine Kreditkarte.">
 <link rel="canonical" href="https://tovaglia.io">
 <meta name="robots" content="index,follow">
+<meta name="theme-color" content="#7A1F2E">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Tovaglia">
 <meta property="og:url" content="https://tovaglia.io">
 <meta property="og:title" content="Tovaglia — Professionelle Speisekarte in 5 Minuten">
 <meta property="og:description" content="Druckfertige Speisekarten mit Auto-Layout, LMIV-Allergenen und QR-Menü. Kostenlos starten.">
@@ -27,9 +29,195 @@
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
+<!-- Structured Data (JSON-LD) — Organization, WebSite, SoftwareApplication, FAQPage, HowTo -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://tovaglia.io/#organization",
+      "name": "Tovaglia",
+      "url": "https://tovaglia.io",
+      "logo": "https://tovaglia.io/logo.svg",
+      "description": "Speisekarten-Software für Restaurants in Deutschland, Österreich und der Schweiz. Druckfertige Karten mit automatischem Layout, LMIV-Allergenkennzeichnung, QR-Menü und TV-Board — alles aus einer einzigen Datenquelle."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://tovaglia.io/#website",
+      "url": "https://tovaglia.io",
+      "name": "Tovaglia",
+      "inLanguage": "de-DE",
+      "publisher": { "@id": "https://tovaglia.io/#organization" }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://tovaglia.io/#app",
+      "name": "Tovaglia",
+      "url": "https://tovaglia.io",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Restaurant Menu Management Software",
+      "operatingSystem": "Web",
+      "inLanguage": "de-DE",
+      "description": "Erstelle druckfertige Speisekarten mit automatischem Layout, LMIV-Allergenkennzeichnung und QR-Menü. In unter 5 Minuten fertig — ohne Designer, ohne Photoshop.",
+      "publisher": { "@id": "https://tovaglia.io/#organization" },
+      "featureList": [
+        "Auto-Layout druckfertiger Speisekarten",
+        "LMIV-Allergenkennzeichnung (14 EU-Pflichtallergene)",
+        "QR-Menü mit Allergen- und Diät-Filter",
+        "TV-Board / Digital Signage für Mittag- und Abendkarte",
+        "Mehrsprachige Auto-Übersetzung (DE, EN, IT, FR und mehr)",
+        "AI-Foto-Import bestehender Speisekarten",
+        "Druckfertige PDFs in A4, A5 und Bifold mit Bleed und Passmarken",
+        "Eigenes Logo, Markenfarben und kuratierte Templates"
+      ],
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Free",
+          "description": "1 Speisekarte, 2 PDF-Downloads pro Monat, mit Tovaglia-Wasserzeichen. Keine Kreditkarte nötig.",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "Pro (Monatlich)",
+          "description": "Unbegrenzte Speisekarten, kein Wasserzeichen, alle Design-Features, eigenes Logo, mehrsprachiges QR-Menü, druckfertige PDFs.",
+          "price": "14.90",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "Pro (Jährlich)",
+          "description": "Pro-Tarif mit jährlicher Abrechnung — entspricht 12,42 € pro Monat, spart 30 € pro Jahr.",
+          "price": "149",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "Business (Monatlich)",
+          "description": "Alles aus Pro, plus Board-Anzeige (Digital Signage), Tischverwaltung, Bestellsystem am Tisch und Dashboard mit Auswertungen.",
+          "price": "29.90",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "Business (Jährlich)",
+          "description": "Business-Tarif mit jährlicher Abrechnung — entspricht 24,92 € pro Monat, spart 60 € pro Jahr.",
+          "price": "299",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tovaglia.io/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Brauche ich Design-Kenntnisse?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein. Wenn du Word bedienen kannst, kannst du Tovaglia bedienen. Das Layout entsteht automatisch — du tippst nur ein, was auf die Karte soll. Wer kurze Sätze schreiben kann, kann Tovaglia benutzen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie funktioniert die Allergenkennzeichnung?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tovaglia stellt dir alle 14 EU-Pflichtallergene sowie gängige Zusatzstoffe zur Auswahl. Du weist sie pro Gericht per Klick zu, die Legende wird automatisch unter jeder Karte ergänzt. Die Verantwortung für die korrekte Zuweisung liegt beim Betrieb — wir liefern die Werkzeuge, du kennst dein Gericht."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Verbindet sich Tovaglia mit meiner Kasse?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein. Tovaglia ist die Karte und das, was der Gast sieht — Print, QR-Menü und TV-Board. Mit Kassensystemen wie Vectron, Lightspeed oder orderbird gibt es bewusst keine Verbindung. Wir machen einen Job, und den machen wir gut. Wer eine Kassen-Integration braucht, ist bei einem Kassenanbieter besser aufgehoben."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kann ich mehrere Sprachen anbieten?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Du pflegst die Karte einmal in deiner Sprache, Tovaglia übersetzt automatisch ins Englische, Italienische, Französische und mehr. Im QR-Menü schaltet die Sprache je nach Browser-Sprache deines Gastes — oder per Klick. Übersetzungen kannst du jederzeit nachbearbeiten, falls dein Lieblingsgericht einen Eigennamen hat."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was passiert mit meinen Daten, wenn ich kündige?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Du kannst deine Karten jederzeit als druckfertige PDFs exportieren. Nach Kündigung bleibt dein Konto noch 30 Tage im Read-only-Modus, danach werden alle Daten DSGVO-konform gelöscht. Kein Lock-in. Was du gemacht hast, gehört dir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kann ich selbst drucken oder meine Druckerei behalten?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, beides. Der Fokus liegt darauf, dass du flexibel bleibst: Tovaglia exportiert druckfertige PDFs (A4, A5, Bifold) mit Bleed und Passmarken — du druckst sie auf dem Office-Drucker im Haus, oder schickst sie an deine Druckerei. Keine Druckerei-Bindung, kein Aufpreis."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Funktioniert das TV-Board auf meinem alten Fernseher?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wenn der TV einen Browser hat: ja. URL eingeben, Karte läuft. Falls nicht, reicht ein günstiger Mini-PC oder ein Streaming-Stick mit Browser (Fire TV, Chromecast mit Browser-App, ein alter Laptop hinter dem Display). Keine spezielle Hardware, kein Abo für ein zweites Gerät."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Bleibt der Look meines Restaurants erhalten?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Du lädst dein Logo als PNG oder SVG hoch — eine integrierte Ausschneide-Funktion entfernt den Hintergrund automatisch, falls nötig. Aus unserer Sammlung kuratierter Templates wählst du das Layout, das zu deinem Haus passt — vom feinen Trattoria-Stil über moderne Bistro-Karten bis zur klassischen Fine-Dining-Ästhetik. Dazu kommen eigene Markenfarben, die sich konsistent durch Print, QR-Menü und TV-Board ziehen. Eine Karte, die nach deinem Restaurant aussieht — nicht nach Tovaglia."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://tovaglia.io/#howto",
+      "name": "Speisekarte in drei Schritten erstellen",
+      "description": "In drei Schritten zur fertigen Speisekarte: Gerichte eingeben, Tovaglia setzt das Layout, du exportierst das druckfertige PDF und QR-Menü.",
+      "totalTime": "PT5M",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Eingeben",
+          "text": "Du tippst deine Gerichte. Kategorien, Preise, Beschreibungen, Allergene. Schnell, strukturiert, so wie du denkst. Kein Formatieren, kein Gezerre an Layoutboxen."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Layout",
+          "text": "Tovaglia setzt die Karte. Professionelle Typografie, korrekte Proportionen, automatische Umbrüche. Das Layout wie vom Designer — ohne einen zu bezahlen."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Drucken",
+          "text": "Du exportierst. PDF in A4, A5 oder Bifold. Für die Druckerei oder den Office-Drucker. Plus QR-Menü für deine Gäste — automatisch mitgeneriert."
+        }
+      ]
+    }
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Inter+Tight:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&family=Caveat:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
   --paper: #F4EFE8;
@@ -47,7 +235,168 @@
   --success: #3d7a60;
   --success-bg: rgba(74,154,122,0.08);
   --warn: #c83232;
+
+  /* ─── Mood (font pairing + headline character) ─── */
+  --serif: 'Playfair Display', serif;
+  --sans:  'DM Sans', sans-serif;
+  --h-weight: 400;
+  --h-tracking: -0.022em;
+  --h-style: normal;        /* normal | italic */
+  --em-style: italic;       /* the in-headline emphasis */
+  --section-rhythm: 1;      /* multiplier for section padding */
+  --card-radius: 6px;
 }
+
+/* ── Mood: Modern (sans display, tight, no italic emphasis) ── */
+[data-mood="modern"] {
+  --serif: 'Space Grotesk', sans-serif;
+  --sans:  'Inter Tight', sans-serif;
+  --h-weight: 600;
+  --h-tracking: -0.035em;
+  --h-style: normal;
+  --em-style: normal;
+  --card-radius: 14px;
+}
+/* ── Mood: Spirited (warm modern serif, looser, italics everywhere) ── */
+[data-mood="spirited"] {
+  --serif: 'Fraunces', serif;
+  --sans:  'Inter Tight', sans-serif;
+  --h-weight: 400;
+  --h-tracking: -0.018em;
+  --h-style: normal;
+  --em-style: italic;
+  --card-radius: 18px;
+}
+
+/* Apply font tokens */
+body { font-family: var(--sans); }
+.serif, .hero-h, .sec-h, .pain-card h3, .pain-bridge-t, .how-n, .how-card h3,
+.feat-item h4, .testi-q, .stat-n, .price-name, .price-amt, .qr-f h4,
+.fn-quote, .fn-text, .fn-av, .tier-name, .tp-amt, .ph-section,
+.ph-dish-name, .ph-dish-price, .ph-dish-desc, .ph-bottom .tov,
+.ph-head .brand, .phone-qr-label, .hc-logo, .hc-section, .hc-item-name,
+.hc-item-desc, .hc-item-price, .hc-foot, .hero-trust .serif {
+  font-family: var(--serif);
+}
+.hero-h, .sec-h, .pain-bridge-t {
+  font-weight: var(--h-weight);
+  letter-spacing: var(--h-tracking);
+  font-style: var(--h-style);
+}
+.hero-h em, .sec-h em, .pain-bridge-t em {
+  font-style: var(--em-style);
+}
+[data-mood="modern"] .hero-h em,
+[data-mood="modern"] .sec-h em,
+[data-mood="modern"] .pain-bridge-t em {
+  text-decoration: underline;
+  text-decoration-color: var(--wine);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+  color: inherit;
+}
+
+/* ─── Palette overrides ─── */
+[data-palette="notte"] {
+  --paper: #1F1B17;
+  --paper-warm: #2A2520;
+  --ink: #F4EFE8;
+  --ink-soft: #c8bfb4;
+  --stone: #8b8278;
+  --stone-soft: #6b6058;
+  --cream: #3a342f;
+  --hairline: rgba(244,239,232,0.08);
+  --hairline-strong: rgba(244,239,232,0.16);
+  --wine: #C68A6E;
+  --wine-dark: #a87560;
+  --wine-glow: rgba(198,138,110,0.16);
+}
+[data-palette="toscana"] {
+  --paper: #EFE2CD;
+  --paper-warm: #E5D5BB;
+  --ink: #2B1810;
+  --ink-soft: #4a2f22;
+  --wine: #B85432;
+  --wine-dark: #913f25;
+  --wine-glow: rgba(184,84,50,0.14);
+  --cream: #C9B89A;
+}
+[data-palette="mineral"] {
+  --paper: #EDEDE7;
+  --paper-warm: #E2E2DA;
+  --ink: #1B1F1E;
+  --ink-soft: #3a4341;
+  --wine: #2F5D52;
+  --wine-dark: #1f4339;
+  --wine-glow: rgba(47,93,82,0.12);
+  --cream: #C4C8C2;
+}
+
+/* Notte: dark surfaces invert their on-ink content */
+[data-palette="notte"] .pain { background: #0F0C0A; }
+[data-palette="notte"] .pain-bridge .cta { background: var(--wine); color: var(--paper); }
+[data-palette="notte"] .pain-bridge .cta:hover { background: var(--wine-dark); }
+[data-palette="notte"] .nav { background: rgba(31,27,23,0.85); border-bottom-color: var(--hairline); }
+[data-palette="notte"] .promo { background: var(--wine); color: #fff; }
+[data-palette="notte"] .hero-card { background: #2A2520; box-shadow: 0 30px 80px rgba(0,0,0,0.55); }
+[data-palette="notte"] .testi-av,
+[data-palette="notte"] .fn-av { background: var(--wine); color: var(--paper); }
+[data-palette="notte"] .ph-chip { background: #2A2520; color: var(--ink-soft); border-color: var(--hairline-strong); }
+[data-palette="notte"] .phone-screen { background: #1F1B17; }
+[data-palette="notte"] .ph-bottom { background: #1F1B17; }
+[data-palette="notte"] .price-card,
+[data-palette="notte"] .tier-card,
+[data-palette="notte"] .how-card,
+[data-palette="notte"] .feat-item,
+[data-palette="notte"] .testi { background: #2A2520; border-color: var(--hairline); }
+[data-palette="notte"] .price-tier-bg { background: var(--paper); }
+
+/* ─── Density (section padding rhythm) ─── */
+[data-density="airy"] { --section-rhythm: 1.25; }
+[data-density="compact"] { --section-rhythm: 0.72; }
+.sec, .pain, .how, .feat, .testi-sec, .stats, .price-sec, .qr-show,
+.founder-sec, .price-sec-3, section[id], .nav + section {
+  /* selector kept loose; padding scaling applied via attribute selectors below */
+}
+[data-density] section,
+[data-density] .pain,
+[data-density] .how,
+[data-density] .feat,
+[data-density] .testi-sec,
+[data-density] .stats,
+[data-density] .price-sec,
+[data-density] .qr-show,
+[data-density] .founder-sec,
+[data-density] .price-sec-3 {
+  /* fall through to per-rule padding */
+}
+[data-density="airy"] .pain,
+[data-density="airy"] .how,
+[data-density="airy"] .feat,
+[data-density="airy"] .testi-sec,
+[data-density="airy"] .stats,
+[data-density="airy"] .price-sec,
+[data-density="airy"] .qr-show,
+[data-density="airy"] .founder-sec,
+[data-density="airy"] .price-sec-3 { padding-top: 132px; padding-bottom: 132px; }
+[data-density="compact"] .pain,
+[data-density="compact"] .how,
+[data-density="compact"] .feat,
+[data-density="compact"] .testi-sec,
+[data-density="compact"] .stats,
+[data-density="compact"] .price-sec,
+[data-density="compact"] .qr-show,
+[data-density="compact"] .founder-sec,
+[data-density="compact"] .price-sec-3 { padding-top: 64px; padding-bottom: 64px; }
+[data-density="airy"] .hero { padding-top: 84px; padding-bottom: 96px; }
+[data-density="compact"] .hero { padding-top: 36px; padding-bottom: 44px; }
+
+/* Card radius respects mood */
+.how-card, .feat-item, .testi, .price-card, .tier-card,
+.qr-show-wrap, .pain-card, .founder-quote, .hero-card {
+  border-radius: var(--card-radius);
+}
+
 *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
@@ -336,6 +685,343 @@ a { color: inherit; }
 .hc-badge-top { top: -14px; left: -28px; transform: rotate(-3deg); }
 .hc-badge-bot { bottom: 24px; right: -40px; transform: rotate(2deg); }
 
+/* ═══ HERO STAGE — Card + Phone ═══ */
+.hero-stage {
+  position: relative;
+  width: 100%;
+  height: 660px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tovaglia-style editor modal — sits low-left, partly under the card */
+.hs-editor {
+  position: absolute;
+  bottom: 0; left: -64px;
+  width: 304px;
+  background: #2a2624;
+  border-radius: 10px;
+  box-shadow: 0 18px 40px rgba(26,24,22,0.28), 0 4px 10px rgba(26,24,22,0.12);
+  overflow: hidden;
+  z-index: 4;
+  transform: rotate(-1.4deg);
+  font-family: 'DM Sans', sans-serif;
+  color: #e9e3d8;
+}
+.hs-editor-head {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  gap: 10px;
+}
+.hs-editor-head .ttl {
+  display: flex; align-items: center; gap: 8px;
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #f4ede0;
+  flex: 1; min-width: 0;
+  overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+}
+.hs-editor-head .ttl .dot {
+  width: 8px; height: 8px; border-radius: 999px;
+  background: var(--wine);
+  flex: none;
+  box-shadow: 0 0 0 2px rgba(122,31,46,0.20);
+}
+.hs-editor-head .price {
+  font-size: 13px;
+  font-weight: 500;
+  color: #f4ede0;
+  font-variant-numeric: tabular-nums;
+  flex: none;
+}
+.hs-editor-head .x {
+  width: 22px; height: 22px;
+  display: flex; align-items: center; justify-content: center;
+  color: rgba(255,255,255,0.45);
+  font-size: 16px; line-height: 1;
+  flex: none;
+}
+.hs-editor-body {
+  padding: 14px 14px 16px;
+  display: flex; flex-direction: column; gap: 12px;
+}
+.hs-field { display: flex; flex-direction: column; gap: 5px; }
+.hs-field .lbl {
+  font-size: 9.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.42);
+  font-weight: 500;
+}
+.hs-field .inp {
+  background: #1f1c1a;
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 4px;
+  padding: 8px 10px;
+  font-size: 12px;
+  color: #f4ede0;
+  min-height: 16px;
+  line-height: 1.4;
+  position: relative;
+}
+.hs-field.active .inp {
+  border-color: rgba(122,31,46,0.55);
+  box-shadow: 0 0 0 2px rgba(122,31,46,0.18);
+}
+.hs-row { display: grid; grid-template-columns: 1fr 90px; gap: 8px; }
+.hs-allergens {
+  display: flex; flex-wrap: wrap; gap: 4px;
+  padding-top: 2px;
+}
+.hs-al {
+  width: 28px; height: 28px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 4px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  font-size: 10px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.55);
+  line-height: 1;
+  transition: all 0.3s ease;
+}
+.hs-al .sub { font-size: 6.5px; letter-spacing: 0.04em; margin-top: 1px; font-weight: 400; opacity: 0.7; }
+.hs-al.is-on {
+  background: rgba(122,31,46,0.22);
+  border-color: rgba(122,31,46,0.55);
+  color: #f4ede0;
+}
+.hs-cursor {
+  display: inline-block;
+  width: 1.5px; height: 13px;
+  background: #f4ede0;
+  vertical-align: -2px;
+  margin-left: 1px;
+  animation: hsblink 0.9s steps(2) infinite;
+}
+@keyframes hsblink { 50% { opacity: 0; } }
+
+/* The card is the hero — large, centered, dominant */
+.hero-stage .hero-card {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: auto;
+  height: auto;
+  padding: 44px 42px 32px;
+  transform: rotate(-1.2deg);
+  z-index: 3;
+  background: linear-gradient(180deg, #fefcf8 0%, #fbf6ec 100%);
+  box-shadow:
+    0 1px 4px rgba(26,24,22,0.05),
+    0 18px 44px rgba(26,24,22,0.12),
+    0 56px 96px rgba(26,24,22,0.10),
+    inset 0 0 0 1px rgba(122,31,46,0.06);
+}
+/* Decorative top frame line */
+.hero-stage .hero-card::before {
+  content: "";
+  position: absolute;
+  top: 14px; left: 14px; right: 14px; bottom: 14px;
+  border: 1px solid rgba(122,31,46,0.10);
+  pointer-events: none;
+}
+.hero-stage .hero-card .hc-logo {
+  font-size: 26px;
+  padding-bottom: 18px;
+  margin-bottom: 22px;
+  letter-spacing: 0.32em;
+  border-bottom: 1px solid rgba(122,31,46,0.18);
+  position: relative;
+}
+.hero-stage .hero-card .hc-logo::after {
+  content: "·  Frische Italienische Küche  ·";
+  display: block;
+  margin-top: 8px;
+  font-size: 10px;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: none;
+  color: var(--stone);
+}
+.hero-stage .hero-card .hc-section {
+  font-size: 19px;
+  margin: 20px 0 12px;
+  letter-spacing: 0.02em;
+  position: relative;
+}
+.hero-stage .hero-card .hc-section::before {
+  content: "";
+  display: inline-block;
+  width: 22px; height: 1px;
+  background: var(--wine);
+  vertical-align: middle;
+  margin-right: 10px;
+  opacity: 0.55;
+}
+.hero-stage .hero-card .hc-item { padding: 7px 0; gap: 16px; }
+.hero-stage .hero-card .hc-item-name { font-size: 15.5px; }
+.hero-stage .hero-card .hc-item-desc { font-size: 12px; margin-top: 3px; }
+.hero-stage .hero-card .hc-item-price { font-size: 15px; }
+.hero-stage .hero-card .hc-allergens { font-size: 9px; margin-top: 4px; }
+.hero-stage .hero-card .hc-foot {
+  font-size: 10px;
+  padding-top: 16px;
+  letter-spacing: 0.32em;
+  border-top: 1px solid rgba(122,31,46,0.18);
+  margin-top: 18px;
+}
+.hero-stage .hero-card:hover { transform: rotate(0); }
+.hero-stage .hero-card .hc-logo { font-size: 17px; padding-bottom: 11px; margin-bottom: 14px; }
+.hero-stage .hero-card .hc-section { font-size: 14px; margin: 12px 0 8px; }
+.hero-stage .hero-card .hc-item { padding: 4px 0; }
+.hero-stage .hero-card .hc-item-name { font-size: 12.5px; }
+.hero-stage .hero-card .hc-item-desc { font-size: 9.5px; }
+.hero-stage .hero-card .hc-item-price { font-size: 12px; }
+.hero-stage .hero-card .hc-allergens { font-size: 8px; }
+.hero-stage .hero-card .hc-foot { font-size: 9px; padding-top: 10px; letter-spacing: 0.26em; }
+.hero-stage .hero-card .hc-item,
+.hero-stage .hero-card .hc-section {
+  opacity: 1;
+  transform: none;
+}
+.hero-stage .hero-card .hc-item.is-on,
+.hero-stage .hero-card .hc-section.is-on {
+  opacity: 1; transform: none;
+}
+
+/* Phone mockup — sits below card bottom-right, off the edge */
+.hs-phone {
+  position: absolute;
+  bottom: -24px; right: -78px;
+  width: 144px;
+  height: 296px;
+  background: #1a1816;
+  border-radius: 24px;
+  padding: 6px;
+  box-shadow: 0 14px 32px rgba(26,24,22,0.28), 0 2px 4px rgba(26,24,22,0.10);
+  z-index: 5;
+  transform: rotate(4deg);
+}
+.hs-phone-screen {
+  width: 100%; height: 100%;
+  background: #fefcf8;
+  border-radius: 19px;
+  overflow: hidden;
+  position: relative;
+  display: flex; flex-direction: column;
+}
+.hs-phone-notch {
+  width: 44px; height: 14px;
+  background: #1a1816;
+  border-radius: 0 0 9px 9px;
+  margin: 0 auto;
+  flex: none;
+}
+.hs-phone-head {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 9px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--ink);
+  padding: 8px 0 4px;
+  border-bottom: 1px solid var(--hairline);
+  margin: 4px 10px 0;
+}
+.hs-phone-body {
+  flex: 1; padding: 8px 10px; overflow: hidden;
+  font-family: 'Playfair Display', serif;
+}
+.hs-phone-sec {
+  font-style: italic;
+  font-size: 8px;
+  color: var(--wine);
+  margin: 5px 0 3px;
+  letter-spacing: 0.04em;
+  opacity: 1;
+}
+.hs-phone-sec.is-on { opacity: 1; }
+.hs-phone-sec:first-child { margin-top: 0; }
+.hs-phone-it {
+  display: flex; justify-content: space-between; gap: 4px;
+  font-size: 7.5px;
+  padding: 1.5px 0;
+  color: var(--ink);
+  opacity: 1;
+}
+.hs-phone-it.is-on { opacity: 1; transform: translateY(0); }
+.hs-phone-it .nm { font-weight: 500; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hs-phone-it .pr { font-variant-numeric: tabular-nums; flex: none; }
+
+/* Sync sticker — sits above the editor */
+.hs-sync {
+  position: absolute;
+  bottom: 312px; left: 168px;
+  background: #fff;
+  border: 1px solid var(--hairline);
+  padding: 6px 10px;
+  border-radius: 100px;
+  font-size: 10px;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--ink);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: flex; align-items: center; gap: 6px;
+  box-shadow: 0 6px 18px rgba(26,24,22,0.12);
+  z-index: 6;
+  transform: rotate(-4deg);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.hs-sync.is-on { opacity: 1; }
+.hs-sync .pulse {
+  width: 6px; height: 6px; border-radius: 999px;
+  background: var(--success);
+  animation: pulse 1.6s ease-in-out infinite;
+}
+
+/* Stamp — LMIV ✓ */
+.hs-stamp {
+  position: absolute;
+  top: -22px; right: -28px;
+  width: 74px; height: 74px;
+  font-size: 9.5px;
+  border: 2px solid var(--wine);
+  color: var(--wine);
+  border-radius: 999px;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-style: italic;
+  line-height: 1.15;
+  transform: rotate(8deg);
+  z-index: 7;
+  opacity: 0.9;
+  background: rgba(254,252,248,0.6);
+  backdrop-filter: blur(4px);
+}
+.hs-stamp::before {
+  content: ""; position: absolute; inset: 4px;
+  border: 1px solid var(--wine);
+  border-radius: 999px;
+  opacity: 0.5;
+}
+
+@media (max-width: 980px) {
+  .hero-stage { height: auto; min-height: 580px; }
+  .hs-phone { width: 120px; height: 248px; right: -32px; bottom: -8px; }
+  .hero-stage .hero-card { max-width: 400px; padding: 36px 30px 26px; }
+  .hero-stage .hero-card .hc-logo { font-size: 22px; }
+}
+
 /* ═══ LOGO BAR ═══ */
 .logos {
   padding: 18px 40px 24px;
@@ -397,9 +1083,10 @@ section { position: relative; z-index: 2; }
 .pain {
   background: var(--ink);
   color: var(--paper);
-  padding: 96px 40px;
+  padding: 96px 40px 140px;
+  position: relative;
 }
-.pain-wrap { max-width: 1200px; margin: 0 auto; }
+.pain-wrap { max-width: 1200px; margin: 0 auto; position: relative; }
 .pain .sec-label { color: #E8B8A8; }
 .pain .sec-h { color: var(--paper); }
 .pain-grid {
@@ -457,6 +1144,226 @@ section { position: relative; z-index: 2; }
 .pain-bridge-t em { font-style: italic; }
 .pain-bridge .cta { background: var(--paper); color: var(--ink); box-shadow: none; flex: none; }
 .pain-bridge .cta:hover { background: #fff; }
+
+/* === Donnerstagabend scene — three story cards === */
+.scene-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+.scene-card {
+  position: relative;
+  background: rgba(244,239,232,0.04);
+  border: 1px solid rgba(244,239,232,0.1);
+  border-radius: var(--card-radius);
+  padding: 28px 28px 30px;
+  display: flex; flex-direction: column;
+  transition: background 0.25s, border-color 0.25s;
+}
+.scene-card:hover {
+  background: rgba(244,239,232,0.06);
+  border-color: rgba(232,197,142,0.25);
+}
+.scene-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 24px; right: 24px;
+  height: 1.5px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+  opacity: 0.55;
+}
+.sc-time {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: var(--gold);
+  font-weight: 500;
+}
+.sc-act {
+  font-family: var(--sans);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(244,239,232,0.4);
+  margin: 6px 0 16px;
+  font-weight: 600;
+}
+.sc-h {
+  font-family: var(--serif);
+  font-size: 22px;
+  line-height: 1.25;
+  color: var(--paper);
+  margin: 0 0 12px;
+  letter-spacing: -0.005em;
+  font-style: italic;
+  text-wrap: balance;
+}
+.sc-p {
+  font-family: var(--sans);
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: rgba(244,239,232,0.65);
+  margin: 0;
+}
+.sc-p em {
+  color: var(--gold);
+  font-style: italic;
+  font-family: var(--serif);
+  font-size: 16px;
+}
+.scene-close-line {
+  margin: 88px auto 0;
+  max-width: 760px;
+  text-align: center;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(24px, 2.8vw, 32px);
+  line-height: 1.45;
+  color: var(--paper);
+  letter-spacing: -0.01em;
+  position: relative;
+  padding-top: 56px;
+}
+/* Hairline ornament above the close line */
+.scene-close-line::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 64px; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(232,197,142,0.55), transparent);
+}
+.scene-close-line em {
+  color: var(--gold);
+  font-style: italic;
+  display: block;
+  margin-top: 8px;
+}
+/* Whisper line below — pulls eye down toward next section */
+.scene-whisper {
+  margin: 36px auto 0;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: rgba(244,239,232,0.42);
+  font-weight: 500;
+  display: flex; align-items: center; justify-content: center; gap: 14px;
+}
+.scene-whisper::before,
+.scene-whisper::after {
+  content: '';
+  width: 32px; height: 1px;
+  background: rgba(244,239,232,0.18);
+}
+/* ─────────────── BRIDGE: PAIN → SYNC ─────────────── */
+.bridge {
+  position: relative;
+  background: linear-gradient(180deg, #3A1018 0%, #3A1018 50%, #3A1018 100%);
+  padding: 0 40px;
+  overflow: hidden;
+}
+.bridge-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0 60px;
+  gap: 28px;
+}
+/* vertical hairline that pours from pain into sync */
+.bridge-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(180deg,
+    rgba(232,197,142,0) 0%,
+    rgba(232,197,142,0.45) 30%,
+    rgba(232,197,142,0.65) 50%,
+    rgba(232,197,142,0.45) 70%,
+    rgba(232,197,142,0) 100%);
+  transform: translateX(-0.5px);
+}
+/* the chaos→order glyph at the center */
+.bridge-glyph {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bridge-glyph svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.bridge-glyph .ring {
+  fill: none;
+  stroke: rgba(232,197,142,0.55);
+  stroke-width: 0.8;
+}
+.bridge-glyph .ring-pulse {
+  fill: none;
+  stroke: rgba(232,197,142,0.35);
+  stroke-width: 0.6;
+  transform-origin: center;
+  animation: bridgePulse 3.4s ease-out infinite;
+}
+.bridge-glyph .ring-pulse.p2 { animation-delay: 1.7s; }
+@keyframes bridgePulse {
+  0%   { transform: scale(0.8); opacity: 0.7; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+.bridge-glyph .seed {
+  fill: #E8C58E;
+}
+.bridge-glyph .ray {
+  stroke: rgba(232,197,142,0.45);
+  stroke-width: 0.6;
+  stroke-linecap: round;
+}
+.bridge-label {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 22px;
+  color: rgba(244,239,232,0.78);
+  text-align: center;
+  letter-spacing: 0.01em;
+  max-width: 460px;
+  line-height: 1.4;
+}
+.bridge-label em {
+  color: #E8C58E;
+  font-style: italic;
+}
+.bridge-eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: rgba(232,197,142,0.7);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.bridge-eyebrow::before,
+.bridge-eyebrow::after {
+  content: '';
+  width: 32px;
+  height: 1px;
+  background: rgba(232,197,142,0.4);
+}
+
+@media (max-width: 860px) {
+  .scene-grid { grid-template-columns: 1fr; }
+  .scene-close-line { font-size: 21px; }
+}
 
 /* ═══ HOW ═══ */
 .how-grid {
@@ -747,64 +1654,548 @@ section { position: relative; z-index: 2; }
 /* ═══ FOUNDER BLOCK ═══ */
 .founder-grid {
   display: grid;
-  grid-template-columns: 1.25fr 1fr;
-  gap: 56px;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: stretch;
+}
+.story-card {
+  position: relative;
+  border-radius: 6px;
+  padding: 32px 32px 28px;
+  display: flex; flex-direction: column;
+  overflow: hidden;
+}
+.story-card .sc-line {
+  font-size: 16px; line-height: 1.55;
+  margin: 0 0 22px;
+  font-family: var(--sans);
+  max-width: 36ch;
+}
+.story-card .sc-meta {
+  margin-top: auto;
+  font-size: 11.5px; letter-spacing: 0.18em;
+  text-transform: uppercase; font-weight: 500;
+  opacity: 0.55;
+}
+.story-before .sc-line { color: #d8d2c8; }
+.story-before .sc-meta { color: #c89a6a; }
+.story-after .sc-line { color: var(--ink); }
+.story-after .sc-meta { color: var(--wine); }
+
+/* File stack — small chaos visual on Vorher card */
+.file-stack {
+  position: relative;
+  height: 156px;
+  margin: 12px 0 24px;
+}
+.file-doc {
+  position: absolute;
+  left: 0;
+  width: 248px; height: 64px;
+  background: #f5efe4;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 3px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.38);
+  padding: 10px 12px;
+  display: flex; flex-direction: column; justify-content: space-between;
+  font-family: 'Inter Tight', sans-serif;
+  color: #2a2520;
+}
+.file-doc::before {
+  content: ''; position: absolute;
+  top: 0; right: 0;
+  width: 16px; height: 16px;
+  background: linear-gradient(225deg, transparent 50%, #d8d2c8 50%);
+  border-left: 1px solid rgba(0,0,0,0.08);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.file-doc .ext {
+  font-size: 10px; letter-spacing: 0.16em; font-weight: 600;
+  text-transform: uppercase; color: #7a1f2e;
+}
+.file-doc .nm {
+  font-size: 14px; font-weight: 500;
+  color: #1a1816;
+  font-family: 'Courier New', monospace;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.file-doc.f3 { top: 0;  left: 6px;  transform: rotate(-3deg); opacity: 0.7; }
+.file-doc.f2 { top: 22px; left: 28px; transform: rotate(2deg); opacity: 0.88; }
+.file-doc.f1 { top: 50px; left: 0;   transform: rotate(-1deg); }
+.file-doc.f1 .cursor {
+  position: absolute;
+  right: 18px; bottom: 10px;
+  width: 1px; height: 13px;
+  background: #1a1816;
+  animation: blink 1.1s steps(2) infinite;
+}
+
+/* Browser-tab badge — sixth surface that needs syncing */
+.file-tab {
+  position: absolute;
+  right: 0; top: 14px;
+  width: 174px;
+  background: rgba(244,239,232,0.06);
+  border: 1px solid rgba(244,239,232,0.14);
+  border-radius: 4px;
+  padding: 8px 10px 9px;
+  transform: rotate(3deg);
+  font-family: var(--sans);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.32);
+}
+.file-tab .ftb {
+  display: flex; align-items: center; gap: 6px;
+  margin-bottom: 6px;
+}
+.file-tab .ftb i {
+  width: 7px; height: 7px; border-radius: 50%;
+}
+.file-tab .ftb i:nth-child(1) { background: #e76f51; }
+.file-tab .ftb i:nth-child(2) { background: #e9c46a; }
+.file-tab .ftb i:nth-child(3) { background: #8ab17d; }
+.file-tab .url {
+  font-size: 10px; color: rgba(244,239,232,0.55);
+  letter-spacing: 0.04em;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.file-tab .lbl {
+  margin-top: 4px;
+  font-size: 11px; font-weight: 500;
+  color: rgba(244,239,232,0.85);
+  letter-spacing: 0.02em;
+}
+
+/* Crossed-out app icons — "das brauchst du nicht mehr" */
+.app-cross {
+  position: relative;
+  display: flex; align-items: center;
+  gap: 22px;
+  padding: 4px 2px;
+}
+.ac-icon {
+  position: relative;
+  width: 64px; height: 64px;
+  border-radius: 12px;
+  display: grid; place-items: center;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: -0.04em;
+  filter: grayscale(0.55) brightness(0.85);
+  opacity: 0.6;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+}
+.ac-ps    { background: #001e36; color: #31a8ff; border: 1.4px solid #31a8ff; }
+.ac-id    { background: #49021f; color: #f36; border: 1.4px solid #f36; }
+.ac-canva { background: #00c4cc; color: #fff; }
+.ac-canva .glyph {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 34px;
+  font-style: italic;
+  font-weight: 600;
+}
+.ac-x {
+  position: absolute; inset: -5px;
+  width: calc(100% + 10px); height: calc(100% + 10px);
+  pointer-events: none;
+  filter: none;
+}
+.ac-x line {
+  stroke: #c33;
+  stroke-width: 7;
+  stroke-linecap: round;
+  opacity: 0.92;
+}
+.ac-icon:nth-child(1) { transform: none; }
+.ac-icon:nth-child(2) { transform: none; margin-top: 0; }
+.ac-icon:nth-child(3) { transform: none; margin-top: 0; }
+
+/* Vorher blocks — eyebrow labelled zones */
+.vor-block {
+  margin: 0 0 22px;
+}
+.vor-eyebrow {
+  font-family: var(--sans);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: rgba(244,239,232,0.5);
+  margin-bottom: 12px;
+}
+.vor-files {
+  list-style: none; padding: 0; margin: 0;
+  border-top: 1px solid rgba(244,239,232,0.1);
+}
+.vor-files li {
+  display: grid;
+  grid-template-columns: 56px 1fr auto;
+  gap: 14px;
   align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(244,239,232,0.1);
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+}
+.vor-files li.current {
+  background: rgba(244,239,232,0.04);
+  margin: 0 -10px; padding-left: 10px; padding-right: 10px;
+  border-left: 2px solid var(--gold);
+}
+.vf-ext {
+  font-size: 10px; letter-spacing: 0.16em; font-weight: 700;
+  text-transform: uppercase; color: #d4a373;
+  font-family: var(--sans);
+}
+.vf-nm {
+  color: rgba(244,239,232,0.92);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  position: relative;
+}
+.vf-cur {
+  display: inline-block;
+  width: 1px; height: 14px;
+  background: rgba(244,239,232,0.92);
+  margin-left: 2px;
+  vertical-align: -3px;
+  animation: blink 1.1s steps(2) infinite;
+}
+.vf-ch {
+  font-family: var(--sans);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(244,239,232,0.45);
+  font-weight: 500;
+}
+@keyframes blink { 50% { opacity: 0; } }
+
+/* Sync hub — Tovaglia center, four outputs */
+.sync-hub {
+  position: relative;
+  height: 200px;
+  margin: 8px 0 22px;
+}
+.sync-hub .sh-lines {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  stroke: var(--wine);
+  stroke-width: 1;
+  stroke-dasharray: 3 4;
+  opacity: 0.45;
+  fill: none;
+}
+.sync-hub .sh-node {
+  position: absolute;
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--sans);
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid rgba(26,24,22,0.18);
+  padding: 5px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.sync-hub .sh-node .d {
+  width: 5px; height: 5px;
+  background: var(--wine);
+  border-radius: 50%;
+  flex: none;
+}
+.sync-hub .sh-tl { top: 8%;  left: 6%;  }
+.sync-hub .sh-tr { top: 8%;  right: 6%; }
+.sync-hub .sh-bl { bottom: 8%; left: 6%; }
+.sync-hub .sh-br { bottom: 8%; right: 6%; }
+.sync-hub .sh-core {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex; flex-direction: column; align-items: center;
+  gap: 6px;
+}
+.sync-hub .sh-mark {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--wine);
+  color: var(--paper);
+  display: grid; place-items: center;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 22px;
+  font-weight: 500;
+  box-shadow: 0 4px 14px rgba(122,31,46,0.32);
+}
+.sync-hub .sh-lbl {
+  font-family: var(--sans);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--wine);
+  font-weight: 600;
+}
+.story-card .sc-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 10.5px; letter-spacing: 0.18em;
+  text-transform: uppercase; font-weight: 600; margin-bottom: 14px;
+}
+.story-card .sc-tag::before { content:''; width:18px; height:1px; background: currentColor; opacity: 0.5; }
+.story-card .sc-h {
+  font-family: var(--serif);
+  font-size: 24px; line-height: 1.2; font-weight: 500;
+  margin-bottom: 18px; letter-spacing: -0.01em;
+}
+.story-card .sc-h em { font-style: italic; }
+.story-card .sc-stage {
+  flex: 1; border-radius: 4px; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+}
+.story-before {
+  background: #2b2825; color: #d8d2c8;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.story-before .sc-tag { color: #c89a6a; }
+.story-before .sc-h { color: #f0e9dd; }
+.story-before .sc-h em { color: #d4a373; }
+.story-before .sc-stage {
+  background: linear-gradient(180deg, #1f1d1b 0%, #2a2724 100%);
+}
+.psd-mock {
+  width: 90%; height: 88%;
+  background: #3a3633; border-radius: 4px;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.55);
+  transform: rotate(-1.5deg);
+  display: grid; grid-template-rows: 22px 1fr;
+  overflow: hidden; position: relative;
+}
+.psd-mock .tb {
+  background: #4a4441; display: flex; align-items: center; gap: 6px;
+  padding: 0 9px; border-bottom: 1px solid rgba(0,0,0,0.4);
+  font-size: 10px; color: #b8aea4;
+}
+.psd-mock .tb .dot { width: 9px; height: 9px; border-radius: 999px; background: #6b625e; }
+.psd-mock .tb .ttl { margin: 0 auto; font-weight: 500; }
+.psd-mock .body { display: grid; grid-template-columns: 1fr 90px; background: #2d2a28; }
+.psd-mock .canvas {
+  position: relative; overflow: hidden;
+  background: repeating-linear-gradient(45deg, #ccc 0 6px, #999 6px 12px);
+}
+.psd-mock .paper {
+  position: absolute; inset: 14% 10%;
+  background: #f5efe4; padding: 10px 12px;
+  font-family: var(--serif); display: flex; flex-direction: column; gap: 3px;
+  outline: 1px dashed rgba(0,150,255,0.6); outline-offset: -2px;
+}
+.psd-mock .paper .ttl {
+  font-size: 10px; text-align: center; color: #7a1f2e;
+  font-style: italic; margin-bottom: 4px;
+}
+.psd-mock .paper .row {
+  display: flex; justify-content: space-between;
+  font-size: 6.5px; color: #1a1816;
+  border-bottom: 1px dotted rgba(0,0,0,0.15); padding-bottom: 1px;
+}
+.psd-mock .paper .row.broken {
+  color: #c0392b; font-family: 'Comic Sans MS', cursive;
+}
+.psd-mock .layers {
+  background: #3a3633; padding: 6px;
+  font-size: 8px; color: #a89e94;
+  display: flex; flex-direction: column; gap: 2px;
+  border-left: 1px solid rgba(0,0,0,0.4);
+}
+.psd-mock .layers .lh {
+  font-size: 7px; letter-spacing: 0.06em; text-transform: uppercase;
+  color: #6b625e; padding-bottom: 3px;
+  border-bottom: 1px solid rgba(0,0,0,0.3); margin-bottom: 3px;
+}
+.psd-mock .layers .l {
+  display: flex; align-items: center; gap: 4px;
+  padding: 1px 2px; white-space: nowrap; overflow: hidden;
+  text-overflow: ellipsis;
+}
+.psd-mock .layers .l.sel { background: rgba(200,154,106,0.18); color: #f0e9dd; }
+.psd-mock .layers .l.dim { opacity: 0.4; }
+.psd-mock .layers .eye {
+  width: 6px; height: 6px; border: 1px solid currentColor;
+  border-radius: 999px; flex: none; opacity: 0.6;
+}
+.psd-mock .sticky {
+  position: absolute;
+  top: 16%; right: 6%;
+  width: 78px;
+  background: #fef3a7; padding: 7px 8px;
+  font-family: 'Comic Sans MS', cursive; font-size: 8px;
+  color: #1a1816; line-height: 1.3;
+  transform: rotate(6deg);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.45);
+  z-index: 5;
+}
+.psd-pain-list {
+  margin-top: 14px; display: flex; flex-direction: column; gap: 7px;
+}
+.psd-pain {
+  font-size: 13px; color: #c8bdaf; line-height: 1.45;
+  display: flex; align-items: flex-start; gap: 10px;
+}
+.psd-pain::before {
+  content: '\2715'; color: #d4655a; font-weight: 600;
+  flex: none; margin-top: 1px;
+}
+
+.story-after {
+  background: #fefcf8; color: var(--ink);
+  border: 1px solid var(--hairline);
+}
+.story-after .sc-tag { color: var(--wine); }
+.story-after .sc-h em { color: var(--wine); }
+.story-after .sc-stage {
+  background: var(--paper);
+  border: 1px solid var(--hairline);
+}
+.tov-mock {
+  width: 90%; height: 88%;
+  background: #fff; border-radius: 6px;
+  box-shadow: 0 14px 40px rgba(26,24,22,0.10);
+  display: grid; grid-template-rows: 28px 1fr;
+  overflow: hidden;
+}
+.tov-mock .tb {
+  background: #f8f4ec; display: flex; align-items: center; gap: 7px;
+  padding: 0 12px; border-bottom: 1px solid var(--hairline);
+}
+.tov-mock .tb .dot { width: 7px; height: 7px; border-radius: 999px; background: #d8d2c8; }
+.tov-mock .tb .ttl {
+  margin-left: 8px; font-size: 10px; color: var(--stone); font-weight: 500;
+}
+.tov-mock .tb .live {
+  margin-left: auto; font-size: 9px; color: var(--success);
+  letter-spacing: 0.06em; display: flex; align-items: center; gap: 4px;
+}
+.tov-mock .tb .live::before {
+  content:''; width: 5px; height: 5px; border-radius: 999px; background: var(--success);
+}
+.tov-mock .paper {
+  padding: 14px 16px; background: #fff;
+  font-family: var(--serif);
+}
+.tov-mock .paper .restaurant {
+  text-align: center; font-size: 9px; letter-spacing: 0.24em;
+  text-transform: uppercase; color: var(--stone);
+  font-family: 'Inter Tight', sans-serif; margin-bottom: 6px;
+}
+.tov-mock .paper .section {
+  font-style: italic; font-size: 12px; color: var(--wine);
+  text-align: center; margin: 6px 0 4px;
+}
+.tov-mock .paper .row {
+  display: grid; grid-template-columns: 1fr auto; gap: 8px;
+  font-size: 9px; color: var(--ink);
+  padding: 3px 0;
+  border-bottom: 1px dotted rgba(0,0,0,0.08);
+}
+.tov-mock .paper .row .nm { font-style: italic; }
+.tov-mock .paper .row .pr { color: var(--wine); font-variant-numeric: tabular-nums; }
+.tov-gain-list {
+  margin-top: 14px; display: flex; flex-direction: column; gap: 7px;
+}
+.tov-gain {
+  font-size: 13px; color: var(--ink-soft); line-height: 1.45;
+  display: flex; align-items: flex-start; gap: 10px;
+}
+.tov-gain::before {
+  content: '\2713'; color: var(--success); font-weight: 700;
+  flex: none; margin-top: 1px;
+}
+
+/* Founder pull-quote band */
+.founder-quote {
+  margin-top: 56px;
+  padding: 56px 48px;
+  background: var(--ink); color: var(--paper);
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 36px; align-items: center;
+  position: relative;
+}
+.founder-quote::before {
+  content: '\201C';
+  position: absolute;
+  top: 12px; left: 28px;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 120px;
+  line-height: 1;
+  color: var(--wine);
+  opacity: 0.6;
+}
+.fq-photo {
+  width: 120px; height: 120px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #7a1f2e 0%, #3a0a14 100%);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif); font-style: italic;
+  font-size: 56px; color: var(--paper);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4), 0 0 0 4px rgba(244,239,232,0.06);
+  flex: none;
+}
+.fq-text {
+  font-family: var(--serif); font-style: italic;
+  font-size: 19px; line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+}
+.fq-text em { color: #d4a373; font-style: italic; }
+.fq-sig {
+  margin-top: 18px;
+  display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 14px;
+  font-size: 13px; color: rgba(244,239,232,0.6);
+  letter-spacing: 0.04em;
+}
+.fq-sig .name { color: var(--paper); font-weight: 500; font-style: normal; font-family: var(--sans); }
+.fq-sig .role { color: rgba(244,239,232,0.45); font-style: normal; font-family: var(--sans); }
+.fq-sig .sep { opacity: 0.3; }
+
+/* Founder badges row */
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .founder-badges {
   display: flex; flex-wrap: wrap; gap: 10px;
-  margin-top: 4px;
+  margin-top: 28px;
 }
 .fb {
   display: inline-flex; align-items: center; gap: 8px;
   padding: 8px 14px;
-  background: rgba(122,31,46,0.06);
-  border: 1px solid rgba(122,31,46,0.16);
+  background: #fefcf8;
+  border: 1px solid var(--hairline);
   border-radius: 100px;
   font-size: 13px; font-weight: 500;
-  color: var(--wine);
+  color: var(--ink);
 }
-.founder-note {
-  position: relative;
-  padding: 40px 36px 32px;
-  background: var(--ink);
-  color: var(--paper);
-  border-radius: 6px;
-  box-shadow: 0 12px 40px rgba(26,24,22,0.12);
-}
-.fn-quote {
-  font-family: 'Playfair Display', serif;
-  font-size: 88px;
-  line-height: 0.6;
-  color: var(--wine);
-  position: absolute;
-  top: 28px; left: 28px;
-  opacity: 0.7;
-}
-.fn-text {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-size: 19px;
-  line-height: 1.5;
-  margin-top: 24px;
-  margin-bottom: 28px;
+.fb svg { color: var(--wine); }
+.founder-quote .fb {
+  background: rgba(244,239,232,0.06);
+  border-color: rgba(244,239,232,0.12);
   color: var(--paper);
 }
-.fn-sig {
-  display: flex; align-items: center; gap: 12px;
-  padding-top: 18px;
-  border-top: 1px solid rgba(244,239,232,0.12);
+.founder-quote .fb svg { color: #d4a373; }
+
+@media (max-width: 980px) {
+  .founder-grid { grid-template-columns: 1fr; }
+  .story-grid { grid-template-columns: 1fr; }
+  .founder-quote { grid-template-columns: 1fr; padding: 48px 28px 36px; }
+  .fq-text { font-size: 19px; }
+  .fq-photo { width: 84px; height: 84px; font-size: 38px; }
 }
-.fn-av {
-  width: 38px; height: 38px; border-radius: 999px;
-  background: var(--wine); color: var(--paper);
-  display: flex; align-items: center; justify-content: center;
-  font-family: 'Playfair Display', serif;
-  font-size: 17px; font-weight: 500;
-  flex: none;
-}
-.fn-name { font-size: 14px; font-weight: 500; color: var(--paper); line-height: 1.2; }
-.fn-role { font-size: 12.5px; color: rgba(244,239,232,0.55); margin-top: 2px; }
 
 /* ═══ PRICING TIERS ═══ */
 .billing-toggle {
@@ -1125,9 +2516,1023 @@ section { position: relative; z-index: 2; }
   .final { padding: 72px 20px; }
   .ft { flex-direction: column; padding: 24px 20px 96px; text-align: center; }
 }
+
+/* ─────────── EDITORIAL ACCENTS (mood=spirited) ─────────── */
+[data-mood="spirited"] {
+  --gold: #C9A063;
+  --gold-soft: rgba(201,160,99,0.5);
+}
+[data-mood="spirited"] .hero-eyebrow {
+  background: transparent;
+  border: 0;
+  padding: 0 0 0 0;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--stone);
+  font-weight: 500;
+  margin-bottom: 18px;
+  display: inline-flex; align-items: center; gap: 12px;
+}
+[data-mood="spirited"] .hero-eyebrow .dot {
+  width: 5px; height: 5px;
+  background: var(--gold);
+  box-shadow: none;
+}
+[data-mood="spirited"] .hero-eyebrow::after {
+  content: '';
+  width: 56px; height: 1px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+}
+[data-mood="spirited"] .hero-h em {
+  font-style: italic;
+  color: var(--wine);
+  font-weight: 400;
+}
+[data-mood="spirited"] .hero-h {
+  font-variation-settings: 'opsz' 144;
+  letter-spacing: -0.024em;
+  line-height: 1.02;
+}
+[data-mood="spirited"] .hc-logo,
+[data-mood="spirited"] .hc-section {
+  font-family: var(--serif);
+}
+[data-mood="spirited"] .hc-section {
+  font-style: italic;
+  color: var(--wine);
+}
+/* Section eyebrow numerals — appear only in spirited mood */
+[data-mood="spirited"] .sec-label[data-num] {
+  position: relative;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 14px;
+}
+[data-mood="spirited"] .sec-label[data-num]::before {
+  content: attr(data-num);
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 300;
+  font-variation-settings: 'opsz' 144;
+  font-size: 38px;
+  line-height: 0.8;
+  color: var(--gold);
+  letter-spacing: -0.02em;
+  margin-right: 2px;
+  transform: translateY(2px);
+  opacity: 0.95;
+}
+[data-mood="spirited"] .sec-label[data-num]::after {
+  content: '';
+  flex: 0 0 auto;
+  width: 56px; height: 1px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+  margin-left: 4px;
+  align-self: center;
+}
+
+/* Editorial em treatment: italic wine + soft gold underline */
+[data-mood="spirited"] .sec-h em,
+[data-mood="spirited"] .hero-h em {
+  font-style: italic;
+  color: var(--wine);
+  font-weight: 400;
+  position: relative;
+}
+[data-mood="spirited"] .sec-h em::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 4%; bottom: 0.04em;
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold) 0%, var(--gold) 60%, transparent 100%);
+  opacity: 0.5;
+}
+/* Pain section's em is on dark — use gold instead */
+[data-mood="spirited"] .pain .sec-h em { color: var(--gold); }
+[data-mood="spirited"] .pain .sec-h em::after { background: linear-gradient(90deg, rgba(244,239,232,0.5), transparent); }
+
+/* Pricing tier refinements */
+[data-mood="spirited"] .tier-name {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+}
+[data-mood="spirited"] .tier-card.featured,
+[data-mood="spirited"] .tier-card[data-featured="true"] {
+  border-color: var(--gold) !important;
+}
+
+/* Founder pull-quote */
+[data-mood="spirited"] .fn-quote {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-variation-settings: 'opsz' 144;
+  font-size: 22px;
+  line-height: 1.45;
+  color: var(--ink);
+  border-left: 1px solid var(--gold);
+  padding-left: 24px;
+  margin: 16px 0;
+}
+
+/* Hero card — editorial details */
+[data-mood="spirited"] .hc-logo {
+  font-family: var(--serif);
+  font-variation-settings: 'opsz' 144;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+}
+[data-mood="spirited"] .hc-section {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--wine);
+  font-weight: 400;
+}
+[data-mood="spirited"] .hc-item-name,
+[data-mood="spirited"] .hc-item-price {
+  font-family: var(--serif);
+  font-weight: 500;
+}
+[data-mood="spirited"] .hc-item-desc {
+  font-family: var(--serif);
+  font-style: italic;
+}
+
+/* ─────────────── SYNC SECTION ─────────────── */
+.sync {
+  position: relative;
+  padding: 60px 40px 140px;
+  background: linear-gradient(180deg, #3A1018 0%, #4A1620 45%, #3A1018 100%);
+  color: var(--paper);
+  overflow: hidden;
+}
+.sync::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(900px 600px at 75% 45%, rgba(232,197,142,0.07), transparent 60%),
+    radial-gradient(700px 500px at 15% 100%, rgba(0,0,0,0.30), transparent 70%);
+  pointer-events: none;
+}
+.sync-wrap {
+  position: relative;
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 80px;
+  align-items: center;
+}
+.sync .sec-label { color: rgba(244,239,232,0.7); }
+.sync .sec-h { color: var(--paper); margin-bottom: 18px; }
+.sync .sec-h em { color: #C8606E; }
+[data-mood="spirited"] .sync .sec-h em::after {
+  background: linear-gradient(90deg, rgba(200,96,110,0.6), transparent);
+}
+.sync-sub { color: rgba(244,239,232,0.72); font-size: 17px; line-height: 1.6; margin-bottom: 28px; max-width: 460px; }
+.sync-bullets { display: flex; flex-direction: column; gap: 14px; }
+.sync-bullet {
+  display: grid; grid-template-columns: 22px 1fr; gap: 14px; align-items: start;
+  font-size: 15px; line-height: 1.5; color: rgba(244,239,232,0.85);
+}
+.sync-bullet b { color: var(--paper); font-weight: 500; }
+.sync-bullet svg { color: #C8606E; margin-top: 2px; }
+
+/* ─────────────── DIAGRAM (rebuilt) ─────────────── */
+/* Layout: square stage, center source, 3 output cards arranged radially with no overlap */
+.sync-diagram {
+  position: relative;
+  width: 100%;
+  max-width: 580px;
+  height: 720px;
+  margin: 0 auto;
+}
+/* Connector lines */
+.sync-diagram .lines {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+/* Center source — circular */
+.sync-source {
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  width: 152px; height: 152px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 30%, rgba(122,31,46,0.55), rgba(122,31,46,0.25) 60%, transparent);
+  border: 1px solid rgba(200,96,110,0.45);
+  box-shadow: 0 0 0 6px rgba(122,31,46,0.10), 0 0 60px rgba(122,31,46,0.22);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center;
+  z-index: 4;
+  padding: 14px;
+}
+.sync-source-label {
+  font-size: 9.5px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: #C8606E; font-weight: 500;
+  margin-bottom: 4px;
+}
+.sync-source-name {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--paper);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.sync-source-hint {
+  font-size: 10.5px;
+  color: rgba(244,239,232,0.55);
+  letter-spacing: 0.02em;
+}
+/* Pulse rings */
+.sync-pulse {
+  position: absolute; inset: -2px;
+  border-radius: 999px;
+  border: 1px solid rgba(200,96,110,0.55);
+  animation: sync-pulse 3.2s ease-out infinite;
+  pointer-events: none;
+}
+.sync-pulse.p2 { animation-delay: 1.6s; }
+@keyframes sync-pulse {
+  0%   { transform: scale(1);    opacity: 0.55; }
+  100% { transform: scale(1.35); opacity: 0; }
+}
+
+/* Output cards — fixed positions, no overlap with each other or the center */
+/* Selector qualified with .sync-diagram to outrank the global .tv class
+   (used by the separate TV-Board section further down) which would
+   otherwise hijack position/background/padding on .sync-out.tv. */
+.sync-diagram .sync-out {
+  position: absolute;
+  background: rgba(244,239,232,0.04);
+  border: 1px solid rgba(244,239,232,0.10);
+  border-radius: 10px;
+  padding: 14px 14px 16px;
+  z-index: 3;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+}
+/* Print — top-left, portrait */
+.sync-out.print {
+  top: 0; left: 0;
+  width: 168px;
+  transform: rotate(-2deg);
+  z-index: 3;
+}
+/* QR — middle-right, narrow phone */
+.sync-out.qr {
+  top: 50%; right: 0;
+  transform: translateY(-50%) rotate(2deg);
+  width: 152px;
+  z-index: 5;
+}
+/* TV — bottom-left, landscape */
+.sync-out.tv {
+  bottom: 20px; left: 8%;
+  width: 240px;
+  transform: rotate(1deg);
+  z-index: 4;
+}
+
+.sync-out-eyebrow {
+  font-size: 9.5px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: #C8606E; font-weight: 500; margin-bottom: 8px;
+  display: flex; align-items: center; gap: 8px;
+}
+.sync-out-eyebrow .num {
+  font-family: var(--serif); font-style: italic; font-weight: 300;
+  font-size: 14px; letter-spacing: 0; opacity: 0.85;
+  text-transform: none;
+}
+.sync-out-title {
+  font-family: var(--serif); font-style: italic;
+  font-size: 18px; color: var(--paper); font-weight: 400;
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+/* Print mockup — paper sheet, A4-ish portrait */
+.sync-mock-print {
+  background: #fbf6ec;
+  color: var(--ink);
+  padding: 14px 12px;
+  border-radius: 3px;
+  aspect-ratio: 0.72;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--serif);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+}
+.sync-mock-print .mp-logo {
+  font-size: 9px; text-align: center; letter-spacing: 0.32em;
+  color: var(--ink); margin-bottom: 8px; font-weight: 500;
+  border-bottom: 0.5px solid rgba(122,31,46,0.4);
+  padding-bottom: 6px;
+}
+.sync-mock-print .mp-sec {
+  font-style: italic;
+  font-size: 9px; color: var(--wine); margin-top: 6px; margin-bottom: 4px;
+}
+.sync-mock-print .mp-row {
+  display: flex; justify-content: space-between; gap: 6px;
+  font-size: 7.5px; padding: 1px 0;
+}
+.sync-mock-print .mp-row .name { color: var(--ink); font-weight: 500; }
+.sync-mock-print .mp-row .price { color: var(--ink); font-variant-numeric: tabular-nums; }
+
+/* QR / phone mockup */
+.sync-mock-qr {
+  background: #0F0C0A;
+  border-radius: 14px;
+  padding: 12px 10px;
+  aspect-ratio: 0.52;
+  display: flex; flex-direction: column;
+  border: 1px solid rgba(244,239,232,0.08);
+}
+.sync-mock-qr .mq-bar {
+  display: flex; align-items: center; gap: 4px;
+  font-size: 7px; color: rgba(244,239,232,0.5);
+  margin-bottom: 8px;
+}
+.sync-mock-qr .mq-bar .dot {
+  width: 4px; height: 4px; border-radius: 50%; background: #C8606E;
+}
+.sync-mock-qr .mq-h {
+  font-family: var(--serif); font-style: italic;
+  color: var(--paper); font-size: 11px; line-height: 1.15;
+  font-weight: 400;
+}
+.sync-mock-qr .mq-chips { display: flex; gap: 4px; margin-top: 8px; flex-wrap: wrap; }
+.sync-mock-qr .mq-chip {
+  font-size: 6.5px; padding: 2px 6px; border-radius: 999px;
+  background: rgba(200,96,110,0.14); color: #C8606E;
+  border: 0.5px solid rgba(200,96,110,0.30);
+}
+.sync-mock-qr .mq-card {
+  margin-top: auto;
+  background: rgba(244,239,232,0.05);
+  border-left: 2px solid #C8606E;
+  padding: 5px 7px;
+  border-radius: 0 4px 4px 0;
+  display: flex; justify-content: space-between; align-items: center; gap: 4px;
+}
+.sync-mock-qr .mq-card .name { font-size: 7px; color: var(--paper); font-weight: 500; }
+.sync-mock-qr .mq-card .desc { font-size: 5.5px; color: rgba(244,239,232,0.5); margin-top: 1px; font-style: italic; }
+.sync-mock-qr .mq-card .price { font-size: 8px; color: #C8606E; font-family: var(--serif); }
+
+/* TV / landscape board mockup */
+.sync-mock-tv {
+  background: #0F0C0A;
+  border-radius: 4px;
+  border: 2px solid #2a2624;
+  padding: 10px;
+  aspect-ratio: 1.6;
+  display: flex; flex-direction: column; gap: 6px;
+  position: relative;
+  overflow: hidden;
+}
+.sync-mock-tv::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,0.4) 100%);
+  pointer-events: none;
+}
+.sync-mock-tv .mt-h {
+  font-family: var(--serif); font-style: italic;
+  color: #C8606E; font-size: 10px;
+  letter-spacing: 0.04em;
+}
+.sync-mock-tv .mt-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 8px;
+  flex: 1;
+}
+.sync-mock-tv .mt-cell {
+  background: rgba(244,239,232,0.04);
+  border-left: 1.5px solid #C8606E;
+  padding: 3px 6px;
+  border-radius: 0 2px 2px 0;
+  display: flex; justify-content: space-between; align-items: baseline; gap: 6px;
+}
+.sync-mock-tv .mt-cell .n { font-size: 7.5px; color: var(--paper); font-weight: 500; }
+.sync-mock-tv .mt-cell .p { font-size: 7.5px; color: #C8606E; font-family: var(--serif); font-variant-numeric: tabular-nums; }
+
+/* Live dot on each output */
+.sync-live {
+  position: absolute;
+  top: 10px; right: 10px;
+  display: flex; align-items: center; gap: 4px;
+  font-size: 8px; letter-spacing: 0.15em; text-transform: uppercase;
+  color: rgba(244,239,232,0.6); font-weight: 500;
+}
+.sync-live .ld {
+  width: 5px; height: 5px; border-radius: 50%;
+  background: #6FCB8E;
+  box-shadow: 0 0 6px #6FCB8E;
+  animation: pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes sync-flow {
+  to { stroke-dashoffset: -36; }
+}
+
+@media (max-width: 980px) {
+  .sync-wrap { grid-template-columns: 1fr; gap: 40px; }
+  .sync-diagram { max-width: 420px; }
+  .sync-out.print { width: 150px; }
+  .sync-out.qr { width: 140px; }
+  .sync-out.tv { width: 180px; }
+}
+
+/* ─────────────── TV BOARD SECTION ─────────────── */
+.tvb {
+  position: relative;
+  padding: 130px 40px;
+  background: linear-gradient(180deg, #0F0C0A 0%, #1A1310 100%);
+  color: var(--paper);
+  overflow: hidden;
+}
+.tvb::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(900px 400px at 20% 10%, rgba(232,197,142,0.08), transparent 60%),
+    radial-gradient(800px 500px at 90% 100%, rgba(122,31,46,0.25), transparent 60%);
+  pointer-events: none;
+}
+.tvb-wrap {
+  position: relative; max-width: 1280px; margin: 0 auto;
+  display: grid; grid-template-columns: 0.85fr 1.15fr;
+  gap: 80px; align-items: center;
+}
+.tvb .sec-label { color: rgba(244,239,232,0.7); }
+.tvb .sec-h { color: var(--paper); }
+.tvb .sec-h em { color: #E8C58E; }
+[data-mood="spirited"] .tvb .sec-h em::after {
+  background: linear-gradient(90deg, rgba(232,197,142,0.5), transparent);
+}
+.tvb-sub { color: rgba(244,239,232,0.7); font-size: 17px; line-height: 1.6; margin: 18px 0 28px; max-width: 460px; }
+.tvb-bullets { display: flex; flex-direction: column; gap: 14px; margin-bottom: 28px; }
+.tvb-bullet {
+  display: grid; grid-template-columns: 22px 1fr; gap: 14px; align-items: start;
+  font-size: 15px; line-height: 1.5; color: rgba(244,239,232,0.85);
+}
+.tvb-bullet b { color: var(--paper); font-weight: 500; }
+.tvb-bullet svg { color: #E8C58E; margin-top: 2px; }
+
+.tvb-time-toggle {
+  display: inline-flex; gap: 0;
+  background: rgba(244,239,232,0.04);
+  border: 1px solid rgba(232,197,142,0.2);
+  border-radius: 999px;
+  padding: 4px;
+}
+.tvb-time-toggle button {
+  background: transparent; border: 0; cursor: pointer;
+  padding: 8px 16px; border-radius: 999px;
+  font-family: inherit; font-size: 13px;
+  color: rgba(244,239,232,0.6); font-weight: 500;
+  transition: all 0.25s ease;
+}
+.tvb-time-toggle button.on {
+  background: #E8C58E; color: #1A1310;
+}
+
+/* TV stage */
+.tvb-stage {
+  position: relative;
+  display: grid;
+  grid-template-columns: 0.55fr 1fr;
+  gap: 28px;
+  align-items: end;
+}
+
+/* Generic TV chrome */
+.tv {
+  position: relative;
+  background: #0a0807;
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow:
+    0 0 0 1px rgba(232,197,142,0.18),
+    0 40px 80px rgba(0,0,0,0.5),
+    inset 0 0 0 1px rgba(255,255,255,0.04);
+}
+.tv::after {
+  content: '';
+  position: absolute; bottom: -16px; left: 50%;
+  transform: translateX(-50%);
+  width: 60%; height: 16px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.5), transparent);
+  border-radius: 50%;
+  filter: blur(8px);
+}
+.tv-stand {
+  position: absolute;
+  bottom: -34px; left: 50%; transform: translateX(-50%);
+  width: 30%; height: 18px;
+  background: linear-gradient(180deg, #1a1310, #0a0807);
+  border-radius: 2px 2px 6px 6px;
+}
+.tv-stand::after {
+  content: ''; position: absolute;
+  bottom: -4px; left: -10%; width: 120%; height: 4px;
+  background: #0a0807; border-radius: 2px;
+}
+.tv-screen {
+  background: var(--wine);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Portrait variant */
+.tv.portrait { aspect-ratio: 9 / 16; }
+.tv.portrait .tv-screen { aspect-ratio: 9 / 16; }
+
+/* Landscape variant */
+.tv.landscape { aspect-ratio: 16 / 9; }
+.tv.landscape .tv-screen { aspect-ratio: 16 / 9; }
+
+/* Screen content layouts */
+.tv-content {
+  position: absolute; inset: 0;
+  padding: 6%;
+  display: flex; flex-direction: column;
+  color: var(--paper);
+}
+.tv-eyebrow {
+  font-size: 0.55em; letter-spacing: 0.3em;
+  text-transform: uppercase; color: #E8C58E;
+  font-weight: 500; opacity: 0.85;
+}
+.tv-title {
+  font-family: var(--serif); font-style: italic;
+  font-variation-settings: 'opsz' 144;
+  color: var(--paper);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  margin-top: 0.2em;
+}
+.tv-rule {
+  height: 1px;
+  background: linear-gradient(90deg, #E8C58E, transparent);
+  margin: 1em 0 0.8em;
+}
+
+/* Portrait dish list */
+.tv.portrait .tv-eyebrow { font-size: 11px; }
+.tv.portrait .tv-title { font-size: 28px; line-height: 1; }
+.tv.portrait .tv-list { display: flex; flex-direction: column; gap: 0.8em; }
+.tv.portrait .tv-row {
+  display: grid; grid-template-columns: 1fr auto;
+  gap: 8px; align-items: baseline;
+  border-bottom: 0.5px dotted rgba(232,197,142,0.3);
+  padding-bottom: 0.6em;
+}
+.tv.portrait .tv-row:last-child { border-bottom: 0; }
+.tv.portrait .tv-row .nm {
+  font-family: var(--serif); font-style: italic;
+  font-size: 15px; font-weight: 400;
+  font-variation-settings: 'opsz' 144;
+}
+.tv.portrait .tv-row .ds {
+  font-size: 9px; color: rgba(244,239,232,0.5);
+  margin-top: 2px; line-height: 1.3;
+}
+.tv.portrait .tv-row .pr {
+  font-family: var(--serif); font-size: 14px; color: #E8C58E;
+  font-variant-numeric: tabular-nums;
+}
+.tv.portrait .tv-foot {
+  margin-top: auto;
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 8px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: rgba(244,239,232,0.4);
+}
+.tv.portrait .tv-foot .tov { color: #E8C58E; }
+
+/* Landscape grid */
+.tv.landscape .tv-eyebrow { font-size: 12px; }
+.tv.landscape .tv-title { font-size: 38px; }
+.tv.landscape .tv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  flex: 1;
+  margin-top: 0.6em;
+}
+.tv.landscape .tv-cell {
+  background: rgba(244,239,232,0.04);
+  border-left: 2px solid #E8C58E;
+  padding: 8px 10px;
+  border-radius: 0 4px 4px 0;
+  display: flex; flex-direction: column; gap: 3px;
+}
+.tv.landscape .tv-cell .nm {
+  font-family: var(--serif); font-style: italic;
+  font-size: 14px; line-height: 1.05;
+  font-variation-settings: 'opsz' 144;
+  color: var(--paper);
+}
+.tv.landscape .tv-cell .ds {
+  font-size: 9px; color: rgba(244,239,232,0.55);
+  line-height: 1.3;
+}
+.tv.landscape .tv-cell .pr {
+  font-family: var(--serif); font-size: 13px; color: #E8C58E;
+  margin-top: auto; font-variant-numeric: tabular-nums;
+}
+.tv.landscape .tv-foot {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-top: 10px;
+  font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: rgba(244,239,232,0.4);
+}
+.tv.landscape .tv-foot .tov { color: #E8C58E; }
+
+/* Subtle scanline gloss on screens */
+.tv-screen::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.04) 0%, transparent 30%);
+  pointer-events: none;
+}
+
+/* Ambient label cards floating beside TVs */
+.tvb-tag {
+  position: absolute;
+  background: rgba(244,239,232,0.04);
+  border: 1px solid rgba(232,197,142,0.2);
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 11px;
+  color: rgba(244,239,232,0.7);
+  letter-spacing: 0.04em;
+  display: flex; align-items: center; gap: 8px;
+  backdrop-filter: blur(6px);
+}
+.tvb-tag .dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: #6FCB8E;
+  box-shadow: 0 0 0 3px rgba(111,203,142,0.18);
+  animation: sync-blink 2s ease-in-out infinite;
+}
+.tvb-tag.t1 { top: -8px; right: -8px; }
+.tvb-tag.t2 { bottom: 28px; left: -16px; }
+
+/* TV state crossfade */
+.tv-state { transition: opacity 0.5s ease; }
+.tv-state.hidden { opacity: 0; pointer-events: none; position: absolute; inset: 0; padding: 6%; }
+
+@media (max-width: 980px) {
+  .tvb { padding: 80px 24px; }
+  .tvb-wrap { grid-template-columns: 1fr; gap: 56px; }
+  .tvb-stage { grid-template-columns: 1fr 1.4fr; gap: 18px; }
+}
+
+/* ─────────────── AI FOTO-IMPORT ─────────────── */
+.aii {
+  position: relative;
+  padding: 130px 40px;
+  background: var(--paper-warm);
+  overflow: hidden;
+}
+.aii::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(900px 400px at 90% 0%, rgba(122,31,46,0.06), transparent 60%),
+    radial-gradient(700px 400px at 10% 100%, rgba(201,160,99,0.08), transparent 60%);
+  pointer-events: none;
+}
+.aii-wrap { position: relative; max-width: 1280px; margin: 0 auto; }
+.aii-head { max-width: 720px; margin: 0 auto 72px; text-align: center; }
+.aii-head .sec-label { justify-content: center; }
+.aii-head .sec-h em::after { left: 25%; right: 25%; }
+
+.aii-stage {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  gap: 0;
+  align-items: stretch;
+  position: relative;
+}
+.aii-step {
+  background: var(--paper);
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  padding: 22px;
+  display: flex; flex-direction: column;
+  min-height: 360px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.02), 0 18px 40px -22px rgba(0,0,0,0.18);
+}
+.aii-arrow {
+  display: flex; align-items: center; justify-content: center;
+  padding: 0 16px;
+  color: var(--gold, #C9A063);
+}
+.aii-arrow svg { width: 28px; height: 28px; }
+
+.aii-step-eyebrow {
+  display: flex; align-items: baseline; gap: 12px;
+  margin-bottom: 16px;
+}
+.aii-step-eyebrow .num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 300;
+  font-variation-settings: 'opsz' 144;
+  font-size: 32px;
+  line-height: 0.8;
+  color: var(--gold, #C9A063);
+  letter-spacing: -0.02em;
+}
+.aii-step-eyebrow .label {
+  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--stone); font-weight: 500;
+}
+.aii-step h3 {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-variation-settings: 'opsz' 144;
+  font-size: 22px;
+  line-height: 1.15;
+  margin: 0 0 8px;
+  letter-spacing: -0.01em;
+}
+.aii-step p {
+  font-size: 14px; line-height: 1.55;
+  color: var(--ink-soft);
+  margin: 0 0 18px;
+}
+.aii-step .demo { flex: 1; display: flex; align-items: center; justify-content: center; min-height: 180px; }
+
+/* Step 1 — Photo of handwritten/old menu */
+.aii-photo {
+  width: 100%; aspect-ratio: 3/4;
+  background:
+    linear-gradient(135deg, #f8f1e3 0%, #f0e4d0 100%);
+  border-radius: 4px;
+  position: relative;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08), 0 14px 30px -10px rgba(0,0,0,0.18);
+  overflow: hidden;
+  transform: rotate(-2deg);
+}
+.aii-photo::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    repeating-linear-gradient(
+      90deg, transparent 0, transparent 40px,
+      rgba(0,0,0,0.02) 40px, rgba(0,0,0,0.02) 41px
+    );
+  pointer-events: none;
+}
+.aii-photo-inner {
+  position: absolute; inset: 18px 14px;
+  display: flex; flex-direction: column;
+  font-family: 'Caveat', 'Brush Script MT', cursive;
+  color: #3a2620;
+}
+.aii-photo-title {
+  text-align: center;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 18px;
+  color: #5a141f;
+  border-bottom: 1px solid rgba(90,20,31,0.3);
+  padding-bottom: 4px;
+  margin-bottom: 8px;
+  letter-spacing: 0.04em;
+}
+.aii-photo-row {
+  display: flex; justify-content: space-between;
+  font-family: 'Caveat', 'Marker Felt', cursive;
+  font-size: 14px;
+  margin: 3px 0;
+  line-height: 1.2;
+}
+.aii-photo-row .nm { color: #2a1a14; }
+.aii-photo-row .pr { color: #5a141f; font-weight: 600; }
+.aii-photo-section {
+  font-family: var(--serif); font-style: italic;
+  color: #5a141f; font-size: 13px;
+  margin: 6px 0 4px;
+  border-bottom: 0.5px dotted rgba(90,20,31,0.3);
+}
+.aii-photo-stain {
+  position: absolute;
+  width: 30px; height: 30px;
+  background: radial-gradient(circle, rgba(122,31,46,0.18), transparent 70%);
+  border-radius: 50%;
+  bottom: 10%; right: 8%;
+}
+
+/* Step 2 — OCR/recognition with bounding boxes */
+.aii-ocr {
+  width: 100%; aspect-ratio: 3/4;
+  background:
+    linear-gradient(180deg, #fdfcf8 0%, #f6f1e6 100%);
+  border: 1px solid rgba(35,40,42,0.1);
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08), 0 14px 30px -10px rgba(0,0,0,0.18);
+}
+.aii-ocr-inner {
+  position: absolute; inset: 18px 16px;
+  font-family: var(--serif);
+  font-size: 11px;
+  color: #23282a;
+  line-height: 1.35;
+  display: flex; flex-direction: column;
+  gap: 4px;
+}
+.aii-ocr-title {
+  text-align: center; font-size: 15px;
+  font-family: var(--serif); font-style: italic;
+  border-bottom: 1px solid rgba(35,40,42,0.18);
+  padding-bottom: 6px; margin-bottom: 6px;
+  position: relative;
+}
+.aii-ocr-row {
+  display: flex; justify-content: space-between; align-items: baseline;
+  position: relative;
+  padding: 1px 0;
+}
+.aii-ocr-row > span:first-child { padding-right: 8px; }
+.aii-ocr-row > span:last-child { font-variant-numeric: tabular-nums; }
+.aii-ocr-section {
+  font-family: var(--serif); font-style: italic;
+  font-size: 12px; font-weight: 500;
+  margin: 5px 0 2px;
+  position: relative;
+  letter-spacing: 0.01em;
+}
+
+/* Bounding boxes wrap inline-around real elements */
+.aii-ocr-row.bb-target,
+.aii-ocr-section.bb-target {
+  outline: 1.4px solid var(--wine);
+  outline-offset: 3px;
+  background: rgba(122,31,46,0.04);
+  border-radius: 2px;
+  animation: aii-bb-pulse 2.6s ease-in-out infinite;
+}
+.aii-ocr-section.bb-target { animation-delay: 0s; }
+.aii-ocr .aii-ocr-row.bb-target:nth-of-type(1) { animation-delay: 0.15s; }
+.aii-ocr .aii-ocr-row.bb-target:nth-of-type(2) { animation-delay: 0.3s; }
+.aii-ocr .aii-ocr-row.bb-target:nth-of-type(3) { animation-delay: 0.55s; }
+.aii-ocr .aii-ocr-row.bb-target:nth-of-type(4) { animation-delay: 0.7s; }
+.aii-ocr .aii-ocr-row.bb-target:nth-of-type(5) { animation-delay: 0.95s; }
+.aii-ocr .aii-ocr-section.bb-target ~ .aii-ocr-section.bb-target { animation-delay: 0.5s; }
+
+.bb-tag::before {
+  content: attr(data-tag);
+  position: absolute;
+  top: -7px;
+  left: -3px;
+  transform: translateY(-100%);
+  background: var(--wine); color: #fff;
+  font-family: var(--sans);
+  font-size: 8.5px; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 2px;
+  white-space: nowrap;
+  z-index: 2;
+  pointer-events: none;
+}
+.bb-tag-right::before { left: auto; right: -3px; }
+
+@keyframes aii-bb-pulse {
+  0%, 100% { outline-color: rgba(122,31,46,0.95); background: rgba(122,31,46,0.04); }
+  50%      { outline-color: rgba(122,31,46,0.55); background: rgba(122,31,46,0.08); }
+}
+
+/* Step 3 — Structured editor */
+.aii-editor {
+  width: 100%;
+  background: #fff;
+  border: 1px solid var(--hairline-strong);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06), 0 14px 30px -10px rgba(0,0,0,0.16);
+}
+.aii-editor-bar {
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 12px;
+  background: var(--paper-warm);
+  border-bottom: 1px solid var(--hairline);
+  font-size: 11px; color: var(--stone);
+}
+.aii-editor-bar .dots { display: flex; gap: 4px; }
+.aii-editor-bar .dots span {
+  width: 8px; height: 8px; border-radius: 50%; background: var(--hairline-strong);
+}
+.aii-editor-bar .ttl { font-weight: 500; color: var(--ink); }
+.aii-editor-row {
+  display: grid; grid-template-columns: 1fr 60px 80px;
+  gap: 8px; align-items: center;
+  padding: 9px 12px;
+  border-bottom: 1px solid var(--hairline);
+  font-size: 12px;
+}
+.aii-editor-row.section {
+  background: var(--paper-warm);
+  font-family: var(--serif); font-style: italic;
+  color: var(--wine); font-size: 13px;
+  grid-template-columns: 1fr;
+  padding: 6px 12px;
+}
+.aii-editor-row .nm { font-weight: 500; color: var(--ink); }
+.aii-editor-row .nm small { display: block; color: var(--stone-soft); font-weight: 400; font-size: 10px; margin-top: 1px; }
+.aii-editor-row .all {
+  display: flex; gap: 3px;
+}
+.aii-editor-row .al-chip {
+  font-size: 9px; padding: 2px 5px;
+  background: var(--wine-glow); color: var(--wine);
+  border-radius: 2px; font-weight: 600;
+  font-family: var(--sans); font-style: normal;
+}
+.aii-editor-row .pr {
+  text-align: right; color: var(--ink);
+  font-variant-numeric: tabular-nums; font-weight: 500;
+}
+.aii-editor-row .pr.new {
+  color: var(--success);
+  position: relative;
+}
+.aii-editor-row .pr.new::before {
+  content: '✶';
+  position: absolute; left: -16px; top: 0;
+  color: var(--gold, #C9A063);
+  font-size: 11px;
+}
+.aii-editor-foot {
+  padding: 9px 12px;
+  background: var(--paper-warm);
+  font-size: 10px;
+  color: var(--stone);
+  display: flex; justify-content: space-between;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.aii-editor-foot .ok {
+  color: var(--success); font-weight: 600;
+  display: inline-flex; align-items: center; gap: 4px;
+}
+
+/* Footer outcome bar */
+.aii-outcome {
+  margin-top: 56px;
+  display: flex; justify-content: center; gap: 56px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.aii-outcome > div {
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+}
+.aii-outcome .num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-variation-settings: 'opsz' 144;
+  font-size: 44px;
+  font-weight: 300;
+  color: var(--wine);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.aii-outcome .lab {
+  font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--stone); font-weight: 500;
+}
+
+@media (max-width: 980px) {
+  .aii { padding: 80px 24px; }
+  .aii-stage { grid-template-columns: 1fr; gap: 0; }
+  .aii-arrow { padding: 18px 0; transform: rotate(90deg); }
+  .aii-step { min-height: 0; }
+  .aii-outcome { gap: 28px; }
+  .aii-outcome .num { font-size: 32px; }
+}
+
 </style>
 </head>
-<body>
+<body data-mood="spirited" data-palette="bordeaux" data-density="standard">
 
 <!-- ANNOUNCEMENT -->
 <div class="promo">
@@ -1141,7 +3546,7 @@ section { position: relative; z-index: 2; }
   </a>
   <div class="nav-r">
     <a href="#how" class="nav-a">So geht's</a>
-    <a href="#founder" class="nav-a">Founder-Access</a>
+    <a href="#founder" class="nav-a">Vorher · Nachher</a>
     <a href="#preis" class="nav-a">Preise</a>
     <a href="#cta" class="nav-cta">Kostenlos starten →</a>
   </div>
@@ -1155,25 +3560,12 @@ section { position: relative; z-index: 2; }
       Speisekarten-Software für Restaurants
     </div>
     <h1 class="hero-h">
-      Deine Speisekarte — <em>druckfertig in 5 Minuten.</em>
+      <span style="display:block;">Du änderst die Daten.</span>
+      <em>Tovaglia macht das Layout.</em>
     </h1>
     <p class="hero-sub">
-      <b>Tovaglia</b> setzt deine Karte automatisch: professionelles Layout, LMIV-Allergene, QR-Menü. Du tippst deine Gerichte ein — <b>den Rest macht das System.</b>
+      <b>Speisekarten-Software für Restaurants:</b> Print-PDF, QR-Menü und TV-Board entstehen aus einer Quelle. Du tippst — der Rest passiert automatisch. <b>LMIV-konform, mehrsprachig, in Minuten live.</b>
     </p>
-    <div class="hero-bullets">
-      <div class="hero-bullet">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-        <span><b>Kein Designer, kein InDesign</b> — Layout entsteht automatisch.</span>
-      </div>
-      <div class="hero-bullet">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-        <span><b>Rechtssicher</b> — alle 14 EU-Allergene per Klick.</span>
-      </div>
-      <div class="hero-bullet">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-        <span><b>Print + QR-Menü</b> — immer synchron, immer aktuell.</span>
-      </div>
-    </div>
     <div class="cta-group">
       <a href="#cta" class="cta" data-cta="hero">
         Kostenlos Karte erstellen
@@ -1191,111 +3583,249 @@ section { position: relative; z-index: 2; }
   </div>
 
   <div class="hero-visual">
-    <div class="hero-card">
-      <div class="hc-logo">Tovaglia</div>
-      <div class="hc-section">Antipasti</div>
-      <div class="hc-item">
-        <div>
-          <div class="hc-item-name">Burrata di Puglia</div>
-          <div class="hc-item-desc">Mit schwarzem Trüffel &amp; geröstetem Brot</div>
-          <div class="hc-allergens">C · G · 2</div>
+    <div class="hero-stage">
+      <!-- Print card -->
+      <div class="hero-card" id="hero-card">
+        <div class="hc-logo">Tovaglia</div>
+        <div class="hc-section" data-key="antipasti">Antipasti</div>
+        <div class="hc-item" data-key="burrata">
+          <div>
+            <div class="hc-item-name">Burrata di Puglia</div>
+            <div class="hc-item-desc">Mit schwarzem Trüffel &amp; geröstetem Brot</div>
+            <div class="hc-allergens">C · G · 2</div>
+          </div>
+          <div class="hc-item-price">18,00</div>
         </div>
-        <div class="hc-item-price">18,00</div>
-      </div>
-      <div class="hc-item">
-        <div>
-          <div class="hc-item-name">Carpaccio di Tonno</div>
-          <div class="hc-item-desc">Ponzu, Sesamöl, mikrogrün</div>
-          <div class="hc-allergens">D · N · 3</div>
+        <div class="hc-item" data-key="carpaccio">
+          <div>
+            <div class="hc-item-name">Carpaccio di Tonno</div>
+            <div class="hc-item-desc">Ponzu, Sesamöl, mikrogrün</div>
+            <div class="hc-allergens">D · N · 3</div>
+          </div>
+          <div class="hc-item-price">22,00</div>
         </div>
-        <div class="hc-item-price">22,00</div>
-      </div>
-      <div class="hc-section">Pasta</div>
-      <div class="hc-item">
-        <div>
-          <div class="hc-item-name">Tagliatelle al Ragù</div>
-          <div class="hc-item-desc">12 Stunden geschmort, Pecorino</div>
-          <div class="hc-allergens">A · C · G</div>
+        <div class="hc-section" data-key="pasta">Pasta</div>
+        <div class="hc-item" data-key="tagliatelle">
+          <div>
+            <div class="hc-item-name">Tagliatelle al Ragù</div>
+            <div class="hc-item-desc">12 Stunden geschmort, Pecorino</div>
+            <div class="hc-allergens">A · C · G</div>
+          </div>
+          <div class="hc-item-price">19,50</div>
         </div>
-        <div class="hc-item-price">19,50</div>
-      </div>
-      <div class="hc-item">
-        <div>
-          <div class="hc-item-name">Risotto ai Funghi</div>
-          <div class="hc-item-desc">Steinpilze, Parmigiano 24 mesi</div>
-          <div class="hc-allergens">G · 2</div>
+        <div class="hc-item" data-key="risotto">
+          <div>
+            <div class="hc-item-name">Risotto ai Funghi</div>
+            <div class="hc-item-desc">Steinpilze, Parmigiano 24 mesi</div>
+            <div class="hc-allergens">G · 2</div>
+          </div>
+          <div class="hc-item-price">21,00</div>
         </div>
-        <div class="hc-item-price">21,00</div>
-      </div>
-      <div class="hc-section">Secondi</div>
-      <div class="hc-item">
-        <div>
-          <div class="hc-item-name">Ossobuco alla Milanese</div>
-          <div class="hc-item-desc">Safranrisotto, Gremolata</div>
-          <div class="hc-allergens">A · G</div>
+        <div class="hc-section" data-key="secondi">Secondi</div>
+        <div class="hc-item" data-key="ossobuco">
+          <div>
+            <div class="hc-item-name">Ossobuco alla Milanese</div>
+            <div class="hc-item-desc">Safranrisotto, Gremolata</div>
+            <div class="hc-allergens">A · G</div>
+          </div>
+          <div class="hc-item-price">32,00</div>
         </div>
-        <div class="hc-item-price">32,00</div>
+        <div class="hc-foot">Frühjahrskarte · 04 / 2026</div>
       </div>
-      <div class="hc-foot">Frühjahrskarte · 04 / 2026</div>
-    </div>
-    <div class="hc-badge hc-badge-top">
-      <div class="ic">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+
+      <!-- Phone with QR menu -->
+      <div class="hs-phone">
+        <div class="hs-phone-screen">
+          <div class="hs-phone-notch"></div>
+          <div class="hs-phone-head">Tovaglia</div>
+          <div class="hs-phone-body" id="hs-phone-body">
+            <div class="hs-phone-sec" data-key="antipasti">Antipasti</div>
+            <div class="hs-phone-it" data-key="burrata"><span class="nm">Burrata</span><span class="pr">18,00</span></div>
+            <div class="hs-phone-it" data-key="carpaccio"><span class="nm">Carpaccio</span><span class="pr">22,00</span></div>
+            <div class="hs-phone-sec" data-key="pasta">Pasta</div>
+            <div class="hs-phone-it" data-key="tagliatelle"><span class="nm">Tagliatelle</span><span class="pr">19,50</span></div>
+            <div class="hs-phone-it" data-key="risotto"><span class="nm">Risotto</span><span class="pr">21,00</span></div>
+            <div class="hs-phone-sec" data-key="secondi">Secondi</div>
+            <div class="hs-phone-it" data-key="ossobuco"><span class="nm">Ossobuco</span><span class="pr">32,00</span></div>
+          </div>
+        </div>
       </div>
-      <div>
-        In 4:32 Min. gesetzt
-        <span class="sub">Von Rohtext zu PDF</span>
-      </div>
-    </div>
-    <div class="hc-badge hc-badge-bot">
-      <div class="ic wine">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-      </div>
-      <div>
-        QR-Menü inklusive
-        <span class="sub">Immer synchron</span>
-      </div>
+
+      <!-- Sync badge -->
+      
     </div>
   </div>
 </section>
 
+<!-- LOGO BAR / SOCIAL PROOF -->
+<div class="logos">
+  <div class="logos-label">Gebaut von einem Grafikdesigner — für Gastronomen</div>
+  <div class="logos-row">
+    <span class="ss">LMIV-KONFORM</span>
+    <span>·</span>
+    <span class="ss">DSGVO</span>
+    <span>·</span>
+    <span>Hosting in Deutschland</span>
+    <span>·</span>
+    <span class="ss">SSL VERSCHLÜSSELT</span>
+  </div>
+</div>
+
 <!-- PAIN -->
 <section class="pain">
   <div class="pain-wrap">
-    <div class="sec-label">Kennst du das?</div>
-    <h2 class="sec-h">Jede neue Karte ist ein halber <em>Kampf.</em></h2>
-    <p class="sec-sub" style="color: rgba(244,239,232,0.6); max-width: 620px;">
-      Du änderst ein Gericht, streichst ein Dessert, passt Preise an — und plötzlich stimmt das ganze Layout nicht mehr. Der Feierabend rückt in die Ferne.
+    <div class="sec-label" data-num="01">Kennst du das?</div>
+    <h2 class="sec-h">Es ist Donnerstag. <em>Halb elf.</em></h2>
+    <p class="sec-sub" style="color: rgba(244,239,232,0.55); max-width: 580px; margin-top: 14px;">
+      Die letzten G&auml;ste sind weg. Die Karte muss morgen fr&uuml;h zum Drucker.
     </p>
-    <div class="pain-grid">
-      <div class="pain-card">
-        <div class="x"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div>
-        <h3>Stunden in Word &amp; Canva</h3>
-        <p>Tabs verrutschen, Schriftarten wechseln, der zweite Gang landet auf Seite 3. Und am nächsten Tag willst du nur den Preis ändern.</p>
-      </div>
-      <div class="pain-card">
-        <div class="x"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div>
-        <h3>Designer = 300 € &amp; 5 Tage</h3>
-        <p>Für jede Saisonkarte. Für jede Änderung. Für jeden Tippfehler. Ein Teller Pasta verkauft — Agentur-Rechnung bezahlt.</p>
-      </div>
-      <div class="pain-card">
-        <div class="x"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div>
-        <h3>LMIV-Allergene = Albtraum</h3>
-        <p>14 Pflichtallergene, ständig falsch zugewiesen, Abmahnungen im Briefkasten. Rechtssicherheit sollte kein Lottospiel sein.</p>
+
+    <div class="scene-grid">
+      <article class="scene-card">
+        <div class="sc-time">22:47</div>
+        <div class="sc-act">Akt I</div>
+        <h3 class="sc-h">&bdquo;Nur kurz drei Sachen &auml;ndern.&ldquo;</h3>
+        <p class="sc-p">Drei Gerichte raus. Vier Preise hoch. Ein neuer Wein, der unbedingt rein soll. Du &ouml;ffnest die alte Word-Datei.</p>
+      </article>
+
+      <article class="scene-card">
+        <div class="sc-time">23:32</div>
+        <div class="sc-act">Akt II</div>
+        <h3 class="sc-h">Das Layout zerf&auml;llt.</h3>
+        <p class="sc-p">Tabs verrutschen, der zweite Gang landet auf Seite 3. Die Designerin? <em>300&nbsp;&euro;, f&uuml;nf Tage.</em> Aber morgen ist Drucktermin.</p>
+      </article>
+
+      <article class="scene-card">
+        <div class="sc-time">01:14</div>
+        <div class="sc-act">Akt III</div>
+        <h3 class="sc-h">Speichern. Drucken. Fluchen.</h3>
+        <p class="sc-p">Photoshop. Canva. PDF nochmal. Du fragst dich, warum das jedes Mal so ist &mdash; und wann du eigentlich Wirt sein darfst.</p>
+      </article>
+    </div>
+
+    <div class="scene-close-line">
+      Es ist nicht das Essen, das dir den Abend nimmt. <em>Es ist das Werkzeug.</em>
+    </div>
+
+    <div class="scene-whisper">Es geht auch anders</div>
+  </div>
+</section>
+
+<!-- SYNC -->
+<section class="sync" id="sync">
+  <div class="sync-wrap">
+    <div class="sync-copy">
+      <div class="sec-label" data-num="02">Eine Quelle. Drei Bühnen.</div>
+      <h2 class="sec-h">Du tippst einmal — <em>Tovaglia spielt überall.</em></h2>
+      <p class="sync-sub">
+        Print-PDF für die Druckerei, QR-Menü für den Tisch, TV-Board für die Wand. Alles aus <b>einer einzigen Quelle</b>. Du änderst den Preis im CMS — und Sekunden später stimmt er auf jedem Kanal.
+      </p>
+      <div class="sync-bullets">
+        <div class="sync-bullet">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <span><b>Echtzeit-Sync.</b> Keine Doppelpflege, keine Versionschaos.</span>
+        </div>
+        <div class="sync-bullet">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <span><b>Format-aware.</b> Jeder Kanal bekommt sein eigenes Layout — automatisch.</span>
+        </div>
+        <div class="sync-bullet">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <span><b>Mehrsprachig.</b> Deutsch, Italienisch, Englisch — pro Sprache eigene Karte.</span>
+        </div>
       </div>
     </div>
-    <div class="pain-bridge">
-      <div class="pain-bridge-t">
-        Das Problem ist nicht dein Essen. <em>Das Problem ist das Werkzeug.</em>
+
+    <div class="sync-diagram">
+      <!-- Connector lines -->
+      <svg class="lines" viewBox="0 0 580 580" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="syncGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#C8606E" stop-opacity="0.65"/>
+            <stop offset="100%" stop-color="#C8606E" stop-opacity="0.22"/>
+          </linearGradient>
+        </defs>
+        <!-- Source center: 290, 290.  Cards (approx pixel centers within 580 box): -->
+        <!-- Print TL  ~95, 130 -->
+        <!-- QR right  ~498, 312 -->
+        <!-- TV BL     ~190, 504 -->
+        <!-- Print line -->
+        <line x1="290" y1="290" x2="95"  y2="130" stroke="url(#syncGrad)" stroke-width="1.2"/>
+        <line x1="290" y1="290" x2="95"  y2="130" stroke="#C8606E" stroke-width="1.2" stroke-dasharray="3 6" style="animation: sync-flow 2.4s linear infinite;"/>
+        <!-- QR line -->
+        <line x1="290" y1="290" x2="498" y2="312" stroke="url(#syncGrad)" stroke-width="1.2"/>
+        <line x1="290" y1="290" x2="498" y2="312" stroke="#C8606E" stroke-width="1.2" stroke-dasharray="3 6" style="animation: sync-flow 2.4s linear infinite; animation-delay: -0.8s;"/>
+        <!-- TV line -->
+        <line x1="290" y1="290" x2="190" y2="504" stroke="url(#syncGrad)" stroke-width="1.2"/>
+        <line x1="290" y1="290" x2="190" y2="504" stroke="#C8606E" stroke-width="1.2" stroke-dasharray="3 6" style="animation: sync-flow 2.4s linear infinite; animation-delay: -1.6s;"/>
+      </svg>
+
+      <!-- Center source -->
+      <div class="sync-source">
+        <div class="sync-pulse"></div>
+        <div class="sync-pulse p2"></div>
+        <div class="sync-source-label">Tovaglia CMS</div>
+        <div class="sync-source-name">Deine Karte</div>
+        <div class="sync-source-hint">42 Gerichte · 14 Allergene</div>
       </div>
-      <a href="#how" class="cta">Lösung ansehen</a>
+
+      <!-- PRINT output -->
+      <div class="sync-out print">
+        <div class="sync-out-eyebrow"><span class="num">i.</span>Print-PDF</div>
+        <div class="sync-out-title">Druckfertig.</div>
+        <div class="sync-mock-print">
+          <div class="mp-logo">TOVAGLIA</div>
+          <div class="mp-sec">Antipasti</div>
+          <div class="mp-row"><span class="name">Burrata di Puglia</span><span class="price">18,00</span></div>
+          <div class="mp-row"><span class="name">Carpaccio di Tonno</span><span class="price">22,00</span></div>
+          <div class="mp-sec">Pasta</div>
+          <div class="mp-row"><span class="name">Tagliatelle al Ragù</span><span class="price">19,50</span></div>
+          <div class="mp-row"><span class="name">Risotto ai Funghi</span><span class="price">21,00</span></div>
+        </div>
+      </div>
+
+      <!-- QR output -->
+      <div class="sync-out qr">
+        <div class="sync-out-eyebrow"><span class="num">ii.</span>QR-Menü</div>
+        <div class="sync-out-title">Am Tisch.</div>
+        <div class="sync-mock-qr">
+          <div class="mq-bar"><span class="dot"></span><span>tovaglia.menu/lago</span></div>
+          <div class="mq-h">Was darf<br/>es heute sein?</div>
+          <div class="mq-chips">
+            <span class="mq-chip">Glutenfrei</span>
+            <span class="mq-chip">Vegan</span>
+          </div>
+          <div class="mq-card">
+            <div>
+              <div class="name">Tagliatelle</div>
+              <div class="desc">12 h geschmort</div>
+            </div>
+            <div class="price">19,50</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TV output -->
+      <div class="sync-out tv">
+        <div class="sync-out-eyebrow"><span class="num">iii.</span>TV-Board</div>
+        <div class="sync-out-title">Auf der Wand.</div>
+        <div class="sync-mock-tv">
+          <div class="mt-h">Heute · Mittag</div>
+          <div class="mt-grid">
+            <div class="mt-cell"><div class="n">Burrata</div><div class="p">18,00</div></div>
+            <div class="mt-cell"><div class="n">Tagliatelle</div><div class="p">19,50</div></div>
+            <div class="mt-cell"><div class="n">Risotto</div><div class="p">21,00</div></div>
+            <div class="mt-cell"><div class="n">Ossobuco</div><div class="p">28,00</div></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- HOW -->
 <section class="sec" id="how">
-  <div class="sec-label">So funktioniert es</div>
+  <div class="sec-label" data-num="03">So funktioniert es</div>
   <h2 class="sec-h">In drei Schritten zur fertigen <em>Speisekarte.</em></h2>
   <p class="sec-sub">Keine Design-Kenntnisse. Keine Software-Installation. Nur deine Gerichte — der Rest läuft automatisch.</p>
   <div class="how-grid">
@@ -1317,10 +3847,133 @@ section { position: relative; z-index: 2; }
   </div>
 </section>
 
+<!-- AI FOTO-IMPORT -->
+<section class="aii" id="ai">
+  <div class="aii-wrap">
+    <div class="aii-head">
+      <div class="sec-label" data-num="04">KI · Foto-Import</div>
+      <h2 class="sec-h">Fotografier deine alte Karte. <em>Tovaglia liest sie.</em></h2>
+      <p class="sec-sub" style="margin: 14px auto 0;">
+        Hand­geschrieben? Eingescannt? Fünfzehn Jahre alt? Egal. Du machst ein Foto — die KI erkennt Gerichte, Preise, Sektionen. Du musst nur noch <b>bestätigen</b>.
+      </p>
+    </div>
+
+    <div class="aii-stage">
+      <!-- Step 1: Photo -->
+      <div class="aii-step">
+        <div class="aii-step-eyebrow"><span class="num">i.</span><span class="label">Du fotografierst</span></div>
+        <h3>Mit dem Handy.<br/>So wie sie ist.</h3>
+        <p>Handgeschrieben, schief, mit Soße bekleckert. Ein Foto reicht — auch der allererste Versuch.</p>
+        <div class="demo">
+          <div class="aii-photo">
+            <div class="aii-photo-inner">
+              <div class="aii-photo-title">Trattoria Lago</div>
+              <div class="aii-photo-section">Antipasti</div>
+              <div class="aii-photo-row"><span class="nm">Burrata</span><span class="pr">16</span></div>
+              <div class="aii-photo-row"><span class="nm">Tonno</span><span class="pr">19</span></div>
+              <div class="aii-photo-section">Pasta</div>
+              <div class="aii-photo-row"><span class="nm">Tagliatelle</span><span class="pr">17</span></div>
+              <div class="aii-photo-row"><span class="nm">Risotto</span><span class="pr">18</span></div>
+              <div class="aii-photo-section">Secondi</div>
+              <div class="aii-photo-row"><span class="nm">Ossobuco</span><span class="pr">28</span></div>
+              <div class="aii-photo-stain"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="aii-arrow" aria-hidden="true">
+        <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="2" y1="14" x2="24" y2="14"/>
+          <polyline points="18 8, 24 14, 18 20"/>
+        </svg>
+      </div>
+
+      <!-- Step 2: OCR / recognition -->
+      <div class="aii-step">
+        <div class="aii-step-eyebrow"><span class="num">ii.</span><span class="label">KI erkennt</span></div>
+        <h3>Sektionen, Gerichte,<br/>Preise — markiert.</h3>
+        <p>Layout-aware OCR identifiziert jedes Element und extrahiert Struktur statt nur Text.</p>
+        <div class="demo">
+          <div class="aii-ocr">
+            <div class="aii-ocr-inner">
+              <div class="aii-ocr-title">Trattoria Lago</div>
+              <div class="aii-ocr-section bb-target bb-tag" data-tag="Sektion">Antipasti</div>
+              <div class="aii-ocr-row bb-target bb-tag bb-tag-right" data-tag="Gericht + Preis"><span>Burrata di Puglia</span><span>16 €</span></div>
+              <div class="aii-ocr-row bb-target"><span>Carpaccio di Tonno</span><span>19 €</span></div>
+              <div class="aii-ocr-section bb-target">Pasta</div>
+              <div class="aii-ocr-row bb-target"><span>Tagliatelle al Rag&ugrave;</span><span>17 €</span></div>
+              <div class="aii-ocr-row bb-target"><span>Risotto ai Funghi</span><span>18 €</span></div>
+              <div class="aii-ocr-section bb-target">Secondi</div>
+              <div class="aii-ocr-row bb-target"><span>Ossobuco alla Milanese</span><span>28 €</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="aii-arrow" aria-hidden="true">
+        <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="2" y1="14" x2="24" y2="14"/>
+          <polyline points="18 8, 24 14, 18 20"/>
+        </svg>
+      </div>
+
+      <!-- Step 3: Editor -->
+      <div class="aii-step">
+        <div class="aii-step-eyebrow"><span class="num">iii.</span><span class="label">Du bestätigst</span></div>
+        <h3>Strukturiert.<br/>Editierbar. Live.</h3>
+        <p>In Sekunden hast du eine Karte, die du bearbeitest wie ein Dokument. Allergene werden vorgeschlagen.</p>
+        <div class="demo">
+          <div class="aii-editor">
+            <div class="aii-editor-bar">
+              <div class="dots"><span></span><span></span><span></span></div>
+              <span class="ttl">Trattoria Lago · Karte 04/26</span>
+            </div>
+            <div class="aii-editor-row section">Antipasti</div>
+            <div class="aii-editor-row">
+              <div class="nm">Burrata di Puglia <small>Trüffel, Brot</small></div>
+              <div class="all"><span class="al-chip">G</span><span class="al-chip">A</span></div>
+              <div class="pr">16,00</div>
+            </div>
+            <div class="aii-editor-row">
+              <div class="nm">Carpaccio di Tonno <small>Ponzu, Sesam</small></div>
+              <div class="all"><span class="al-chip">D</span><span class="al-chip">N</span></div>
+              <div class="pr">19,00</div>
+            </div>
+            <div class="aii-editor-row section">Pasta</div>
+            <div class="aii-editor-row">
+              <div class="nm">Tagliatelle al Ragù <small>12 h geschmort</small></div>
+              <div class="all"><span class="al-chip">A</span><span class="al-chip">G</span></div>
+              <div class="pr new">17,00</div>
+            </div>
+            <div class="aii-editor-row">
+              <div class="nm">Risotto ai Funghi <small>Steinpilze</small></div>
+              <div class="all"><span class="al-chip">G</span></div>
+              <div class="pr">18,00</div>
+            </div>
+            <div class="aii-editor-foot">
+              <span>Auto-erkannt</span>
+              <span class="ok">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Bereit
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="aii-outcome">
+      <div><span class="num">~30s</span><span class="lab">Pro Karte</span></div>
+      <div><span class="num">14</span><span class="lab">Allergene auto-vorgeschlagen</span></div>
+    </div>
+  </div>
+</section>
+
 <!-- FEATURES -->
 <section class="feat">
   <div class="feat-wrap">
-    <div class="sec-label">Alles drin</div>
+    <div class="sec-label" data-num="05">Alles drin</div>
     <h2 class="sec-h">Was du <em>sonst noch</em> bekommst.</h2>
     <div class="feat-grid">
       <div class="feat-item">
@@ -1361,7 +4014,7 @@ section { position: relative; z-index: 2; }
 <section class="qr-show" id="qr">
   <div class="qr-show-wrap">
     <div class="qr-copy">
-      <div class="sec-label">Bonus &middot; QR-Menü</div>
+      <div class="sec-label" data-num="06">Bonus &middot; QR-Menü</div>
       <h2 class="sec-h">Deine Gäste scannen. <em>Und finden, was sie essen dürfen.</em></h2>
       <p class="sec-sub">Jede Speisekarte bekommt automatisch ein digitales Zwillings-Menü mit <b style="color:var(--ink)">intelligentem Allergenfilter</b>. Gluten? Laktose? Nüsse? Ein Tipp — unpassende Gerichte werden ausgegraut, der Rest bleibt frei zum Genießen.</p>
       <div class="qr-features">
@@ -1407,112 +4060,278 @@ section { position: relative; z-index: 2; }
   </div>
 </section>
 
+<!-- TV BOARD -->
+<section class="tvb" id="tv">
+  <div class="tvb-wrap">
+    <div class="tvb-copy">
+      <div class="sec-label" data-num="07">Bonus &middot; TV-Board</div>
+      <h2 class="sec-h">Die Tageskarte hängt <em>an der Wand.</em></h2>
+      <p class="tvb-sub">
+        Hochkant über dem Tresen. Quer über dem Eingang. Tovaglia spielt deine Karte als <b>digitales Board</b> aus — automatisch typografisch gesetzt, automatisch synchron mit deiner Print-Karte. Mittag wird Abend? Ein Klick.
+      </p>
+      <div class="tvb-bullets">
+        <div class="tvb-bullet">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <span><b>Portrait &amp; Landscape</b> — jedes Format aus derselben Quelle.</span>
+        </div>
+        <div class="tvb-bullet">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <span><b>Tageszeit-Zonen.</b> Mittag, Abend, Aperitivo — automatisch zur richtigen Stunde.</span>
+        </div>
+        <div class="tvb-bullet">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <span><b>Browser-basiert.</b> Jeder Smart-TV, jeder Mini-PC, kein Spezialwerk.</span>
+        </div>
+      </div>
+      <div class="tvb-time-toggle" id="tvb-toggle">
+        <button class="on" data-state="lunch">Mittag</button>
+        <button data-state="dinner">Abend</button>
+      </div>
+    </div>
+
+    <div class="tvb-stage">
+
+      <!-- Portrait TV -->
+      <div class="tv portrait">
+        <div class="tv-screen">
+          <div class="tv-content tv-state" data-state="lunch">
+            <div class="tv-eyebrow">Pranzo · Heute</div>
+            <div class="tv-title">Mittags-<br/>karte.</div>
+            <div class="tv-rule"></div>
+            <div class="tv-list">
+              <div class="tv-row">
+                <div>
+                  <div class="nm">Tagliatelle al Ragù</div>
+                  <div class="ds">12 h geschmort, Pecorino</div>
+                </div>
+                <div class="pr">14,50</div>
+              </div>
+              <div class="tv-row">
+                <div>
+                  <div class="nm">Caponata</div>
+                  <div class="ds">Aubergine, Kapern · Vegan</div>
+                </div>
+                <div class="pr">11,50</div>
+              </div>
+              <div class="tv-row">
+                <div>
+                  <div class="nm">Risotto Funghi</div>
+                  <div class="ds">Steinpilze, Parmigiano 24 m</div>
+                </div>
+                <div class="pr">15,00</div>
+              </div>
+            </div>
+            <div class="tv-foot">
+              <span>Mo–Fr · 12–15&nbsp;Uhr</span>
+              <span class="tov">Tovaglia</span>
+            </div>
+          </div>
+          <div class="tv-content tv-state hidden" data-state="dinner">
+            <div class="tv-eyebrow">Cena · Heute</div>
+            <div class="tv-title">Abend-<br/>karte.</div>
+            <div class="tv-rule"></div>
+            <div class="tv-list">
+              <div class="tv-row">
+                <div>
+                  <div class="nm">Burrata di Puglia</div>
+                  <div class="ds">Trüffel, geröstetes Brot</div>
+                </div>
+                <div class="pr">18,00</div>
+              </div>
+              <div class="tv-row">
+                <div>
+                  <div class="nm">Ossobuco</div>
+                  <div class="ds">Safranrisotto, Gremolata</div>
+                </div>
+                <div class="pr">32,00</div>
+              </div>
+              <div class="tv-row">
+                <div>
+                  <div class="nm">Tiramisù</div>
+                  <div class="ds">Hausgemacht, Marsala</div>
+                </div>
+                <div class="pr">9,50</div>
+              </div>
+            </div>
+            <div class="tv-foot">
+              <span>Di–So · ab 18&nbsp;Uhr</span>
+              <span class="tov">Tovaglia</span>
+            </div>
+          </div>
+        </div>
+        <div class="tv-stand"></div>
+      </div>
+
+      <!-- Landscape TV -->
+      <div class="tv landscape">
+        <div class="tv-screen">
+          <div class="tv-content tv-state" data-state="lunch">
+            <div style="display:flex; justify-content:space-between; align-items:flex-end;">
+              <div>
+                <div class="tv-eyebrow">Pranzo · 12&ndash;15 Uhr</div>
+                <div class="tv-title">Tagesgerichte.</div>
+              </div>
+              <div style="font-family: var(--serif); font-style: italic; color: rgba(244,239,232,0.5); font-size: 14px;">Donnerstag, 16. April</div>
+            </div>
+            <div class="tv-rule"></div>
+            <div class="tv-grid">
+              <div class="tv-cell">
+                <div class="nm">Tagliatelle al Ragù</div>
+                <div class="ds">12 h geschmort, Pecorino</div>
+                <div class="pr">14,50&nbsp;€</div>
+              </div>
+              <div class="tv-cell">
+                <div class="nm">Caponata Siciliana</div>
+                <div class="ds">Aubergine, Kapern, Oliven</div>
+                <div class="pr">11,50&nbsp;€</div>
+              </div>
+              <div class="tv-cell">
+                <div class="nm">Risotto ai Funghi</div>
+                <div class="ds">Steinpilze, Parmigiano 24&nbsp;m</div>
+                <div class="pr">15,00&nbsp;€</div>
+              </div>
+            </div>
+            <div class="tv-foot">
+              <span>Inkl. Wasser &amp; Kleines Brot</span>
+              <span class="tov">Tovaglia · live sync</span>
+            </div>
+          </div>
+          <div class="tv-content tv-state hidden" data-state="dinner">
+            <div style="display:flex; justify-content:space-between; align-items:flex-end;">
+              <div>
+                <div class="tv-eyebrow">Cena · ab 18 Uhr</div>
+                <div class="tv-title">Abendkarte.</div>
+              </div>
+              <div style="font-family: var(--serif); font-style: italic; color: rgba(244,239,232,0.5); font-size: 14px;">Donnerstag, 16. April</div>
+            </div>
+            <div class="tv-rule"></div>
+            <div class="tv-grid">
+              <div class="tv-cell">
+                <div class="nm">Burrata di Puglia</div>
+                <div class="ds">Trüffel, geröstetes Brot</div>
+                <div class="pr">18,00&nbsp;€</div>
+              </div>
+              <div class="tv-cell">
+                <div class="nm">Ossobuco Milanese</div>
+                <div class="ds">Safranrisotto, Gremolata</div>
+                <div class="pr">32,00&nbsp;€</div>
+              </div>
+              <div class="tv-cell">
+                <div class="nm">Tiramisù</div>
+                <div class="ds">Hausgemacht, Marsala</div>
+                <div class="pr">9,50&nbsp;€</div>
+              </div>
+            </div>
+            <div class="tv-foot">
+              <span>Reservierung empfohlen</span>
+              <span class="tov">Tovaglia · live sync</span>
+            </div>
+          </div>
+        </div>
+        <div class="tv-stand"></div>
+        <div class="tvb-tag t1"><span class="dot"></span>Live · 4K</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- FOUNDER / EARLY ACCESS -->
 <section class="sec founder" id="founder">
-  <div class="founder-grid">
-    <div>
-      <div class="sec-label">Ehrlich gesagt</div>
-      <h2 class="sec-h">Wir sind <em>neu</em> &mdash; und genau deshalb solltest du jetzt dabei sein.</h2>
-      <p class="sec-sub" style="margin-bottom: 22px;">
-        Tovaglia ist gerade erst gestartet. Wir haben noch keine 1.000&nbsp;Kunden, keine prominenten Logos, keine gekauften Testimonials. Was wir haben: eine Software, die funktioniert &mdash; entwickelt aus jahrelanger Erfahrung als Designer f&uuml;r Gastronomiebetriebe.
-      </p>
-      <p class="sec-sub" style="margin-bottom: 28px;">
-        Als <b>Early-Access-Nutzer</b> bekommst du direkten Draht zum Team, Einfluss auf die Features, die als n&auml;chstes kommen &mdash; und die Sicherheit, dass dein Preis stabil bleibt, solange du dabei bist.
-      </p>
-      <div class="founder-badges">
-        <div class="fb">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          <span>Direkter Draht zum Team</span>
-        </div>
-        <div class="fb">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          <span>Preis bleibt, solange du dabei bist</span>
-        </div>
-        <div class="fb">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <span>Mitgestalten statt nur nutzen</span>
-        </div>
-      </div>
-      <a href="#preis" class="cta" style="margin-top: 24px;">
-        Jetzt starten
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </a>
-    </div>
-    <aside class="founder-note">
-      <div class="fn-quote">“</div>
-      <p class="fn-text">
-        Als Designer habe ich jahrelang f&uuml;r Gastronomen gearbeitet. Ich kenne das Chaos mit Word-Vorlagen, Canva-Dateien und Allergen-Listen auf Post-its &mdash; aus erster Hand. Tovaglia ist das Werkzeug, das ich mir damals f&uuml;r meine Kunden gew&uuml;nscht h&auml;tte &mdash; und das ich jetzt f&uuml;r dich baue.
-      </p>
-      <div class="fn-sig">
-        <div class="fn-av">T</div>
-        <div>
-          <div class="fn-name">Das Tovaglia-Team</div>
-          <div class="fn-role">Gr&uuml;nder &middot; 2026</div>
+  <div class="sec-label" data-num="08" style="text-align:center;justify-content:center;">Vorher &middot; Nachher</div>
+  <h2 class="sec-h" style="text-align:center;max-width:880px;margin:0 auto 14px;">Ich kenne das <em>Chaos</em> &mdash; weil ich selbst drin sa&szlig;.</h2>
+  <p class="sec-sub" style="text-align:center;max-width:680px;margin:0 auto 56px;">
+    Drei Stunden in Photoshop f&uuml;r eine Saisonkarte. Allergen-Codes von Hand. Schriftarten, die nicht passen. Tovaglia ist das Werkzeug, das ich damals gebraucht h&auml;tte.
+  </p>
+
+  <div class="story-grid">
+    <article class="story-card story-before">
+      <div class="sc-tag">Vorher</div>
+      <h3 class="sc-h">Drei Stunden in Photoshop. <em>Donnerstagabend.</em></h3>
+      <p class="sc-line">Vier Dateien f&uuml;r dieselbe Karte: Print, QR-Men&uuml;, TV-Tafel und Webseite. Eine Preis&auml;nderung &mdash; und du machst sie viermal. Eine vergisst du.</p>
+
+      <div class="vor-block">
+        <div class="vor-eyebrow">Du jonglierst mit</div>
+        <div class="app-cross" aria-hidden="true">
+          <div class="ac-icon ac-ps">
+            <span class="glyph">Ps</span>
+            <svg class="ac-x" viewBox="0 0 100 100" preserveAspectRatio="none"><line x1="10" y1="10" x2="90" y2="90"/><line x1="90" y1="10" x2="10" y2="90"/></svg>
+          </div>
+          <div class="ac-icon ac-id">
+            <span class="glyph">Id</span>
+            <svg class="ac-x" viewBox="0 0 100 100" preserveAspectRatio="none"><line x1="10" y1="10" x2="90" y2="90"/><line x1="90" y1="10" x2="10" y2="90"/></svg>
+          </div>
+          <div class="ac-icon ac-canva">
+            <span class="glyph">C</span>
+            <svg class="ac-x" viewBox="0 0 100 100" preserveAspectRatio="none"><line x1="10" y1="10" x2="90" y2="90"/><line x1="90" y1="10" x2="10" y2="90"/></svg>
+          </div>
         </div>
       </div>
-    </aside>
+
+      <div class="vor-block">
+        <div class="vor-eyebrow">Und verwaltest</div>
+        <ul class="vor-files" aria-hidden="true">
+          <li>
+            <span class="vf-ext">.indd</span>
+            <span class="vf-nm">Karte_Print_A4_final</span>
+            <span class="vf-ch">Print</span>
+          </li>
+          <li>
+            <span class="vf-ext">.psd</span>
+            <span class="vf-nm">Tafel_Bar_quer_v3</span>
+            <span class="vf-ch">TV-Tafel</span>
+          </li>
+          <li class="current">
+            <span class="vf-ext">.psd</span>
+            <span class="vf-nm">Speisekarte_final_v6_neu<span class="vf-cur"></span></span>
+            <span class="vf-ch">QR-Men&uuml;</span>
+          </li>
+          <li>
+            <span class="vf-ext">.png</span>
+            <span class="vf-nm">Karte_Webseite_export</span>
+            <span class="vf-ch">Webseite</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sc-meta">22:47 Uhr &middot; Datei v6</div>
+    </article>
+
+    <article class="story-card story-after">
+      <div class="sc-tag">Nachher</div>
+      <h3 class="sc-h">Vier Minuten in Tovaglia. <em>Vor dem ersten Espresso.</em></h3>
+      <p class="sc-line">Karte tippen, Allergene und N&auml;hrwerte ein Klick weiter. Print, QR und TV-Board sind in derselben Sekunde aktuell.</p>
+      <div class="sync-hub" aria-hidden="true">
+        <svg class="sh-lines" viewBox="0 0 360 180" preserveAspectRatio="none">
+          <line x1="180" y1="90" x2="56" y2="42"/>
+          <line x1="180" y1="90" x2="304" y2="42"/>
+          <line x1="180" y1="90" x2="56" y2="138"/>
+          <line x1="180" y1="90" x2="304" y2="138"/>
+        </svg>
+        <div class="sh-node sh-tl"><span class="d"></span>Print</div>
+        <div class="sh-node sh-tr"><span class="d"></span>QR-Men&uuml;</div>
+        <div class="sh-node sh-bl"><span class="d"></span>TV-Board</div>
+        <div class="sh-node sh-br"><span class="d"></span>Webseite</div>
+        <div class="sh-core">
+          <span class="sh-mark">T</span>
+          <span class="sh-lbl">Tovaglia</span>
+        </div>
+      </div>
+      <div class="sc-meta">09:14 Uhr &middot; Live synchronisiert</div>
+    </article>
   </div>
 
-  <div class="testi-grid" style="display:none">
-    <div class="testi featured">
-      <div class="testi-stars">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-      </div>
-      <div class="testi-q">
-        „Früher habe ich drei Abende im Büro gesessen, um die Saisonkarte fertig zu bekommen. Heute tippe ich die Gerichte ein und gehe früher nach Hause. Das Ding hat sich im ersten Monat bezahlt gemacht."
-      </div>
-      <div class="testi-foot">
-        <div class="testi-av">MB</div>
-        <div>
-          <div class="testi-name">Marco Bellucci</div>
-          <div class="testi-role">Inhaber · Osteria Bellavista, München</div>
-        </div>
-      </div>
-    </div>
-    <div class="testi">
-      <div class="testi-stars">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-      </div>
-      <div class="testi-q">„Die Allergenkennzeichnung ist gold wert. Seit Tovaglia schlafe ich ruhiger — keine Angst mehr vor Abmahnungen."</div>
-      <div class="testi-foot">
-        <div class="testi-av">SK</div>
-        <div>
-          <div class="testi-name">Sabine Kraus</div>
-          <div class="testi-role">Zur Linde, Tübingen</div>
-        </div>
-      </div>
-    </div>
-    <div class="testi">
-      <div class="testi-stars">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-      </div>
-      <div class="testi-q">„Drei Sprachen, ein Klick. Unsere Touristen-Gäste lieben das QR-Menü auf Englisch."</div>
-      <div class="testi-foot">
-        <div class="testi-av">AD</div>
-        <div>
-          <div class="testi-name">Antonio Di Rossi</div>
-          <div class="testi-role">Trattoria Marco, Hamburg</div>
-        </div>
-      </div>
-    </div>
+  <div style="text-align:center;margin-top:48px;">
+    <a href="#preis" class="cta">
+      Jetzt kostenlos starten
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
   </div>
 </section>
 
 <!-- PRICING -->
 <section class="price-sec" id="preis">
-  <div class="sec-label">Faire Preise</div>
+  <div class="sec-label" data-num="09">Faire Preise</div>
   <h2 class="sec-h" style="margin: 0 auto 18px;">Ein Plan f&uuml;r <em>jede K&uuml;che.</em></h2>
   <p class="sec-sub" style="margin: 0 auto 32px;">Starte kostenlos. Wechsle, wenn du w&auml;chst. Keine versteckten Kosten, jederzeit k&uuml;ndbar.</p>
 
@@ -1545,7 +4364,7 @@ section { position: relative; z-index: 2; }
 
     <!-- PRO (highlighted) -->
     <div class="tier tier-pro">
-      <div class="tier-ribbon">Empfohlen</div>
+      <div class="tier-ribbon">F&uuml;r die meisten richtig</div>
       <div class="tier-name">Pro</div>
       <div class="tier-desc">Alles, was du f&uuml;r eine professionelle Karte brauchst.</div>
       <div class="tier-price">
@@ -1561,7 +4380,7 @@ section { position: relative; z-index: 2; }
         <li><svg class="ok" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>QR-Men&uuml;, mehrsprachig</span></li>
         <li><svg class="ok" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Druckfertige PDFs (A4, A5, Bifold)</span></li>
       </ul>
-      <a href="https://app.tovaglia.io?plan=pro" class="tier-cta primary">Pro w&auml;hlen</a>
+      <a href="https://app.tovaglia.io?plan=pro" class="tier-cta primary">Plan w&auml;hlen</a>
       <div class="tier-note">Jederzeit k&uuml;ndbar &middot; Monatlich abrechenbar</div>
     </div>
 
@@ -1581,7 +4400,7 @@ section { position: relative; z-index: 2; }
         <li><svg class="ok" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span><b>Bestellsystem</b> am Tisch</span></li>
         <li><svg class="ok" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span><b>Dashboard &amp; Auswertungen</b></span></li>
       </ul>
-      <a href="https://app.tovaglia.io?plan=business" class="tier-cta ghost">Business w&auml;hlen</a>
+      <a href="https://app.tovaglia.io?plan=business" class="tier-cta ghost">Plan w&auml;hlen</a>
       <div class="tier-note">Jederzeit k&uuml;ndbar</div>
     </div>
   </div>
@@ -1592,45 +4411,64 @@ section { position: relative; z-index: 2; }
 
 <!-- FAQ -->
 <section class="sec">
-  <div class="sec-label">Bevor du fragst</div>
-  <h2 class="sec-h">Ehrliche <em>Antworten.</em></h2>
+  <div class="sec-label">H&auml;ufig gefragt</div>
+  <h2 class="sec-h">Was du <em>wissen solltest.</em></h2>
 
   <div class="faq-wrap">
     <div class="faq-item">
       <button class="faq-q">Brauche ich Design-Kenntnisse?
         <span class="plus"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
       </button>
-      <div class="faq-a"><p>Nein. Wenn du Word bedienen kannst, kannst du Tovaglia bedienen. Das Layout entsteht automatisch — du tippst nur ein, was auf die Karte soll. <b>Wer kurze Sätze schreiben kann, kann Tovaglia benutzen.</b></p></div>
+      <div class="faq-a"><p>Nein. Wenn du Word bedienen kannst, kannst du Tovaglia bedienen. Das Layout entsteht automatisch &mdash; du tippst nur ein, was auf die Karte soll. <b>Wer kurze S&auml;tze schreiben kann, kann Tovaglia benutzen.</b></p></div>
     </div>
+
     <div class="faq-item">
-      <button class="faq-q">Ist die Allergenkennzeichnung wirklich rechtssicher?
+      <button class="faq-q">Wie funktioniert die Allergenkennzeichnung?
         <span class="plus"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
       </button>
-      <div class="faq-a"><p>Ja. Tovaglia deckt alle 14 EU-Pflichtallergene nach <b>LMIV 1169/2011</b> ab. Die Legende wird automatisch auf jeder Karte ergänzt &mdash; Zuweisung pro Gericht per Klick, Abmahn-Risiko deutlich reduziert.</p></div>
+      <div class="faq-a"><p>Tovaglia stellt dir alle <b>14 EU-Pflichtallergene</b> sowie g&auml;ngige Zusatzstoffe zur Auswahl. Du weist sie pro Gericht per Klick zu, die Legende wird automatisch unter jeder Karte ergänzt. <b>Die Verantwortung f&uuml;r die korrekte Zuweisung liegt beim Betrieb</b> &mdash; wir liefern die Werkzeuge, du kennst dein Gericht.</p></div>
     </div>
+
     <div class="faq-item">
-      <button class="faq-q">Kann ich meinen Druckerei-Workflow behalten?
+      <button class="faq-q">Verbindet sich Tovaglia mit meiner Kasse?
         <span class="plus"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
       </button>
-      <div class="faq-a"><p>Absolut. Tovaglia exportiert <b>druckfertige PDFs mit Bleed und Passmarken</b>. Jede Druckerei kann sie ohne Nacharbeit verarbeiten. Oder du druckst direkt im Haus auf dem Office-Drucker.</p></div>
+      <div class="faq-a"><p>Nein. Tovaglia ist die Karte und das, was der Gast sieht &mdash; Print, QR-Men&uuml; und TV-Board. Mit Kassensystemen wie Vectron, Lightspeed oder orderbird gibt es <b>bewusst keine Verbindung</b>. Wir machen einen Job, und den machen wir gut. Wer eine Kassen-Integration braucht, ist bei einem Kassenanbieter besser aufgehoben.</p></div>
     </div>
+
     <div class="faq-item">
-      <button class="faq-q">Was kostet der Einstieg?
+      <button class="faq-q">Kann ich mehrere Sprachen anbieten?
         <span class="plus"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
       </button>
-      <div class="faq-a"><p>Nichts. Du startest mit der kostenlosen Version &mdash; 1 Speisekarte, 2 Downloads pro Monat, Tovaglia-Wasserzeichen. Wenn du mehr brauchst, wechselst du auf Pro (14,90&nbsp;&euro;/Monat) oder Business (29,90&nbsp;&euro;/Monat). <b>Keine Kreditkarte, keine Abofalle.</b></p></div>
+      <div class="faq-a"><p>Ja. Du pflegst die Karte einmal in deiner Sprache, Tovaglia &uuml;bersetzt automatisch ins Englische, Italienische, Franz&ouml;sische und mehr. Im QR-Men&uuml; schaltet die Sprache je nach Browser-Sprache deines Gastes &mdash; oder per Klick. <b>&Uuml;bersetzungen kannst du jederzeit nachbearbeiten</b>, falls dein Lieblingsgericht einen Eigennamen hat.</p></div>
     </div>
+
     <div class="faq-item">
-      <button class="faq-q">Kann ich mein eigenes Logo und Design verwenden?
+      <button class="faq-q">Was passiert mit meinen Daten, wenn ich k&uuml;ndige?
         <span class="plus"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
       </button>
-      <div class="faq-a"><p>Ja. Lade dein Logo hoch (PNG/SVG), wähle aus einer Auswahl professioneller Typografien und die Karte trägt deine Handschrift. <b>Nicht Tovaglia-Look — dein Look.</b></p></div>
+      <div class="faq-a"><p>Du kannst deine Karten jederzeit als <b>druckfertige PDFs exportieren</b>. Nach K&uuml;ndigung bleibt dein Konto noch 30 Tage im Read-only-Modus, danach werden alle Daten DSGVO-konform gel&ouml;scht. <b>Kein Lock-in.</b> Was du gemacht hast, geh&ouml;rt dir.</p></div>
     </div>
+
     <div class="faq-item">
-      <button class="faq-q">Für wen lohnt sich Tovaglia nicht?
+      <button class="faq-q">Kann ich selbst drucken oder meine Druckerei behalten?
         <span class="plus"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
       </button>
-      <div class="faq-a"><p>Wenn deine Karte seit 15 Jahren gleich ist und es auch bleiben soll, brauchst du uns nicht. Tovaglia rechnet sich ab der <b>zweiten Karten-Änderung im Jahr</b> — für alle anderen spielt sich das System in wenigen Wochen amortisiert.</p></div>
+      <div class="faq-a"><p>Ja, beides. Der Fokus liegt darauf, dass du <b>flexibel bleibst</b>: Tovaglia exportiert druckfertige PDFs (A4, A5, Bifold) mit Bleed und Passmarken &mdash; du druckst sie auf dem Office-Drucker im Haus, oder schickst sie an deine Druckerei. <b>Keine Druckerei-Bindung, kein Aufpreis.</b></p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Funktioniert das TV-Board auf meinem alten Fernseher?
+        <span class="plus"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+      </button>
+      <div class="faq-a"><p>Wenn der TV einen Browser hat: ja. URL eingeben, Karte l&auml;uft. Falls nicht, reicht ein g&uuml;nstiger Mini-PC oder ein Streaming-Stick mit Browser (Fire TV, Chromecast mit Browser-App, ein alter Laptop hinter dem Display). <b>Keine spezielle Hardware, kein Abo f&uuml;r ein zweites Ger&auml;t.</b></p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Bleibt der Look meines Restaurants erhalten?
+        <span class="plus"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+      </button>
+      <div class="faq-a"><p>Ja. Du l&auml;dst dein <b>Logo als PNG oder SVG hoch</b> &mdash; eine integrierte Ausschneide-Funktion entfernt den Hintergrund automatisch, falls n&ouml;tig. Aus unserer Sammlung kuratierter <b>Templates</b> w&auml;hlst du das Layout, das zu deinem Haus passt &mdash; vom feinen Trattoria-Stil &uuml;ber moderne Bistro-Karten bis zur klassischen Fine-Dining-&Auml;sthetik. Dazu kommen <b>eigene Markenfarben</b>, die sich konsistent durch Print, QR-Men&uuml; und TV-Board ziehen. <b>Eine Karte, die nach deinem Restaurant aussieht &mdash; nicht nach Tovaglia.</b></p></div>
     </div>
   </div>
 </section>
@@ -1722,7 +4560,186 @@ section { position: relative; z-index: 2; }
     }
     btns.forEach(b => b.addEventListener('click', () => setBilling(b.dataset.billing)));
   })();
+
+  // TV-Board state toggle (Mittag/Abend)
+  (function() {
+    const toggle = document.getElementById('tvb-toggle');
+    if (!toggle) return;
+    const buttons = toggle.querySelectorAll('button');
+    function setState(state) {
+      buttons.forEach(b => b.classList.toggle('on', b.dataset.state === state));
+      document.querySelectorAll('.tv-state').forEach(el => {
+        el.classList.toggle('hidden', el.dataset.state !== state);
+      });
+    }
+    buttons.forEach(b => b.addEventListener('click', () => setState(b.dataset.state)));
+  })();
+
+  // Hero — fade in card + phone items together
+  (function(){
+    const card = document.getElementById('hero-card');
+    const phoneBody = document.getElementById('hs-phone-body');
+    if (!card) return;
+    function revealAll() {
+      card.querySelectorAll('.hc-item, .hc-section').forEach((el, i) => {
+        setTimeout(() => el.classList.add('is-on'), 80 + i * 70);
+      });
+      if (phoneBody) {
+        phoneBody.querySelectorAll('.hs-phone-it, .hs-phone-sec').forEach((el, i) => {
+          setTimeout(() => el.classList.add('is-on'), 120 + i * 70);
+        });
+      }
+    }
+    revealAll();
+  })();
 </script>
 
-</body>
+<!-- ═══ TWEAKS PANEL ═══ -->
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+
+<div id="tweaks-root"></div>
+<script type="text/babel">
+const TWEAK_DEFAULS = /*EDITMODE-BEGIN*/{
+  "mood": "spirited",
+  "palette": "bordeaux",
+  "density": "standard"
+}/*EDITMODE-END*/;
+
+const MOODS = [
+  { value: 'editorial', label: 'Editorial', hint: 'Playfair · ruhig · klassisch' },
+  { value: 'spirited',  label: 'Warm',      hint: 'Fraunces · weich · lebendig' },
+  { value: 'modern',    label: 'Modern',    hint: 'Space Grotesk · scharf · technisch' },
+];
+
+const PALETTES = [
+  { value: 'bordeaux', label: 'Bordeaux', swatches: ['#F4EFE8', '#7A1F2E', '#1A1816'] },
+  { value: 'notte',    label: 'Notte',    swatches: ['#1F1B17', '#C68A6E', '#F4EFE8'] },
+  { value: 'toscana',  label: 'Toscana',  swatches: ['#EFE2CD', '#B85432', '#2B1810'] },
+  { value: 'mineral',  label: 'Mineral',  swatches: ['#EDEDE7', '#2F5D52', '#1B1F1E'] },
+];
+
+const DENSITIES = [
+  { value: 'airy',     label: 'Airy' },
+  { value: 'standard', label: 'Standard' },
+  { value: 'compact',  label: 'Compact' },
+];
+
+function applyTweaks(t) {
+  document.body.setAttribute('data-mood',    t.mood    || 'spirited');
+  document.body.setAttribute('data-palette', t.palette || 'bordeaux');
+  document.body.setAttribute('data-density', t.density || 'standard');
+}
+
+function App() {
+  const [tweaks, setTweak] = useTweaks(TWEAK_DEFAULS);
+  React.useEffect(() => { applyTweaks(tweaks); }, [tweaks]);
+
+  return (
+    <TweaksPanel title="Tweaks" subtitle="Reshape the feel" width={320}>
+      <TweakSection label="Mood" hint="Type pairing & headline character">
+        <div style={tpStyles.optionGrid}>
+          {MOODS.map(m => (
+            <button
+              key={m.value}
+              onClick={() => setTweak('mood', m.value)}
+              style={{
+                ...tpStyles.optionCard,
+                ...(tweaks.mood === m.value ? tpStyles.optionCardActive : {}),
+              }}
+            >
+              <div style={{
+                fontFamily: m.value === 'editorial' ? "'Playfair Display', serif"
+                          : m.value === 'spirited'  ? "'Fraunces', serif"
+                          : "'Space Grotesk', sans-serif",
+                fontSize: 19,
+                fontWeight: m.value === 'modern' ? 600 : 400,
+                fontStyle: m.value === 'spirited' ? 'italic' : 'normal',
+                letterSpacing: m.value === 'modern' ? '-0.03em' : '-0.01em',
+                lineHeight: 1,
+                color: '#F4EFE8',
+              }}>
+                Aa
+              </div>
+              <div style={tpStyles.optionLabel}>{m.label}</div>
+              <div style={tpStyles.optionHint}>{m.hint}</div>
+            </button>
+          ))}
+        </div>
+      </TweakSection>
+
+      <TweakSection label="Palette" hint="Color world of the whole page">
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8 }}>
+          {PALETTES.map(p => (
+            <button
+              key={p.value}
+              onClick={() => setTweak('palette', p.value)}
+              style={{
+                ...tpStyles.optionCard,
+                padding: 10,
+                ...(tweaks.palette === p.value ? tpStyles.optionCardActive : {}),
+              }}
+            >
+              <div style={{ display: 'flex', gap: 0, borderRadius: 4, overflow: 'hidden', height: 28 }}>
+                {p.swatches.map((c, i) => (
+                  <div key={i} style={{ flex: 1, background: c }} />
+                ))}
+              </div>
+              <div style={{ ...tpStyles.optionLabel, marginTop: 8 }}>{p.label}</div>
+            </button>
+          ))}
+        </div>
+      </TweakSection>
+
+      <TweakRadio
+        label="Density"
+        hint="Section rhythm & breathing room"
+        value={tweaks.density}
+        onChange={v => setTweak('density', v)}
+        options={DENSITIES}
+      />
+    </TweaksPanel>
+  );
+}
+
+const tpStyles = {
+  optionGrid: { display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 6 },
+  optionCard: {
+    background: 'rgba(255,255,255,0.04)',
+    border: '1px solid rgba(255,255,255,0.10)',
+    borderRadius: 10,
+    padding: '14px 8px 10px',
+    cursor: 'pointer',
+    fontFamily: 'inherit',
+    color: 'inherit',
+    textAlign: 'center',
+    transition: 'all 0.18s',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    gap: 6,
+  },
+  optionCardActive: {
+    background: 'rgba(122,31,46,0.18)',
+    borderColor: 'rgba(198,138,110,0.55)',
+    boxShadow: '0 0 0 1px rgba(198,138,110,0.25)',
+  },
+  optionLabel: {
+    fontSize: 11,
+    fontWeight: 600,
+    letterSpacing: '0.06em',
+    color: 'rgba(244,239,232,0.92)',
+  },
+  optionHint: {
+    fontSize: 9.5,
+    color: 'rgba(244,239,232,0.45)',
+    letterSpacing: '0.02em',
+    lineHeight: 1.3,
+  },
+};
+
+ReactDOM.createRoot(document.getElementById('tweaks-root')).render(<App />);
+</script>
 </html>

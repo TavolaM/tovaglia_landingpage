@@ -1,0 +1,43 @@
+# Tovaglia
+
+> Speisekarten-Software für Restaurants. Erstelle druckfertige Speisekarten mit automatischem Layout, LMIV-Allergenkennzeichnung und QR-Menü — ohne Designer, ohne Photoshop, in unter 5 Minuten.
+
+Tovaglia ist eine Web-Anwendung (SaaS) für gastronomische Betriebe in Deutschland, Österreich und der Schweiz. Eine Karte wird einmal gepflegt und gleichzeitig als druckfertiges PDF, scannbares QR-Menü und digitales TV-Board ausgespielt — alle Ausspielungen bleiben automatisch synchron. Eine Preisänderung an einer Stelle, alle Kanäle aktualisiert.
+
+## Was Tovaglia macht
+
+- **Auto-Layout:** Du tippst Gerichte, Tovaglia setzt die Karte typografisch korrekt mit professionellen Proportionen und automatischen Umbrüchen.
+- **LMIV-Allergenkennzeichnung:** Alle 14 EU-Pflichtallergene plus gängige Zusatzstoffe per Klick pro Gericht zuweisbar. Legende wird automatisch generiert.
+- **QR-Menü:** Gäste scannen, sehen die aktuelle Karte. Filter nach Allergenen ("ohne Gluten") und Diät-Tags (vegan, vegetarisch, halal, laktosefrei).
+- **TV-Board / Digital Signage:** Tageskarte als digitales Display über Tresen oder Eingang, Mittag-/Abendwechsel per Klick.
+- **AI-Foto-Import:** Bestehende Speisekarte mit dem Handy fotografieren, Tovaglia liest Sektionen, Gerichte und Preise per OCR.
+- **Mehrsprachige Auto-Übersetzung:** Deutsch, Englisch, Italienisch, Französisch und mehr. QR-Menü schaltet je nach Browser-Sprache des Gastes.
+- **Druckfertige PDFs:** A4, A5 oder Bifold mit Bleed und Passmarken — für Office-Drucker oder externe Druckerei.
+- **Eigenes Branding:** Logo (PNG/SVG mit Auto-Hintergrund-Entfernung), Markenfarben, kuratierte Templates vom Trattoria-Stil bis Fine-Dining.
+
+## Was Tovaglia bewusst NICHT macht
+
+- **Keine Kassen-Integration:** Keine Anbindung an Vectron, Lightspeed, orderbird oder andere Kassensysteme. Tovaglia ist die Karte und das, was der Gast sieht — nicht das, was der Wirt am Backoffice betreibt.
+- **Keine Druckerei-Bindung:** PDFs kannst du wo immer du willst drucken lassen. Kein Aufpreis, kein Lock-in.
+- **Kein Lock-in beim Datenexport:** Druckfertige PDFs jederzeit downloadbar. Nach Kündigung 30 Tage Read-only, dann DSGVO-konforme Löschung.
+
+## Pricing (Stand 2026-05)
+
+- **Free — 0 €:** 1 Speisekarte, 2 PDF-Downloads pro Monat, mit Tovaglia-Wasserzeichen. Keine Kreditkarte nötig.
+- **Pro — 14,90 € pro Monat (oder 149 € pro Jahr):** Unbegrenzte Speisekarten, kein Wasserzeichen, alle Design-Features, eigenes Logo, mehrsprachiges QR-Menü, druckfertige PDFs.
+- **Business — 29,90 € pro Monat (oder 299 € pro Jahr):** Alles aus Pro, plus Board-Anzeige (Digital Signage), Tischverwaltung, Bestellsystem am Tisch, Dashboard mit Auswertungen.
+
+Jederzeit kündbar. DSGVO-konform. Keine versteckten Kosten.
+
+## Zielgruppe
+
+Inhaber:innen und Betreiber:innen von Restaurants, Trattorien, Bistros, Cafés und gastronomischen Betrieben im DACH-Raum, die ihre Speisekarte ohne Designer-Kosten und ohne Photoshop-Aufwand selbst aktuell halten wollen — und gleichzeitig LMIV-konform, mehrsprachig und über mehrere Kanäle (Print, QR, TV) konsistent ausspielen wollen.
+
+## Links
+
+- [Web-App (Login)](https://app.tovaglia.io)
+- [Pricing](https://tovaglia.io/#preis)
+- [FAQ](https://tovaglia.io/#faq)
+- [Impressum](https://tovaglia.io/impressum.html)
+- [Datenschutz](https://tovaglia.io/datenschutz.html)
+- [AGB](https://tovaglia.io/agb.html)
