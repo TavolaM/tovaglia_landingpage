@@ -4380,7 +4380,7 @@ section { position: relative; z-index: 2; }
         <li><svg class="ok" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>QR-Men&uuml;, mehrsprachig</span></li>
         <li><svg class="ok" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Druckfertige PDFs (A4, A5, Bifold)</span></li>
       </ul>
-      <a href="https://app.tovaglia.io?plan=pro" class="tier-cta primary">Plan w&auml;hlen</a>
+      <a href="https://app.tovaglia.io/login.html?checkout=pro_monthly" data-m="https://app.tovaglia.io/login.html?checkout=pro_monthly" data-y="https://app.tovaglia.io/login.html?checkout=pro_yearly" class="tier-cta primary">Plan w&auml;hlen</a>
       <div class="tier-note">Jederzeit k&uuml;ndbar &middot; Monatlich abrechenbar</div>
     </div>
 
@@ -4400,7 +4400,7 @@ section { position: relative; z-index: 2; }
         <li><svg class="ok" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span><b>Bestellsystem</b> am Tisch</span></li>
         <li><svg class="ok" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span><b>Dashboard &amp; Auswertungen</b></span></li>
       </ul>
-      <a href="https://app.tovaglia.io?plan=business" class="tier-cta ghost">Plan w&auml;hlen</a>
+      <a href="https://app.tovaglia.io/login.html?checkout=business_monthly" data-m="https://app.tovaglia.io/login.html?checkout=business_monthly" data-y="https://app.tovaglia.io/login.html?checkout=business_yearly" class="tier-cta ghost">Plan w&auml;hlen</a>
       <div class="tier-note">Jederzeit k&uuml;ndbar</div>
     </div>
   </div>
@@ -4553,9 +4553,11 @@ section { position: relative; z-index: 2; }
     if (!btns.length) return;
     function setBilling(mode) {
       btns.forEach(b => b.classList.toggle('active', b.dataset.billing === mode));
-      document.querySelectorAll('.tp-amt, .tp-per, .tp-annual').forEach(el => {
+      document.querySelectorAll('.tp-amt, .tp-per, .tp-annual, .tier-cta').forEach(el => {
         const v = el.dataset[mode === 'yearly' ? 'y' : 'm'];
-        if (v != null) el.innerHTML = v;
+        if (v == null) return;
+        if (el.tagName === 'A') el.setAttribute('href', v);
+        else el.innerHTML = v;
       });
     }
     btns.forEach(b => b.addEventListener('click', () => setBilling(b.dataset.billing)));
