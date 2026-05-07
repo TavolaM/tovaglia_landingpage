@@ -50,6 +50,9 @@ Mobile-Nav heute: nur Logo (alle anderen Items hidden). Login bleibt sichtbar vi
 ### D7 — Tracking: `data-cta="member-login"`, kein neues JS
 Konsistent mit bestehenden `data-cta="hero"` und `data-cta="final"` Attributen. Kein Listener heute, aber zukunftssicher falls Analytics nachgerüstet wird.
 
+### D8 — A11y: `aria-label="Als Mitglied einloggen"`
+Sichtbarer Text bleibt „Bereits Mitglied?" (D2). Screen-Reader-Nutzer, die mit Link-Listen navigieren, hören aber das `aria-label` und bekommen damit eine eindeutig handlungsorientierte Beschreibung statt einer Frage. Verändert das visuelle Rendering nicht. Ergänzt nach Code-Quality-Review von Task 1.
+
 ## Implementation Sketch
 
 ### HTML — `public/index.html`, Z. 3543-3553
@@ -65,7 +68,8 @@ Konsistent mit bestehenden `data-cta="hero"` und `data-cta="final"` Attributen. 
     <a href="#preis" class="nav-a">Preise</a>
     <a href="https://app.tovaglia.io/login.html"
        class="nav-login"
-       data-cta="member-login">Bereits Mitglied?</a>
+       data-cta="member-login"
+       aria-label="Als Mitglied einloggen">Bereits Mitglied?</a>
     <a href="#cta" class="nav-cta">Kostenlos starten →</a>
   </div>
 </nav>

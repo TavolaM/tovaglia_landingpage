@@ -76,7 +76,7 @@ Use Edit:
 - new_string:
 ```
     <a href="#preis" class="nav-a">Preise</a>
-    <a href="https://app.tovaglia.io/login.html" class="nav-login" data-cta="member-login">Bereits Mitglied?</a>
+    <a href="https://app.tovaglia.io/login.html" class="nav-login" data-cta="member-login" aria-label="Als Mitglied einloggen">Bereits Mitglied?</a>
     <a href="#cta" class="nav-cta">Kostenlos starten →</a>
 ```
 
