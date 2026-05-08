@@ -471,6 +471,13 @@ a { color: inherit; }
   display: inline-flex; align-items: center; gap: 6px;
 }
 .nav-cta:hover { background: var(--wine-dark); transform: translateY(-1px); }
+.nav-login {
+  font-size: 13px; font-weight: 400;
+  color: var(--stone);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-login:hover { color: var(--ink); }
 
 /* ═══ HERO ═══ */
 .hero {
@@ -2497,6 +2504,10 @@ section { position: relative; z-index: 2; }
   .nav { padding: 12px 20px; }
   .nav-a { display: none; }
   .nav-cta { display: none; }
+  .nav-login {
+    font-size: 14px;
+    padding: 13px 8px;
+  }
   .hero {
     grid-template-columns: 1fr;
     gap: 48px;
@@ -3548,6 +3559,7 @@ section { position: relative; z-index: 2; }
     <a href="#how" class="nav-a">So geht's</a>
     <a href="#founder" class="nav-a">Vorher · Nachher</a>
     <a href="#preis" class="nav-a">Preise</a>
+    <a href="https://app.tovaglia.io/login.html" class="nav-login" data-cta="member-login" aria-label="Als Mitglied einloggen">Bereits Mitglied?</a>
     <a href="#cta" class="nav-cta">Kostenlos starten →</a>
   </div>
 </nav>
