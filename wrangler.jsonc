@@ -3,6 +3,7 @@
   "name": "tovaglia-landingpage-github",
   "compatibility_date": "2026-05-05",
   "assets": {
-    "directory": "./public"
+    "directory": "./public",
+    "not_found_handling": "404-page"
   }
 }
